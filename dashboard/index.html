@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>CCD Operations Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0b0e12;
+        --bg-2: #10141a;
+        --panel: #151a21;
+        --panel-2: #1a2029;
+        --line: #262e3a;
+        --line-soft: #1e242e;
+        --text: #e9edf2;
+        --muted: #9aa7b6;
+        --faint: #6b7787;
+        --green: #3fb97c;
+        --green-bg: rgba(63, 185, 124, 0.13);
+        --amber: #e2a63d;
+        --amber-bg: rgba(226, 166, 61, 0.13);
+        --red: #e5534b;
+        --red-bg: rgba(229, 83, 75, 0.14);
+        --blue: #4f9cf9;
+        --blue-bg: rgba(79, 156, 249, 0.12);
+        --grey-bg: rgba(138, 148, 163, 0.12);
+        --steel: #c8d2de;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Barlow", system-ui, sans-serif;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+      .wrap { max-width: 1560px; margin: 0 auto; padding: 20px 20px 40px; }
+
+      /* ---------- Header ---------- */
+      .topbar {
+        display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 24px;
+        padding-bottom: 14px; border-bottom: 2px solid var(--line);
+      }
+      .topbar h1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 30px; font-weight: 700; letter-spacing: 0.4px;
+        margin: 0; text-transform: uppercase; line-height: 1;
+      }
+      .topbar h1 .accent { color: var(--amber); }
+      .stamp {
+        margin-left: auto; text-align: right;
+        font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted);
+        line-height: 1.6;
+      }
+      .stamp b { color: var(--text); font-weight: 600; }
+      .operators { font-size: 13px; color: var(--muted); margin-top: 2px; }
+      .operators b { color: var(--steel); font-weight: 600; }
+
+      /* ---------- KPI strip ---------- */
+      .kpis {
+        display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px;
+        margin: 16px 0 6px;
+      }
+      .kpi {
+        background: var(--panel); border: 1px solid var(--line);
+        border-top: 3px solid var(--faint); border-radius: 6px;
+        padding: 12px 14px 10px;
+      }
+      .kpi.hot { border-top-color: var(--red); }
+      .kpi.good { border-top-color: var(--green); }
+      .kpi.money { border-top-color: var(--amber); }
+      .kpi .num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 34px; font-weight: 700; line-height: 1; letter-spacing: 0.3px;
+      }
+      .kpi .num small { font-size: 19px; font-weight: 600; color: var(--muted); }
+      .kpi .lbl { font-size: 12.5px; color: var(--muted); margin-top: 5px; line-height: 1.35; }
+      .kpi .lbl b { color: var(--steel); font-weight: 600; }
+
+      /* ---------- Section heads ---------- */
+      .section-head {
+        display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+        margin: 28px 0 12px;
+      }
+      .section-head h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 22px; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.6px; margin: 0;
+      }
+      .section-head .sub { font-size: 13px; color: var(--muted); }
+      .section-head .filterbox { margin-left: auto; }
+      .filterbox input {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+        color: var(--text); font-family: "Barlow", sans-serif; font-size: 13.5px;
+        padding: 7px 11px; width: 220px; outline: none;
+      }
+      .filterbox input:focus { border-color: var(--blue); }
+      .filterbox input::placeholder { color: var(--faint); }
+
+      /* ---------- Levers ---------- */
+      .levers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .lever {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+        padding: 13px 15px 12px;
+      }
+      .lever .lhead { display: flex; align-items: center; gap: 9px; margin-bottom: 6px; }
+      .lever .lid {
+        font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+        background: var(--panel-2); border: 1px solid var(--line);
+        padding: 2px 7px; border-radius: 4px; color: var(--steel);
+      }
+      .lever h3 { font-size: 15.5px; font-weight: 600; margin: 0; flex: 1; }
+      .lever p { margin: 0 0 8px; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+      .lever p b { color: var(--steel); font-weight: 600; }
+      .lever .rev {
+        border-top: 1px dashed var(--line); padding-top: 8px;
+        font-size: 13.5px;
+      }
+      .lever .rev b { color: var(--amber); font-weight: 700; }
+      .lever .rev span { color: var(--muted); }
+
+      .pill {
+        font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+        letter-spacing: 0.4px; text-transform: uppercase;
+        padding: 3px 8px; border-radius: 999px; white-space: nowrap;
+      }
+      .pill.green { color: var(--green); background: var(--green-bg); }
+      .pill.amber { color: var(--amber); background: var(--amber-bg); }
+      .pill.blue  { color: var(--blue);  background: var(--blue-bg); }
+      .pill.grey  { color: var(--muted); background: var(--grey-bg); }
+      .pill.red   { color: var(--red);   background: var(--red-bg); }
+
+      /* ---------- Kanban boards ---------- */
+      .board {
+        display: grid; gap: 10px; align-items: start;
+      }
+      .board.cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .board.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .col {
+        background: var(--bg-2); border: 1px solid var(--line-soft);
+        border-radius: 8px; padding: 10px; min-height: 90px;
+      }
+      .col.dragover { border-color: var(--blue); background: #121a26; }
+      .col-head {
+        display: flex; align-items: center; gap: 8px;
+        padding: 2px 2px 10px; border-bottom: 1px solid var(--line-soft);
+        margin-bottom: 10px;
+      }
+      .col-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+      .col-dot.green { background: var(--green); }
+      .col-dot.amber { background: var(--amber); }
+      .col-dot.red   { background: var(--red); }
+      .col-dot.blue  { background: var(--blue); }
+      .col-dot.grey  { background: var(--faint); }
+      .col-head h3 {
+        font-size: 12.5px; font-weight: 700; letter-spacing: 0.7px;
+        text-transform: uppercase; margin: 0; flex: 1; line-height: 1.3;
+      }
+      .col-count {
+        font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;
+        background: var(--panel-2); border: 1px solid var(--line);
+        border-radius: 999px; padding: 1px 8px; color: var(--steel);
+      }
+      .col-empty { font-size: 12.5px; color: var(--faint); text-align: center; padding: 12px 0 6px; }
+
+      .card {
+        background: var(--panel); border: 1px solid var(--line);
+        border-left: 3px solid var(--faint);
+        border-radius: 6px; padding: 11px 12px 10px; margin-bottom: 9px;
+        cursor: grab; box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+      }
+      .card:active { cursor: grabbing; }
+      .card.dragging { opacity: 0.45; }
+      .card.tone-green { border-left-color: var(--green); }
+      .card.tone-amber { border-left-color: var(--amber); }
+      .card.tone-red   { border-left-color: var(--red); }
+      .card.tone-blue  { border-left-color: var(--blue); }
+      .card.tone-grey  { border-left-color: var(--faint); opacity: 0.82; }
+      .card h4 { font-size: 14.5px; font-weight: 600; margin: 0 0 2px; line-height: 1.3; }
+      .card .co { font-size: 12.5px; color: var(--blue); font-weight: 500; margin-bottom: 5px; }
+      .card .detail { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0 0 8px; }
+      .card .detail b { color: var(--steel); font-weight: 600; }
+      .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+      .chip {
+        font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 500;
+        padding: 2.5px 7px; border-radius: 4px; white-space: nowrap;
+        background: var(--panel-2); border: 1px solid var(--line); color: var(--steel);
+      }
+      .chip.value { color: var(--amber); border-color: rgba(226,166,61,0.45); font-weight: 600; }
+      .chip.due-red { color: #fff; background: var(--red); border-color: var(--red); font-weight: 600; }
+      .chip.due-amber { color: var(--amber); background: var(--amber-bg); border-color: rgba(226,166,61,0.45); font-weight: 600; }
+      .chip.due-plain { color: var(--muted); }
+      .chip.owner { color: var(--text); background: #232c3a; border-color: #33405280; }
+      .card .note {
+        font-size: 12.5px; line-height: 1.5; color: var(--muted);
+        border-top: 1px dashed var(--line-soft); padding-top: 7px; margin: 0;
+      }
+      .card .note b { color: var(--steel); font-weight: 600; }
+      .card .action {
+        font-size: 12.5px; line-height: 1.5; margin: 5px 0 0;
+        color: var(--text);
+      }
+      .card .action::before {
+        content: "→ "; color: var(--amber); font-weight: 700;
+      }
+      .card.hidden-by-filter { display: none; }
+
+      /* ---------- Waiting / drafts ---------- */
+      .two-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .w-panel {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        padding: 15px 17px 8px;
+      }
+      .w-panel h3 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+      .w-panel .wsub { font-size: 12.5px; color: var(--muted); margin: 0 0 10px; }
+      .w-item {
+        display: flex; gap: 10px; padding: 9px 0;
+        border-top: 1px solid var(--line-soft); font-size: 13.5px; line-height: 1.5;
+      }
+      .w-item .who {
+        font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+        flex: none; width: 86px; padding-top: 2px; color: var(--steel);
+        text-transform: uppercase; letter-spacing: 0.3px;
+      }
+      .w-item p { margin: 0; color: var(--muted); }
+      .w-item p b { color: var(--text); font-weight: 600; }
+      .w-item .overdue { color: var(--red); font-weight: 700; }
+      .w-item .tag {
+        font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+        color: var(--amber); background: var(--amber-bg); border-radius: 3px;
+        padding: 1px 5px; margin-left: 5px; white-space: nowrap;
+      }
+
+      /* ---------- Timeline ---------- */
+      .timeline {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        padding: 8px 18px;
+      }
+      .t-item {
+        display: flex; gap: 16px; padding: 10px 0;
+        border-top: 1px solid var(--line-soft); font-size: 14px; line-height: 1.5;
+      }
+      .t-item:first-child { border-top: none; }
+      .t-time {
+        font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600;
+        color: var(--amber); flex: none; width: 52px; padding-top: 1px;
+      }
+      .t-item p { margin: 0; color: var(--muted); }
+      .t-item p b { color: var(--text); font-weight: 600; }
+      .t-item .bad { color: var(--red); font-weight: 600; }
+      .t-item .good { color: var(--green); font-weight: 600; }
+
+      /* ---------- Rules strip ---------- */
+      .rules {
+        margin-top: 30px; border: 1px solid var(--line); border-radius: 8px;
+        background: var(--bg-2); padding: 14px 18px;
+        display: flex; flex-wrap: wrap; gap: 8px 26px;
+        font-size: 13px; color: var(--muted); line-height: 1.55;
+      }
+      .rules b { color: var(--steel); font-weight: 600; }
+      .rules .r-title {
+        font-family: "Barlow Condensed", sans-serif; font-size: 15px; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.6px; color: var(--text);
+        width: 100%; margin-bottom: 2px;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 1180px) {
+        .kpis { grid-template-columns: repeat(4, 1fr); }
+        .levers { grid-template-columns: repeat(2, 1fr); }
+        .board.cols-5, .board.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 680px) {
+        .wrap { padding: 14px 12px 32px; }
+        .topbar h1 { font-size: 25px; }
+        .stamp { margin-left: 0; text-align: left; }
+        .kpis { grid-template-columns: repeat(2, 1fr); }
+        .kpi .num { font-size: 29px; }
+        .levers { grid-template-columns: 1fr; }
+        .board.cols-5, .board.cols-4 { grid-template-columns: 1fr; }
+        .two-panel { grid-template-columns: 1fr; }
+        .filterbox { margin-left: 0; width: 100%; }
+        .filterbox input { width: 100%; }
+        .w-item .who { width: 70px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <!-- ================= HEADER ================= -->
+      <header class="topbar">
+        <div>
+          <h1>CCD <span class="accent">Operations</span> Dashboard</h1>
+          <div class="operators">Charlotte Commercial Doors · Run by <b>Snket Desai</b> &amp; <b>Tim Lamb</b> · One board, both operators, full pipeline visibility</div>
+        </div>
+        <div class="stamp">
+          Last updated: <b>Oct 22, 2026 · 4:40 PM ET</b><br />
+          Refreshes automatically on a schedule + on every pipeline change
+        </div>
+      </header>
+
+      <!-- ================= KPI STRIP ================= -->
+      <section class="kpis" aria-label="Key numbers">
+        <div class="kpi hot">
+          <div class="num">14</div>
+          <div class="lbl"><b>Active opportunities</b> across bid engine, customers &amp; watch list</div>
+        </div>
+        <div class="kpi good">
+          <div class="num">5</div>
+          <div class="lbl"><b>Bid-ready now</b> — verified live, in partners' hands or one send away</div>
+        </div>
+        <div class="kpi">
+          <div class="num">4</div>
+          <div class="lbl"><b>Active direct leads</b> — 1 live job, 1 contacted, plus stale &amp; blocked below</div>
+        </div>
+        <div class="kpi good">
+          <div class="num">2</div>
+          <div class="lbl"><b>True partners</b> — Doug (Glass &amp; Door Pro) + Jerry (Apollo). Everyone else is bench.</div>
+        </div>
+        <div class="kpi money">
+          <div class="num">$2.5M<small>–$5.4M</small></div>
+          <div class="lbl"><b>Tracked package value</b> in the live pipeline</div>
+        </div>
+        <div class="kpi money">
+          <div class="num">$90K<small>–$190K</small></div>
+          <div class="lbl"><b>Expected coordination fees</b> — 10%, win-adjusted</div>
+        </div>
+        <div class="kpi good">
+          <div class="num">$6,000</div>
+          <div class="lbl"><b>Booked so far</b> — China Grove margin + Doug monthly (amount TBD)</div>
+        </div>
+      </section>
+
+      <!-- ================= REVENUE BY LEVER ================= -->
+      <div class="section-head">
+        <h2>Revenue by Lever</h2>
+        <span class="sub">Which levers are moving, and what each one has actually produced</span>
+      </div>
+      <section class="levers">
+        <article class="lever">
+          <div class="lhead"><span class="lid">L1</span><h3>Bid Engine</h3><span class="pill green">Producing</span></div>
+          <p>GC portals + procurement boards, swept hourly. <b>9 verified projects stored in 2 days</b> across Charlotte, the Triangle and Atlanta. Engine expanded statewide NC/SC + Atlanta on Oct 22.</p>
+          <div class="rev"><b>$90K–$190K</b> <span>fee potential, win-adjusted — the main revenue engine</span></div>
+        </article>
+        <article class="lever">
+          <div class="lhead"><span class="lid">L2</span><h3>Direct Customers</h3><span class="pill green">Producing</span></div>
+          <p>Calls + Facebook asks. <b>Hartman USA is a live job</b> (~$300 margin on a $2,100 NTE quote). 3 September callers gone stale. Target is 10 customers/day vs actual ~0–3/day.</p>
+          <div class="rev"><b>~$300</b> <span>margin on the one live job — volume is the gap</span></div>
+        </article>
+        <article class="lever">
+          <div class="lhead"><span class="lid">L3</span><h3>Rank-and-Rent Sites</h3><span class="pill amber">Building</span></div>
+          <p>10 Charlotte EMD sites. <b>18 calls in 30 days, 3 strong.</b> Doug's monthly payment is agreed (amount/start TBD) — the first recurring revenue in the operation.</p>
+          <div class="rev"><b>Monthly TBD</b> <span>— Doug's retainer, first recurring revenue</span></div>
+        </article>
+        <article class="lever">
+          <div class="lhead"><span class="lid">L4</span><h3>Facilities &amp; PM Outreach</h3><span class="pill blue">Seeded</span></div>
+          <p>35 facility / property-manager targets. <b>Tier-1 intros sent Oct 21</b> (Novant, IFB, Weston…). Zero substantive replies yet — nudges land Oct 27.</p>
+          <div class="rev"><b>$0 yet</b> <span>— pipeline seeded, first replies will tell</span></div>
+        </article>
+        <article class="lever">
+          <div class="lhead"><span class="lid">L5</span><h3>Content / GEO / Facebook Group</h3><span class="pill amber">Building</span></div>
+          <p>Group live under the Premier Page as sole admin; <b>twice-daily posts</b>. Monday SEO/GEO pulse starts Oct 26 — visibility compounding for the EMD sites.</p>
+          <div class="rev"><b>Indirect</b> <span>— feeds L2 + L3 demand over time</span></div>
+        </article>
+        <article class="lever">
+          <div class="lhead"><span class="lid">L6</span><h3>Partner Bench</h3><span class="pill amber">Building</span></div>
+          <p>53 companies tracked. True partners: <b>Doug + Jerry</b>; Piedmont active. Review-tier audit completed Oct 22. Weekly vetting starts Oct 28.</p>
+          <div class="rev"><b>Capacity</b> <span>— fulfilment depth behind every other lever</span></div>
+        </article>
+      </section>
+
+      <!-- ================= BOARDS (rendered from data) ================= -->
+      <div id="boards"></div>
+
+      <!-- ================= WAITING / DRAFTS ================= -->
+      <div class="section-head">
+        <h2>Waiting &amp; Drafts</h2>
+        <span class="sub">Who owes us what — and what's sitting ready to send</span>
+      </div>
+      <section class="two-panel">
+        <div class="w-panel">
+          <h3>They owe us</h3>
+          <p class="wsub">Open loops, by person. Nothing here closes itself.</p>
+          <div class="w-item"><span class="who">Doug</span><p><b>Revised China Grove proposal</b> — due Fri Oct 23 AM · Edifice fire-station references · monthly amount &amp; start date</p></div>
+          <div class="w-item"><span class="who">Jerry</span><p><b>DeKalb LSBE-call outcome</b> (tomorrow) · dock-installer capacity answer <span class="overdue">— due, overdue</span> · China Grove itemized quote (unblocked Oct 22) · next-week call times</p></div>
+          <div class="w-item"><span class="who">Akhil / QBS</span><p>Design-team answers as they come — laminate, galvanized, weatherstripping, exterior locks, 2S4 90-min item. <b>No longer blocking the quote.</b></p></div>
+          <div class="w-item"><span class="who">Cody / Edifice</span><p>DFH + overhead bidder names for Huntersville &amp; Asheville-Oakley are <b>owed by us</b> — Jerry's answer is the pending piece</p></div>
+          <div class="w-item"><span class="who">Tim</span><p><b>Partner Coordination Agreement bracket approval</b> (10% fee / 12-month tail / award reporting) · Zoom scheduling with Jerry</p></div>
+        </div>
+        <div class="w-panel">
+          <h3>Drafts ready to send</h3>
+          <p class="wsub">Draft-first rule: nothing sends without Snket's go.</p>
+          <div class="w-item"><span class="who">Snket →</span><p><b>Jerry — China Grove relay</b> (proceed + optionals structure; client not named)<span class="tag">snket@</span></p></div>
+          <div class="w-item"><span class="who">Snket →</span><p><b>Akhil — acknowledgment</b> of the proceed-with-optionals structure<span class="tag">snket@</span></p></div>
+          <div class="w-item"><span class="who">Snket →</span><p><b>Jerry — DeKalb contract</b> (verified live, LSBE catch stated plainly)<span class="tag">snket@</span></p></div>
+          <div class="w-item"><span class="who">Snket →</span><p><b>Jerry — Athens Drive overhead offer</b> (prequal locks ~Oct 31)<span class="tag">snket@</span></p></div>
+          <div class="w-item"><span class="who">Tim →</span><p><b>Tanna / Piedmont — Triangle assignments</b> (Athens DFH, Carrboro DFH, SSI Hardware prime)<span class="tag">tim@</span></p></div>
+          <div class="w-item"><span class="who">Tim →</span><p><b>Doug — Triangle glazing packages</b> (Athens glass + Carrboro glass)<span class="tag">tim@</span></p></div>
+          <div class="w-item"><span class="who">Tim →</span><p><b>Piedmont — Hartman service job</b> (Rock Hill closer/handle repair)<span class="tag">tim@</span></p></div>
+        </div>
+      </section>
+
+      <!-- ================= TODAY TIMELINE ================= -->
+      <div class="section-head">
+        <h2>Today — Thursday, Oct 22</h2>
+        <span class="sub">Everything that moved, in order</span>
+      </div>
+      <section class="timeline">
+        <div class="t-item"><span class="t-time">09:51</span><p><span class="bad">Blackburn cancelled</span> — Wilkie Construction dropped the job; the 3 PM bid never happened.</p></div>
+        <div class="t-item"><span class="t-time">09:58</span><p><span class="good">Doug confirms December delivery</span> for all China Grove materials, <b>including AASD-1</b> — the 15-week risk is cleared.</p></div>
+        <div class="t-item"><span class="t-time">12:29</span><p><b>Jerry / Vortex Hartman ballpark: $1,770</b> — our cost basis for the $2,100 NTE quote to Eddie.</p></div>
+        <div class="t-item"><span class="t-time">14:56</span><p><b>Bid engine expanded</b> — statewide NC/SC + Atlanta tier → <b>5 new finds</b> the same afternoon.</p></div>
+        <div class="t-item"><span class="t-time">15:xx</span><p><span class="bad">Rock Hill Fire Station 7 voided</span> on re-verification — stale listing caught before any partner saw it.</p></div>
+        <div class="t-item"><span class="t-time">16:03</span><p><b>Cody (Edifice) requests Doug's contact</b> for the BuildingConnected prequal invite — Huntersville + Asheville-Oakley.</p></div>
+        <div class="t-item"><span class="t-time">16:08</span><p><span class="good">Akhil approves proceed-with-optionals</span> — China Grove quote unblocked; ED out of scope, SD/PD = passage hardware.</p></div>
+        <div class="t-item"><span class="t-time">16:15</span><p><b>DeKalb ITB verified live</b> on the county's official portal — LSBE attendance catch found before Jerry was pitched.</p></div>
+        <div class="t-item"><span class="t-time">PM</span><p><b>Newton County added</b> to the Atlanta watch — Piedmont Newton Hospital (~$600M) stored as a Jerry early signal.</p></div>
+      </section>
+
+      <!-- ================= RULES ================= -->
+      <footer class="rules">
+        <div class="r-title">How this operation runs</div>
+        <span><b>Middleman model</b> — partners bid as bidder of record; we coordinate scope, drawings, quotes, scheduling.</span>
+        <span><b>10% coordination fee</b> confirmed in writing before bid day — never after award.</span>
+        <span><b>Public awards self-verified</b> — we read the bid tab ourselves (Tim's control rule).</span>
+        <span><b>No own GBPs.</b> Demand capture is EMD websites only.</span>
+        <span><b>No paid search, ever.</b></span>
+        <span><b>Draft-first</b> — nothing sends without Snket's go.</span>
+        <span><b>End clients are never disclosed to partners.</b></span>
+      </footer>
+
+    </div>
+
+    <script>
+      /* ============================================================
+         BOARD DATA — snapshot: Thu Oct 22, 2026, 4:40 PM ET.
+         Refreshes replace this block wholesale.
+         Card fields: t title · co company/GC · d detail (may use <b>)
+         · val value chip · due [{label, date}] · own owner chip
+         · tone green|amber|red|blue|grey · note status · act last action
+         ============================================================ */
+      var SNAPSHOT = new Date(2026, 9, 22); // Oct 22, 2026
+
+      var BOARDS = [
+        {
+          id: "opps", title: "Board 1 — Opportunities",
+          sub: "Bid-engine projects & packages. Drag cards between columns as they move.",
+          cols: 5,
+          columns: [
+            { name: "New", dot: "blue", cards: [
+              { t: "DeKalb County Overhead Doors & Gates", co: "ITB 2026-106-ITB · Atlanta / Decatur",
+                d: "Annual contract + 4 renewal options — roll-up, overhead, sliding doors & gates, 24/7. Jerry / Apollo as prime.",
+                val: "~$1.45M/yr incumbent scale",
+                due: [{ label: "Bids Oct 28 · 3 PM", date: "2026-10-28" }],
+                own: "Jerry / Apollo", tone: "red",
+                note: "<b>Verified live</b> on the county's official OpenGov portal. No bond required; $5M umbrella insurance is.",
+                act: "Blocked on the LSBE attendance question — county agent call (Ytierria Adams) is Jerry's first move." },
+              { t: "Kinston Global TransPark", co: "North Carolina",
+                d: "Bid-engine find, door scope in package.",
+                due: [{ label: "Bid Nov 10", date: "2026-11-10" }],
+                own: "Unassigned", tone: "amber",
+                note: "Verified listing, future bid date.",
+                act: "Held — pending Snket's geography decision." },
+              { t: "Robeson CC Healthcare", co: "Robeson Community College · NC",
+                d: "Bid-engine find, healthcare facility project.",
+                due: [{ label: "Bid Dec 8", date: "2026-12-08" }],
+                own: "Unassigned", tone: "amber",
+                note: "Verified listing, future bid date.",
+                act: "Held — pending Snket's geography decision." }
+            ]},
+            { name: "Engaged", dot: "green", cards: [
+              { t: "Athens Drive High School", co: "Balfour Beatty (CM) · Raleigh",
+                d: "<b>BP-08A DFH → Piedmont</b> · <b>BP-08C Overhead → Jerry</b> (offered Oct 22) · <b>BP-08F Glass → Doug</b>. Prequalified bidders only — non-prequalified are rejected outright.",
+                due: [{ label: "Prequal list locks ~Oct 31", date: "2026-10-31" }, { label: "Bids Nov 10", date: "2026-11-10" }],
+                own: "Tim coordinating", tone: "red",
+                note: "No published prequal form — status confirmed directly with William Byrd, Balfour Beatty.",
+                act: "Drafts ready for Tanna, Doug & Jerry — Athens ranked first, the Oct 31 lock is the tightest clock in the pipeline." },
+              { t: "China Grove Door Package", co: "QBS Construction (customer) · China Grove, NC",
+                d: "Doug glazing <b>$143,346</b>; our client price <b>$149,346</b> incl. $6,000 coordination margin. December delivery confirmed for all materials incl. AASD-1. ED = elevator doors, out of scope; SD/PD = same HM door, passage hardware.",
+                val: "$149,346 · $6,000 margin booked",
+                due: [{ label: "Doug revised proposal due Oct 23 AM", date: "2026-10-23" }, { label: "Piedmont gate Oct 30", date: "2026-10-30" }],
+                own: "Snket (customer side)", tone: "green",
+                note: "<b>Akhil approved proceed-with-optionals Oct 22</b> — unresolved items priced per-door as options; design-team answers no longer blocking.",
+                act: "Jerry relay + Akhil acknowledgment drafts ready; Jerry's itemized quote unblocked." },
+              { t: "Wake County SSI Hardware 2A.1", co: "Wake County Schools · 12 schools, Cary",
+                d: "Single-prime sealed bid — doors / frames / hardware supply & install across 12 schools. <b>Piedmont recommended as prime</b> (hardware install is their service line); Cook & Boardman supply-side fallback only.",
+                due: [{ label: "Bids Nov 10 · 1 PM", date: "2026-11-10" }],
+                own: "Piedmont (recommended)", tone: "amber",
+                note: "Licensed contractors only · 5% bid security · 100% performance & payment bonds.",
+                act: "In Tanna's draft — Piedmont must answer the licensing / bonding question plainly." },
+              { t: "Carrboro Elementary Replacement", co: "Clancy & Theys · Chapel Hill–Carrboro",
+                d: "<b>DFH (0810) → Piedmont</b> · <b>Glass (0840) → Doug</b>. Release 2 prequalification confirmed; Jerry is backstop on DFH if Piedmont passes.",
+                due: [{ label: "Prequal Nov 30", date: "2026-11-30" }],
+                own: "Tim coordinating", tone: "green",
+                note: "Submission mechanics sit behind a login wall — package comes from Clancy & Theys once Piedmont confirms.",
+                act: "In Tanna's and Doug's Triangle drafts." },
+              { t: "IFB Solutions Expansion", co: "IFB Solutions · Winston-Salem",
+                d: "DFH package + <b>6 dock doors</b>. Named contact: Ken Edwards, PM. Tim's engagement email sent Oct 21; Southern Dock got the six-dock heads-up the same day.",
+                due: [{ label: "Proposals due Oct 30 · 5 PM", date: "2026-10-30" }],
+                own: "Tim", tone: "amber",
+                note: "No replies yet from IFB or Southern Dock.",
+                act: "Nudge lands Oct 27 if still silent." }
+            ]},
+            { name: "Prequal / Bid in Motion", dot: "amber", cards: [
+              { t: "Huntersville Fire Station #5", co: "Edifice Inc · Huntersville, NC",
+                d: "<b>Doug = glazing bidder of record</b> (turnkey). DFH + overhead bidders still open — Jerry is the pending piece.",
+                due: [{ label: "Prequal Nov 12", date: "2026-11-12" }],
+                own: "Doug (glazing)", tone: "green",
+                note: "Edifice prequal runs through BuildingConnected.",
+                act: "Cody requested Doug's contact Oct 22 — invite incoming; Doug completes prequal on receipt. Fire-station references still owed to Cody." },
+              { t: "Asheville-Oakley Fire Station #9", co: "Edifice Inc · Asheville, NC",
+                d: "<b>Doug = glazing bidder of record.</b> Same BuildingConnected prequal flow as Huntersville.",
+                due: [{ label: "Prequal Dec 11", date: "2026-12-11" }],
+                own: "Doug (glazing)", tone: "green",
+                note: "Cody Treece is the preconstruction contact on both stations.",
+                act: "One invite from Cody covers both stations." },
+              { t: "Firetower 77", co: "HGR Construction (GC) · Rock Hill, SC",
+                d: "1M SF industrial — <b>~100 dock levelers</b>, the biggest single package in the pipeline.",
+                val: "$700K–$1.5M package",
+                own: "Jerry (capacity check)", tone: "amber",
+                note: "Intro sent to HGR; no reply yet. Held pending HGR response.",
+                act: "Jerry is checking his dock-installer capacity — answer due, not received." },
+              { t: "Henderson County Bus Garage", co: "Henderson County · NC",
+                d: "Overhead door package on a county bus garage project.",
+                due: [{ label: "Prequal Jan 29, 2027", date: "2027-01-29" }],
+                own: "Unassigned", tone: "blue",
+                note: "Long runway — earliest prequal in the book.",
+                act: "On the board so the January date never sneaks up." }
+            ]},
+            { name: "Watch", dot: "blue", cards: [
+              { t: "Corning Wilmington Expansion", co: "Corning · Wilmington, NC",
+                d: "Verified pre-bid signal — no GC, no bid date. Nothing for a partner to act on yet; sending it now would be the Sharon-at-SouthPark mistake.",
+                val: "$585M project",
+                own: "Watch", tone: "blue",
+                note: "Construction from 2027.",
+                act: "Trigger to act: GC announcement." },
+              { t: "Piedmont Newton Hospital Relocation", co: "Piedmont Healthcare · Covington, GA",
+                d: "Letter of Determination filed Sep 22, 2026. Stage check clean: no GC, no start date, nothing awarded. Atlanta watch — Jerry territory.",
+                val: "~$600M project",
+                own: "Jerry territory", tone: "blue",
+                note: "Newton County added to the bid engine's Atlanta tier permanently (Oct 22).",
+                act: "Watch for GC / CM announcement." },
+              { t: "Fulton County Schools Capital Plan 2027", co: "Fulton County Schools · Atlanta",
+                d: "Major renovations at <b>18 schools + 2 facilities</b>, plus 5 school replacements. District scope lists <b>“doors and hardware”</b> verbatim. Full Apollo fit.",
+                own: "Jerry territory", tone: "blue",
+                note: "No bid dates published yet.",
+                act: "Watch for package releases." },
+              { t: "New A.D. Williams Elementary", co: "Atlanta Public Schools",
+                d: "CM-at-Risk procurement already ran this year; trade packages follow the CM award. Full Apollo fit.",
+                own: "Jerry territory", tone: "blue",
+                note: "Funding ties to the Nov 2026 ESPLOST referendum — flagged.",
+                act: "Watch for CM award, then trade packages." },
+              { t: "Cobb County 2028 SPLOST Facilities", co: "Cobb County · Marietta, GA",
+                d: "<b>$174M new State Court building</b> + <b>$60M detention-center infirmary</b> — heavy DFH and detention hardware. Marietta is Apollo's home base.",
+                val: "$234M combined",
+                own: "Jerry territory", tone: "blue",
+                note: "Contingent on the Nov 3 referendum; no dates yet.",
+                act: "Watch the referendum result Nov 3." },
+              { t: "Novant Health Rock Hill Campus", co: "Novant Health · Rock Hill, SC",
+                d: "New campus, 2027 horizon. Contact: Matthew Stiene, SVP Construction & Facility Services.",
+                val: "$300M project",
+                own: "Tim", tone: "blue",
+                note: "Intro sent Oct 21 — reply awaited.",
+                act: "Nudge Oct 27 if silent." },
+              { t: "Carolina Pines Logistics", co: "Weston Inc · SC",
+                d: "<b>20 dock doors</b> on a logistics build. Southern Dock got the heads-up Oct 21.",
+                val: "$150K–$250K package",
+                own: "Tim", tone: "blue",
+                note: "Intro sent to Weston — no reply yet.",
+                act: "Nudge Oct 27 if silent." },
+              { t: "Charlotte Firehouse 44", co: "Samet (GC) · Charlotte",
+                d: "New firehouse build in the home market — door packages expected as it procures.",
+                val: "$23.3M project",
+                own: "Tim", tone: "blue",
+                note: "Not yet engaged.",
+                act: "Tim to call Samet." }
+            ]},
+            { name: "Closed", dot: "grey", cards: [
+              { t: "Blackburn", co: "Wilkie Construction", tone: "grey",
+                d: "Cancelled Oct 22 — Wilkie dropped the job (via Trudy Brookshire to Doug). No 3 PM bid. Never engaged further." },
+              { t: "Sharon at SouthPark", co: "Charlotte", tone: "grey",
+                d: "Dead — groundbreaking release looked live, but Cody Treece confirmed it bid in March 2026 and was already awarded. The lesson behind the stage-gate rule." },
+              { t: "Rock Hill Fire Station 7", co: "Rock Hill, SC", tone: "grey",
+                d: "Listing voided on re-verification Oct 22 — never sent to a partner." },
+              { t: "Pineville Town Hall", co: "Pineville, NC", tone: "grey",
+                d: "Killed — stale 2020 post-bid listing surfaced by an aggregator." },
+              { t: "Project Accelerate", co: "—", tone: "grey",
+                d: "Dead — withdrawn in 2025." }
+            ]}
+          ]
+        },
+        {
+          id: "leads", title: "Board 2 — Leads & Customers",
+          sub: "Direct demand from the 10 EMD sites, calls and Facebook asks. Target: 10 customers/day · actual flow ~0–3/day.",
+          cols: 4,
+          columns: [
+            { name: "Active", dot: "green", cards: [
+              { t: "Hartman USA — door out of service", co: "Eddie Douglas · Rock Hill, SC",
+                d: "Hollow-metal door: <b>closer + handle repair</b>, door locked / out of service. Vortex ballpark <b>$1,770</b> (our cost) via Jerry's route; <b>Piedmont selected as the active partner</b> for the job.",
+                val: "Quote Eddie $2,100 NTE · ~$300 margin",
+                own: "Snket / Tim", tone: "green",
+                note: "Two numbers on file (full numbers in the lead record): <b>803-•••-1143</b> — caller ID of record, try first · <b>803-•••-3540</b> — callback Eddie gave on the call.",
+                act: "Awaiting the Eddie call: hardware answers + his boss's approval of the $2,100 not-to-exceed." }
+            ]},
+            { name: "Contacted / In Conversation", dot: "amber", cards: [
+              { t: "Cogir / Cadence Huntersville", co: "Senior living · Huntersville, NC",
+                d: "Verified-need prospect — <b>DHHS door citations</b> on record, so the need is documented, not guessed.",
+                own: "Tim", tone: "amber",
+                note: "Intro sent.",
+                act: "Phone fallback ready if email stays quiet." }
+            ]},
+            { name: "Stale — Never Contacted", dot: "red", cards: [
+              { t: "Jim Ringley", co: "Caller · Sep 25 · Charlotte",
+                d: "Needs a <b>storefront entry door repair</b> (latch / crash-bar) and asked to get it scheduled.",
+                own: "Tim — call priority", tone: "red",
+                note: "30+ days old, never contacted.",
+                act: "Tim call — he was ready to book in September." },
+              { t: "Christo Peregoy", co: "Caller · Sep 21 · Charlotte",
+                d: "<b>Closer adjustments on 3 interior corridor doors</b> — sounded urgent on the call.",
+                own: "Tim — call priority", tone: "red",
+                note: "30+ days old, never contacted.",
+                act: "Tim call — small job, fast close if he's still waiting." },
+              { t: "Jade Capital Caller", co: "Caller · Oct 7 · Charlotte",
+                d: "<b>Hollow-metal back-door replacement.</b> Came in through the door sites; no follow-up yet.",
+                own: "Tim — call priority", tone: "amber",
+                note: "Never contacted since the Oct 7 call.",
+                act: "Tim call before it goes the way of the September callers." }
+            ]},
+            { name: "Blocked", dot: "red", cards: [
+              { t: "Robin Ruffolo", co: "Homeowner ask · Indian Land, SC",
+                d: "Asked her community group for <b>crawl-space door</b> recommendations. Copy-paste reply is written and ready.",
+                own: "Snket", tone: "red",
+                note: "Blocked: the group is private.",
+                act: "Unblocks the moment Snket joins the group." },
+              { t: "Daniel Maddox", co: "Homeowner ask · Oct 21 · Indian Land, SC",
+                d: "<b>Sliding patio door install</b> recommendations — a Doug-fit job. Reply is written and ready.",
+                own: "Snket", tone: "red",
+                note: "Blocked: same private group.",
+                act: "Unblocks the moment Snket joins the group." }
+            ]}
+          ]
+        },
+        {
+          id: "partners", title: "Board 3 — Partners",
+          sub: "Route to Doug & Jerry first. The bench is insurance, not partnerships — it earns that word by engaging.",
+          cols: 5,
+          columns: [
+            { name: "True Partners", dot: "green", cards: [
+              { t: "Doug Adams — Glass & Door Pro", co: "Glazing · storefront · automatic entrances",
+                d: "<b>First monthly-paying partner</b> (amount / start TBD). Service area: south/east Charlotte metro + Union County + SC line; project bids full radius.",
+                val: "Monthly payer #1",
+                own: "Routes first: glazing", tone: "green",
+                note: "Pipeline: <b>China Grove · Huntersville #5 · Asheville-Oakley #9 · Athens glass · Carrboro glass</b>. No independent Google rating — scored on responsiveness, which is excellent.",
+                act: "Owes: revised China Grove proposal (Oct 23 AM), Edifice references, monthly amount/start." },
+              { t: "Jerry Richards — Apollo Door Systems", co: "Metro Atlanta · DFH · overhead · automatic · dock",
+                d: "<b>Reciprocity partner</b> — contacted us first; Atlanta pocket is being built around him as the local operator.",
+                own: "Routes first: Atlanta + overhead/dock", tone: "green",
+                note: "In motion: quoting China Grove · offered Athens overhead (BP-08C) · offered DeKalb prime. Fee terms: agreement not yet signed — fee must be confirmed in writing before any bid day.",
+                act: "Owes: dock-installer capacity answer (overdue), DeKalb LSBE-call outcome, China Grove itemized quote." }
+            ]},
+            { name: "Active", dot: "green", cards: [
+              { t: "Piedmont Door Solutions", co: "Tanna Thomas · pedestrian / automatic doors",
+                d: "Most responsive vendor in the book — <b>10 emails</b> on China Grove alone. Pedestrian/automatic only (no warehouse doors — their own words).",
+                own: "Active partner", tone: "green",
+                note: "Assigned: <b>Athens DFH · Carrboro DFH · SSI Hardware prime (recommended) · Hartman service job</b>.",
+                act: "Triangle assignment draft is in Tim's mailbox for Tanna." }
+            ]},
+            { name: "Bench — Tier 1 by Reviews", dot: "blue", cards: [
+              { t: "RCI Doors", co: "Review audit · Oct 22", tone: "blue",
+                d: "<b>4.9★ / 650 reviews</b> — sentiment leader, named-tech praise, no complaint themes. Never replies to email: <b>phone only, 336-626-5125</b>." },
+              { t: "Garage Door & More", co: "Review audit · Oct 22", tone: "blue",
+                d: "<b>4.9★ / 1,087 reviews</b> — biggest review base in the tier." },
+              { t: "Overhead Door of Charlotte", co: "Review audit · Oct 22", tone: "blue",
+                d: "<b>4.9★ / 529 reviews.</b>" },
+              { t: "OGD", co: "Review audit · Oct 22", tone: "blue",
+                d: "<b>4.6★ / 847 reviews.</b>" },
+              { t: "Vortex", co: "National operator", tone: "blue",
+                d: "<b>4.8★</b> (national aggregate). Already useful once: priced the Hartman repair at ~$1,770 via Jerry's route." },
+              { t: "Custom Door & Gate", co: "Raleigh, NC", tone: "blue",
+                d: "Commercial overhead, HQ in the Triangle. Was the Athens BP-08C cold-call candidate — now the <b>fallback</b> behind Jerry." }
+            ]},
+            { name: "Silent / Stale", dot: "amber", cards: [
+              { t: "GHK Door Solutions", co: "Garret · hollow-metal / overhead", tone: "amber",
+                d: "Zero public footprint and <b>never replied, ever</b>. China Grove quote outstanding since Oct 19.",
+                act: "Call-or-bench decision is open." },
+              { t: "Southern Dock Products", co: "Blair Jones · dock equipment", tone: "amber",
+                d: "Got the IFB six-dock and Carolina Pines 20-dock heads-ups Oct 21 — no reply.",
+                act: "Nudge Oct 27. Firetower held pending HGR." },
+              { t: "MINER", co: "Dock / door service", tone: "amber",
+                d: "No reply to outreach.",
+                act: "Nudge Oct 27 bucket." },
+              { t: "HGR Construction", co: "GC · Firetower 77", tone: "amber",
+                d: "No reply to the Firetower intro — their silence gates a $700K–$1.5M package.",
+                act: "Nudge Oct 27 bucket." },
+              { t: "Weston Inc", co: "Carolina Pines Logistics", tone: "amber",
+                d: "No reply to the Carolina Pines intro.",
+                act: "Nudge Oct 27 bucket." },
+              { t: "Momentum", co: "—", tone: "amber",
+                d: "Email delivery <b>delayed</b> (bounce-audit retry) — resolves on its own by Oct 23 evening.",
+                act: "Fallback if it fails: web form or a Tim call." }
+            ]},
+            { name: "Declined — Do Not Re-pitch", dot: "grey", cards: [
+              { t: "Commercial Door Worx", co: "Tom Pfaff, SVP", tone: "grey",
+                d: "Declined the partnership Oct 16, 2026. Closed." },
+              { t: "ASAP Commercial Doors", co: "—", tone: "grey",
+                d: "Marked Declined in the tracker. Closed." },
+              { t: "Southeast Door Solutions", co: "—", tone: "grey",
+                d: "Declined. Closed." },
+              { t: "Tip Top — CAUTION", co: "Do not route customers", tone: "red",
+                d: "<b>4.9★ / 2,098 reviews but a recurring price-gouging / upsell theme</b> in them. High rating, wrong partner for our customers' service work." }
+            ]}
+          ]
+        }
+      ];
+
+      /* ---------- Rendering ---------- */
+      function esc(s) { return s; } // data above is authored, trusted HTML
+
+      function dueChip(due) {
+        if (!due.date) return '<span class="chip due-plain">' + due.label + "</span>";
+        var days = Math.round((new Date(due.date + "T00:00:00") - SNAPSHOT) / 86400000);
+        var cls = "due-plain", suffix = "";
+        if (days < 0) { cls = "due-red"; suffix = " · OVERDUE"; }
+        else if (days < 10) { cls = "due-red"; suffix = " · " + days + "d"; }
+        else if (days < 30) { cls = "due-amber"; suffix = " · " + days + "d"; }
+        return '<span class="chip ' + cls + '">' + due.label + suffix + "</span>";
+      }
+
+      function cardHTML(c) {
+        var h = '<article class="card tone-' + (c.tone || "grey") + '" draggable="true">';
+        h += "<h4>" + c.t + "</h4>";
+        if (c.co) h += '<div class="co">' + c.co + "</div>";
+        if (c.d) h += '<p class="detail">' + c.d + "</p>";
+        var chips = "";
+        if (c.val) chips += '<span class="chip value">' + c.val + "</span>";
+        if (c.due) for (var i = 0; i < c.due.length; i++) chips += dueChip(c.due[i]);
+        if (c.own) chips += '<span class="chip owner">' + c.own + "</span>";
+        if (chips) h += '<div class="chips">' + chips + "</div>";
+        if (c.note) h += '<p class="note">' + c.note + "</p>";
+        if (c.act) h += '<p class="action">' + c.act + "</p>";
+        return h + "</article>";
+      }
+
+      function renderBoards(filter) {
+        var host = document.getElementById("boards");
+        var html = "";
+        BOARDS.forEach(function (b, bi) {
+          html += '<div class="section-head"><h2>' + b.title + '</h2><span class="sub">' + b.sub + "</span>";
+          if (bi === 0) {
+            html += '<span class="filterbox"><input id="cardFilter" type="search" placeholder="Filter cards… (e.g. Jerry, glazing, Oct 30)" value="' +
+              (filter ? filter.replace(/"/g, "&quot;") : "") + '" /></span>';
+          }
+          html += "</div>";
+          html += '<section class="board cols-' + b.cols + '" data-board="' + b.id + '">';
+          b.columns.forEach(function (col, ci) {
+            html += '<div class="col" data-col="' + ci + '">';
+            html += '<div class="col-head"><span class="col-dot ' + col.dot + '"></span><h3>' + col.name +
+              '</h3><span class="col-count">' + col.cards.length + "</span></div>";
+            col.cards.forEach(function (c) { html += cardHTML(c); });
+            if (!col.cards.length) html += '<div class="col-empty">Nothing here</div>';
+            html += "</div>";
+          });
+          html += "</section>";
+        });
+        host.innerHTML = html;
+        wireBoard();
+        if (filter) applyFilter(filter);
+      }
+
+      function applyFilter(q) {
+        q = (q || "").trim().toLowerCase();
+        document.querySelectorAll(".card").forEach(function (card) {
+          var hit = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+          card.classList.toggle("hidden-by-filter", !hit);
+        });
+        document.querySelectorAll(".col").forEach(function (col) {
+          var total = col.querySelectorAll(".card").length;
+          var visible = col.querySelectorAll(".card:not(.hidden-by-filter)").length;
+          col.querySelector(".col-count").textContent = q ? visible + "/" + total : total;
+        });
+      }
+
+      /* ---------- Drag & drop (same board, in-session only) ---------- */
+      var dragCard = null, dragFrom = null;
+      function wireBoard() {
+        document.querySelectorAll(".card").forEach(function (card) {
+          card.addEventListener("dragstart", function (e) {
+            dragCard = card;
+            dragFrom = { board: card.closest(".board").dataset.board, col: +card.closest(".col").dataset.col, el: card };
+            card.classList.add("dragging");
+            e.dataTransfer.effectAllowed = "move";
+            try { e.dataTransfer.setData("text/plain", "card"); } catch (err) {}
+          });
+          card.addEventListener("dragend", function () {
+            card.classList.remove("dragging");
+            document.querySelectorAll(".col").forEach(function (c) { c.classList.remove("dragover"); });
+          });
+        });
+        document.querySelectorAll(".col").forEach(function (col) {
+          col.addEventListener("dragover", function (e) {
+            if (!dragCard) return;
+            if (col.closest(".board").dataset.board !== dragFrom.board) return;
+            e.preventDefault();
+            col.classList.add("dragover");
+          });
+          col.addEventListener("dragleave", function () { col.classList.remove("dragover"); });
+          col.addEventListener("drop", function (e) {
+            e.preventDefault();
+            col.classList.remove("dragover");
+            if (!dragCard) return;
+            var boardEl = col.closest(".board");
+            if (boardEl.dataset.board !== dragFrom.board) return;
+            var board = BOARDS.filter(function (b) { return b.id === dragFrom.board; })[0];
+            var fromCards = board.columns[dragFrom.col].cards;
+            var idx = Array.prototype.indexOf.call(dragFrom.el.parentNode.querySelectorAll(".card"), dragFrom.el);
+            // Find the card object by matching rendered order among visible siblings
+            var siblings = dragFrom.el.closest(".col").querySelectorAll(".card");
+            var pos = Array.prototype.indexOf.call(siblings, dragFrom.el);
+            var obj = fromCards[pos];
+            fromCards.splice(pos, 1);
+            board.columns[+col.dataset.col].cards.push(obj);
+            var input = document.getElementById("cardFilter");
+            renderBoards(input ? input.value : "");
+          });
+        });
+        var input = document.getElementById("cardFilter");
+        if (input) {
+          input.addEventListener("input", function () { applyFilter(input.value); });
+        }
+      }
+
+      renderBoards("");
+    </script>
+  </body>
+</html>
