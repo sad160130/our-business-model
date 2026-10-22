@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light"/>
+<link rel="icon" href="data:,"/>
+<title>Our Business Model — Visual Explainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A1628; --ink2:#0F2242; --paper:#FFF8EE; --paper2:#FFF1DC;
+  --amber:#FF8A00; --amber2:#FFB020; --amber-soft:#FFE3B3;
+  --text:#16233B; --muted:#5A6B84; --line:#E7D9C3;
+  --card:#FFFFFF; --radius:18px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:'Archivo',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--amber);color:var(--ink)}
+.mono{font-family:'JetBrains Mono',monospace}
+a{color:inherit}
+
+/* ---------- TICKER ---------- */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:10px 0;border-bottom:3px solid var(--amber);position:relative;z-index:5}
+.ticker-track{display:inline-flex;gap:0;animation:tick 28s linear infinite;will-change:transform}
+.ticker span{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0 18px}
+.ticker b{color:var(--amber2)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--ink);color:#fff;padding:56px 20px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:64px solid rgba(255,138,0,.16);pointer-events:none}
+.hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.45);color:var(--amber2);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
+h1.hero-title{font-size:clamp(44px,9vw,104px);line-height:.92;font-weight:900;letter-spacing:-.03em;margin:22px 0 0;text-transform:uppercase}
+h1.hero-title em{font-style:normal;color:var(--amber)}
+h1.hero-title .outline{color:transparent;-webkit-text-stroke:2px #fff}
+.hero-sub{font-size:clamp(18px,3vw,26px);line-height:1.35;font-weight:600;max-width:720px;margin:22px 0 0;color:#E8EEF7}
+.hero-sub b{color:var(--amber2)}
+.hero-note{margin-top:14px;color:#9FB2CC;font-size:15px;max-width:640px;line-height:1.55}
+.hero-note strong{color:#fff}
+.counters{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.14);margin:44px -20px 0;border-top:1px solid rgba(255,255,255,.14)}
+.counter{background:var(--ink2);padding:22px 16px 26px;text-align:left;transition:background .25s}
+.counter:hover{background:#16305C}
+.counter .num{font-size:clamp(30px,4.5vw,52px);font-weight:900;letter-spacing:-.02em;line-height:1;color:#fff}
+.counter .num .unit{color:var(--amber);font-size:.55em}
+.counter .lbl{margin-top:8px;font-size:12.5px;line-height:1.4;color:#A9BBD6;font-weight:600}
+@media(max-width:820px){.counters{grid-template-columns:repeat(2,1fr)}.counter:last-child{grid-column:1/-1}}
+
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0 8px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.sec-no{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;letter-spacing:.18em;color:var(--amber);text-transform:uppercase;display:block;margin-bottom:10px}
+h2{font-size:clamp(32px,5.5vw,58px);line-height:.98;font-weight:900;letter-spacing:-.025em;text-transform:uppercase;margin:0;color:var(--ink)}
+h2 em{font-style:normal;color:var(--amber)}
+.sec-lede{font-size:17px;line-height:1.55;color:var(--muted);max-width:520px;margin:0;font-weight:500}
+
+/* reveal — elements are visible by default; JS hides only below-fold ones, then reveals on scroll */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.rv.pre{opacity:0;transform:translateY(26px)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+/* ---------- ASSET CARDS ---------- */
+.assets{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.asset{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;transition:transform .25s, box-shadow .25s, border-color .25s}
+.asset:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 18px 36px rgba(10,22,40,.12);border-color:var(--amber)}
+.asset .big-no{position:absolute;right:14px;top:6px;font-size:64px;font-weight:900;color:var(--paper2);line-height:1;z-index:0}
+.asset>*{position:relative;z-index:1}
+.asset .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:5px 9px;border-radius:6px}
+.asset .tag.amber{background:var(--amber);color:var(--ink)}
+.asset h3{font-size:21px;font-weight:800;line-height:1.15;margin:14px 0 8px;color:var(--ink)}
+.asset p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:0}
+.asset p b{color:var(--text)}
+.asset.wide{grid-column:span 3}.asset.third{grid-column:span 2}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;background:var(--paper2);border:1px solid var(--line);padding:5px 8px;border-radius:999px;color:var(--ink)}
+@media(max-width:820px){.assets{grid-template-columns:1fr}.asset.wide,.asset.third{grid-column:span 1}}
+
+/* ---------- FLYWHEEL ---------- */
+.fly-sec{background:var(--ink);border-radius:28px;padding:44px 28px 36px;color:#fff;margin-top:64px;position:relative;overflow:hidden}
+.fly-sec::before{content:"FLYWHEEL";position:absolute;left:50%;top:18px;transform:translateX(-50%);font-size:clamp(60px,12vw,150px);font-weight:900;letter-spacing:.02em;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none}
+.fly-sec h2{color:#fff}
+.fly-sec .sec-lede{color:#A9BBD6}
+.fly-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;position:relative;z-index:1}
+@media(max-width:900px){.fly-grid{grid-template-columns:1fr}}
+.wheel-box{position:relative;max-width:520px;margin:0 auto;width:100%}
+svg.wheel{width:100%;height:auto;display:block}
+.ring-rot{transform-origin:260px 260px;animation:spin 40s linear infinite}
+.ring-rot.paused{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.node{cursor:pointer}
+.node circle.face{fill:#13294D;stroke:#33507E;stroke-width:2;transition:all .3s}
+.node text{fill:#fff;font-family:'Archivo',sans-serif;font-weight:800;pointer-events:none}
+.node .n-num{font-size:22px}
+.node.active circle.face{fill:var(--amber);stroke:var(--amber2);stroke-width:3}
+.node.active text{fill:var(--ink)}
+.node:hover circle.face{stroke:var(--amber2)}
+.center-label{fill:#fff;font-family:'Archivo',sans-serif;font-weight:900;text-anchor:middle}
+.center-sub{fill:#8FA6C6;font-family:'JetBrains Mono',monospace;text-anchor:middle}
+.fly-panel{background:#0F2242;border:1.5px solid #2A4470;border-radius:18px;padding:26px;min-height:280px}
+.fly-panel .step-k{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--amber2);text-transform:uppercase}
+.fly-panel h3{font-size:26px;font-weight:800;line-height:1.15;margin:10px 0 10px;color:#fff}
+.fly-panel p{font-size:15.5px;line-height:1.6;color:#C4D2E6;margin:0}
+.fly-controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{appearance:none;border:0;cursor:pointer;font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .15s, background .2s}
+.btn:active{transform:scale(.96)}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{background:var(--amber2)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid #3A5A8C}
+.btn-ghost:hover{border-color:var(--amber2);color:var(--amber2)}
+.fly-dots{display:flex;gap:7px;margin-top:18px;flex-wrap:wrap}
+.fly-dots button{width:34px;height:34px;border-radius:50%;border:1.5px solid #3A5A8C;background:transparent;color:#C4D2E6;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;cursor:pointer;transition:all .2s}
+.fly-dots button.on{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.progress{height:6px;background:#1B3560;border-radius:99px;overflow:hidden;margin-top:18px}
+.progress i{display:block;height:100%;background:var(--amber);width:0%;transition:width .4s}
+
+/* ---------- MONEY ---------- */
+.legs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:820px){.legs{grid-template-columns:1fr}}
+.leg{border-radius:var(--radius);padding:28px;position:relative;overflow:hidden}
+.leg-1{background:var(--ink);color:#fff}
+.leg-2{background:var(--amber);color:var(--ink)}
+.leg .leg-k{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.leg h3{font-size:27px;font-weight:900;line-height:1.05;margin:12px 0 12px;text-transform:uppercase}
+.leg p{font-size:15px;line-height:1.6;margin:0 0 12px}
+.leg-1 p{color:#C4D2E6}.leg-2 p{color:#3D2A00}
+.leg p b{color:inherit}
+.leg .hl{font-weight:900;font-size:19px}
+.leg-1 .hl{color:var(--amber2)}.leg-2 .hl{color:var(--ink)}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.flow span{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:7px 10px;border-radius:8px}
+.leg-1 .flow span{background:#1B3560;color:#fff}
+.leg-2 .flow span{background:rgba(10,22,40,.12);color:var(--ink)}
+.flow i{font-style:normal;font-weight:900}
+.calc{margin-top:14px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:1.15fr .85fr;gap:32px}
+@media(max-width:820px){.calc{grid-template-columns:1fr}}
+.calc h3{margin:0 0 6px;font-size:22px;font-weight:800;color:var(--ink)}
+.calc .sub{font-size:14px;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.slider-row{margin-bottom:24px}
+.slider-row label{display:flex;justify-content:space-between;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:10px}
+.slider-row label output{font-family:'JetBrains Mono',monospace;color:var(--amber);font-weight:700}
+input[type=range]{width:100%;accent-color:var(--amber);height:28px;cursor:pointer}
+.take{background:var(--ink);border-radius:14px;color:#fff;padding:26px;display:flex;flex-direction:column;justify-content:center;text-align:left;position:relative;overflow:hidden}
+.take::after{content:"$";position:absolute;right:-6px;bottom:-38px;font-size:150px;font-weight:900;color:rgba(255,138,0,.18);line-height:1}
+.take .t-k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber2);font-weight:700}
+.take .t-num{font-size:clamp(40px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1;margin:10px 0 8px}
+.take .t-sub{font-size:13.5px;color:#A9BBD6;line-height:1.5;position:relative;z-index:1}
+.calc-note{grid-column:1/-1;font-size:13.5px;line-height:1.55;color:var(--muted);border-top:1px dashed var(--line);padding-top:16px;margin:0}
+.calc-note b{color:var(--ink)}
+
+/* ---------- PIPELINE ---------- */
+.pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.pipe{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pipe{grid-template-columns:1fr}}
+.pcard{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .25s, box-shadow .25s}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(10,22,40,.11)}
+.pcard.hot{border-color:var(--amber);background:linear-gradient(180deg,#FFF6E6,#fff)}
+.status{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--paper2);color:var(--ink)}
+.status i{width:7px;height:7px;border-radius:50%;background:#2E9E5B;display:inline-block}
+.status.live i{background:#E33;animation:pulse 1.2s infinite}
+.status.soon i{background:var(--amber);animation:pulse 1.8s infinite}
+.pcard h3{font-size:19px;font-weight:800;line-height:1.2;margin:13px 0 8px;color:var(--ink)}
+.pcard p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+.pcard p b{color:var(--text)}
+.pcard .amt{margin-top:14px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:var(--amber);background:#FFF3DF;display:inline-block;padding:6px 9px;border-radius:8px}
+.pipe-math{margin-top:14px;background:var(--ink);color:#fff;border-radius:var(--radius);padding:26px 28px;display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.pipe-math .pm-big{font-size:clamp(26px,4vw,40px);font-weight:900;line-height:1.05}
+.pipe-math .pm-big em{font-style:normal;color:var(--amber2)}
+.pipe-math p{margin:0;font-size:14.5px;line-height:1.55;color:#C4D2E6;max-width:460px}
+
+/* ---------- PEOPLE ---------- */
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.people{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.people{grid-template-columns:1fr}}
+.person{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .25s}
+.person:hover{transform:translateY(-5px) rotate(.4deg)}
+.person.true{border-color:var(--amber);background:linear-gradient(180deg,#FFF6E6,#fff);box-shadow:0 10px 24px rgba(255,138,0,.12)}
+.avatar{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;color:#fff;background:var(--ink)}
+.person.amber .avatar{background:var(--amber);color:var(--ink)}
+.person .role{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-top:16px;display:block}
+.person h3{font-size:20px;font-weight:800;margin:7px 0 3px;color:var(--ink);line-height:1.15}
+.person .org{font-size:13px;font-weight:700;color:var(--muted)}
+.person p{font-size:14px;line-height:1.55;color:var(--muted);margin:10px 0 0}
+.person p b{color:var(--text)}
+.bench{margin-top:14px;background:var(--paper2);border:1.5px dashed #D9C49A;border-radius:var(--radius);padding:22px 24px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.bench strong{font-size:17px;color:var(--ink)}
+.bench .trades{display:flex;gap:6px;flex-wrap:wrap}
+
+/* ---------- WEEK / AGENDA ---------- */
+.week-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+@media(max-width:820px){.week-grid{grid-template-columns:1fr}}
+.todo{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:10px 24px}
+.todo-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--paper2)}
+.todo-item:last-child{border-bottom:0}
+.todo-num{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
+.todo-item.urgent .todo-num{background:#E33}
+.todo-item h4{margin:2px 0 5px;font-size:16.5px;font-weight:800;color:var(--ink)}
+.todo-item p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+.todo-item p b{color:var(--text)}
+.agenda{background:var(--ink);border-radius:var(--radius);padding:28px;color:#fff}
+.agenda h3{margin:0 0 4px;font-size:22px;font-weight:900;text-transform:uppercase}
+.agenda .a-sub{color:#A9BBD6;font-size:14px;margin:0 0 20px}
+.a-row{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.a-row:last-child{border-bottom:0}
+.a-time{flex:0 0 74px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--amber2);font-size:14px}
+.a-row div b{display:block;font-size:15.5px}
+.a-row div span{font-size:13px;color:#A9BBD6;line-height:1.45;display:block;margin-top:2px}
+.a-bar{height:8px;border-radius:99px;background:#1B3560;overflow:hidden;display:flex;margin-top:20px}
+.a-bar i{display:block;height:100%}
+
+/* ---------- RULES ---------- */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.rules{grid-template-columns:1fr}}
+.rule{border-radius:var(--radius);padding:26px 28px;font-size:clamp(20px,2.6vw,27px);font-weight:900;line-height:1.2;letter-spacing:-.01em;transition:transform .25s}
+.rule:hover{transform:scale(1.02)}
+.rule small{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;opacity:.65}
+.rule.dark{background:var(--ink);color:#fff}
+.rule.amber{background:var(--amber);color:var(--ink)}
+.rule.light{background:var(--card);border:1.5px solid var(--line);color:var(--ink)}
+.rule em{font-style:normal;text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:4px;text-underline-offset:4px}
+.rule.amber em{text-decoration-color:var(--ink)}
+
+footer{margin-top:80px;background:var(--ink);color:#fff;padding:44px 20px 54px;text-align:center}
+footer .f-big{font-size:clamp(24px,4.5vw,42px);font-weight:900;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em}
+footer .f-big em{font-style:normal;color:var(--amber)}
+footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains Mono',monospace;letter-spacing:.06em}
+@media(max-width:640px){
+  .hero::after{width:240px;height:240px;border-width:38px;right:-110px;top:-90px;opacity:.55}
+}
+@media (prefers-reduced-motion: reduce){
+  .ticker-track,.ring-rot,.kicker i,.status i{animation:none!important}
+  .rv{opacity:1!important;transform:none!important;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker"><i></i> For Tim — the 90-minute catch-up, on one page</span>
+    <h1 class="hero-title">We built a<br><em>machine</em> that<br><span class="outline">finds door work</span></h1>
+    <p class="hero-sub">…and gets our partners <b>paid.</b> Charlotte Commercial Doors is a demand + coordination company for commercial doors.</p>
+    <p class="hero-note">Plain version: <strong>we don't install doors and we're not a general contractor.</strong> We find the work, match it to the right door company, and coordinate it until it's won. This page is the whole business — scroll it before our Zoom.</p>
+    <div class="counters" id="counters">
+      <div class="counter"><div class="num"><span data-count="10">0</span></div><div class="lbl">Websites live in Charlotte — all ranking, all call-tracked</div></div>
+      <div class="counter"><div class="num"><span data-count="2">0</span></div><div class="lbl">True partners doing the work — Doug &amp; Jerry, out of 53 companies tracked</div></div>
+      <div class="counter"><div class="num"><span data-count="6">0</span></div><div class="lbl">Automated scanners hunting work around the clock</div></div>
+      <div class="counter"><div class="num"><span data-count="2">0</span></div><div class="lbl">Ways we make money — margin + monthly calls</div></div>
+      <div class="counter"><div class="num"><span class="unit">$</span><span data-count="10">0</span><span class="unit">K/mo</span></div><div class="lbl">Recurring revenue target we're building toward</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- SECTION 2: WHAT WE BUILT -->
+<section id="built">
+  <div class="sec-head rv">
+    <div><span class="sec-no">01 — The Assets</span><h2>What we<br><em>built</em></h2></div>
+    <p class="sec-lede">Five assets, all live. Together they turn "a facility manager has a broken door" into paid work for a partner — without us ever picking up a tool.</p>
+  </div>
+  <div class="assets">
+    <article class="asset wide rv">
+      <span class="big-no">10</span><span class="tag amber">Asset 01 · Demand</span>
+      <h3>The 10 Charlotte websites</h3>
+      <p>Exact-match domains like <b>charlottecommercialdoors.com</b> that rank on Google the moment a facility manager searches for commercial door help. Ten sites, one city, every angle of the search covered. <b>Every call is tracked</b> through WhatConverts — we know exactly which site produced which job.</p>
+      <div class="chips"><span class="chip">charlottecommercialdoors.com</span><span class="chip">+ 9 more</span><span class="chip">WhatConverts tracked</span><span class="chip">No paid ads — ever</span></div>
+    </article>
+    <article class="asset wide rv d1">
+      <span class="big-no">24/7</span><span class="tag">Asset 02 · Hunting</span>
+      <h3>The scanner engine</h3>
+      <p>Automated systems scanning <b>bid boards, GC portals, Facebook and both inboxes every hour</b> — plus a daily deep sweep — hunting two things: construction projects with door packages, and customers with door problems right now. Nothing waits for a human to notice it.</p>
+      <div class="chips"><span class="chip">Hourly scans</span><span class="chip">Daily deep sweep</span><span class="chip">Bid boards + GC portals</span><span class="chip">Facebook + inboxes</span></div>
+    </article>
+    <article class="asset third rv">
+      <span class="big-no">2</span><span class="tag">Asset 03 · Supply</span>
+      <h3>Two true partners + the bench</h3>
+      <p><b>Doug Adams and Jerry Richards are our true partners</b> — the ones quoting, bidding and confirmed on live work. Behind them sits a bench of <b>53 tracked companies</b>, vetted by trade and scored by Google reviews — but work routes to Doug and Jerry first.</p>
+      <div class="chips"><span class="chip">Doug · Glass &amp; Door Pro</span><span class="chip">Jerry · Apollo Door Systems</span><span class="chip">53-company bench behind them</span></div>
+    </article>
+    <article class="asset third rv d1">
+      <span class="big-no">FB</span><span class="tag">Asset 04 · Public face</span>
+      <h3>Premier Commercial Door Service of Charlotte</h3>
+      <p>Our public Facebook page — and the face of our <b>private group for facility managers &amp; door pros</b>. That's where the market talks, and where we hear about problems before anyone bids on them.</p>
+    </article>
+    <article class="asset third rv d2">
+      <span class="big-no">ATL</span><span class="tag amber">Asset 05 · Next city</span>
+      <h3>The Atlanta pocket</h3>
+      <p><b>12 Atlanta domains verified available</b> — the entire Charlotte playbook, ready to clone. Jerry / Apollo operates locally. Charlotte proves it, Atlanta scales it.</p>
+      <div class="chips"><span class="chip">12 domains ready</span><span class="chip">Jerry = local operator</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- SECTION 3: FLYWHEEL -->
+<section id="flywheel">
+  <div class="fly-sec rv">
+    <div class="sec-head">
+      <div><span class="sec-no" style="color:var(--amber2)">02 — The Engine</span><h2>The <em>flywheel</em></h2></div>
+      <p class="sec-lede">Seven steps. Each turn makes the next one easier — and faster. Tap any step, or just let it spin.</p>
+    </div>
+    <div class="fly-grid">
+      <div class="wheel-box">
+        <svg class="wheel" viewBox="0 0 520 520" role="group" aria-label="Business flywheel diagram">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A00"/></marker>
+          </defs>
+          <g class="ring-rot" id="ringRot">
+            <circle cx="260" cy="260" r="196" fill="none" stroke="#2A4470" stroke-width="26" stroke-dasharray="6 14" opacity=".8"/>
+            <path d="M 260 44 A 216 216 0 1 1 259 44" fill="none" stroke="#FF8A00" stroke-width="3" marker-end="url(#arr)" opacity=".9"/>
+          </g>
+          <circle cx="260" cy="260" r="118" fill="#0A1628" stroke="#2A4470" stroke-width="1.5"/>
+          <text class="center-label" x="260" y="248" font-size="25">EVERY TURN</text>
+          <text class="center-label" x="260" y="278" font-size="25" fill="#FFB020">PAYS FOR</text>
+          <text class="center-label" x="260" y="308" font-size="25">THE NEXT</text>
+          <text class="center-sub" x="260" y="336" font-size="11" letter-spacing="2">CHARLOTTE COMMERCIAL DOORS</text>
+          <g id="nodes"></g>
+        </svg>
+      </div>
+      <div>
+        <div class="fly-panel" aria-live="polite">
+          <span class="step-k" id="flyStepK">Step 1 of 7</span>
+          <h3 id="flyTitle">Our websites rank on Google</h3>
+          <p id="flyBody">Ten exact-match Charlotte sites sit where facility managers already look. When a door breaks or a project posts, we're the result they find — no ads, no cold outreach needed to start the conversation.</p>
+          <div class="progress"><i id="flyProg"></i></div>
+          <div class="fly-dots" id="flyDots"></div>
+          <div class="fly-controls">
+            <button class="btn btn-amber" id="flyToggle" type="button">⏸ Pause the wheel</button>
+            <button class="btn btn-ghost" id="flyNext" type="button">Next step →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: MONEY -->
+<section id="money">
+  <div class="sec-head rv">
+    <div><span class="sec-no">03 — The Money</span><h2>How we<br><em>make money</em></h2></div>
+    <p class="sec-lede">Two legs. One pays in big project spikes, one pays every month. Neither involves us installing anything — or selling raw leads.</p>
+  </div>
+  <div class="legs">
+    <article class="leg leg-1 rv">
+      <span class="leg-k">Leg 1 · Project money</span>
+      <h3>Coordination margin</h3>
+      <p>We source the construction project, line up the installer as <b>bidder of record</b>, and coordinate scope, quotes and scheduling so nothing falls through. When the partner wins, we take an agreed margin:</p>
+      <p class="hl">10–15% of the package — agreed on a call, before bid day.</p>
+      <p>We are never the GC. We never sell raw leads. The partner bids in their own name and does the work in their own name.</p>
+      <div class="flow"><span>WE FIND IT</span><i>→</i><span>PARTNER BIDS IT</span><i>→</i><span>PARTNER WINS</span><i>→</i><span>WE TAKE 10–15%</span></div>
+    </article>
+    <article class="leg leg-2 rv d1">
+      <span class="leg-k">Leg 2 · Monthly money</span>
+      <h3>Rank-and-rent calls</h3>
+      <p>The 10 websites produce qualified phone calls every month. Partners pay for that flow — a steady base under the project spikes.</p>
+      <p class="hl">Doug / Glass &amp; Door Pro is our first monthly-paying partner.</p>
+      <p>The target for this leg: <b>$10,000/month recurring</b> — the number that makes the whole machine self-funding.</p>
+      <div class="flow"><span>SITES RANK</span><i>→</i><span>CALLS COME IN</span><i>→</i><span>PARTNER PAYS MONTHLY</span><i>→</i><span>REPEAT</span></div>
+    </article>
+  </div>
+
+  <div class="calc rv">
+    <div>
+      <h3>Try the math — Leg 1 calculator</h3>
+      <p class="sub">Drag the sliders. This is the conversation we have with a partner on a call before any bid goes in.</p>
+      <div class="slider-row">
+        <label>Project / package size <output id="pkgOut">$250,000</output></label>
+        <input type="range" id="pkg" min="50000" max="1500000" step="10000" value="250000" aria-label="Package size in dollars">
+      </div>
+      <div class="slider-row">
+        <label>Our margin <output id="mgnOut">10%</output></label>
+        <input type="range" id="mgn" min="10" max="15" step="0.5" value="10" aria-label="Margin percent">
+      </div>
+    </div>
+    <div class="take">
+      <span class="t-k">Our take on this package</span>
+      <div class="t-num" id="takeNum">$25,000</div>
+      <div class="t-sub" id="takeSub">On a $250,000 package at 10% — partner keeps $225,000 and the whole job.</div>
+    </div>
+    <p class="calc-note"><b>The honest picture:</b> project money is lumpy — it spikes when packages land. Call money is the monthly base. The two legs together are the business: spikes fund growth, the base keeps the lights on.</p>
+  </div>
+</section>
+
+<!-- SECTION 5: PIPELINE -->
+<section id="pipeline">
+  <div class="sec-head rv">
+    <div><span class="sec-no">04 — Right now</span><h2>Live <em>pipeline</em></h2></div>
+    <p class="sec-lede">This isn't theory. These are real projects in motion this week — found by the scanners, matched to partners, moving toward bid day.</p>
+  </div>
+  <div class="pipe">
+    <article class="pcard rv">
+      <span class="status soon"><i></i> Decision gate · Oct 30</span>
+      <h3>China Grove manufacturing facility</h3>
+      <p>Glazing proposal of <b>$149,345 already submitted</b>. Total door scope estimated at <b>$225–325K</b> across storefront, hollow metal and overhead. Jerry / Apollo is quoting the openings. <b>Doug has confirmed early-to-mid December delivery for all materials — including the AASD-1 automatic entrance</b> — and his revised proposal arrives <b>tomorrow, Fri Oct 23</b>.</p>
+      <span class="amt">SCOPE ≈ $225–325K · DELIVERY EARLY–MID DEC</span>
+    </article>
+    <article class="pcard rv d1">
+      <span class="status"><i></i> Cancelled</span>
+      <h3>Blackburn Operator's Building</h3>
+      <p><b>Cancelled.</b> Wilkie Construction is no longer doing the job, so today's 3 PM bid is off and Doug's storefront pricing is stood down. The scanner found it and a partner was ready — the project itself went away.</p>
+      <span class="amt">OFF THE BOARD · NO BID TODAY</span>
+    </article>
+    <article class="pcard rv d2">
+      <span class="status soon"><i></i> Prequal due · Nov 12</span>
+      <h3>Huntersville Fire Station #5</h3>
+      <p>Partner prequalification due <b>November 12</b>. <b>Doug confirmed as glazing bidder.</b> Jerry has even offered to project-manage it.</p>
+      <span class="amt">GLAZING · DOUG CONFIRMED</span>
+    </article>
+    <article class="pcard rv">
+      <span class="status"><i></i> Prequal due · Dec 11</span>
+      <h3>Asheville-Oakley Fire Station #9</h3>
+      <p>Second fire station in the run. Prequalification due <b>December 11</b> — same playbook as Huntersville, Doug on glazing.</p>
+      <span class="amt">PREQUAL · DEC 11</span>
+    </article>
+    <article class="pcard rv d1">
+      <span class="status soon"><i></i> Proposals due · Oct 30</span>
+      <h3>IFB Solutions expansion</h3>
+      <p>Winston-Salem expansion with proposals due <b>October 30</b> — includes <b>six dock doors</b>. Dock bench is lined up behind it.</p>
+      <span class="amt">INCLUDES 6 DOCK DOORS</span>
+    </article>
+    <article class="pcard hot rv d2">
+      <span class="status"><i></i> Biggest in the pipeline</span>
+      <h3>Firetower 77 — Rock Hill</h3>
+      <p>A <b>1,000,000 SF logistics center</b>. The dock package alone is estimated at <b>$700K–$1.5M</b> — one win here changes the year.</p>
+      <span class="amt">DOCK PACKAGE ≈ $700K–$1.5M</span>
+    </article>
+  </div>
+  <div class="pipe-math rv">
+    <div class="pm-big">If it all lands:<br><em>$65–113K</em> to us</div>
+    <p>At a 10% margin across the pipeline over roughly 6 months. Realistically, about a third of it lands — which is exactly why the flywheel keeps hunting: more projects in, more chances to win.</p>
+  </div>
+</section>
+
+<!-- SECTION 6: PEOPLE -->
+<section id="people">
+  <div class="sec-head rv">
+    <div><span class="sec-no">05 — The People</span><h2>Who does<br><em>what</em></h2></div>
+    <p class="sec-lede">Snket and Tim run the machine. Doug and Jerry are the true partners doing the work. A 53-company bench sits behind them.</p>
+  </div>
+  <div class="people">
+    <article class="person rv">
+      <div class="avatar">SD</div>
+      <span class="role">Founder · Charlotte</span>
+      <h3>Snket Desai</h3>
+      <p>Runs the <b>demand engine, coordination and strategy</b> — the websites, the scanners, the matching, the plan. If a job exists, Snket's machine found it.</p>
+    </article>
+    <article class="person amber rv d1">
+      <div class="avatar">TL</div>
+      <span class="role">Sales &amp; Relationships · Erie, PA</span>
+      <h3>Tim Lamb</h3>
+      <p><b>That's you.</b> Partner calls, GC calls, follow-up calls. The voice of the business — every relationship on the bench runs through Tim.</p>
+    </article>
+    <article class="person true rv d2">
+      <div class="avatar">DA</div>
+      <span class="role">True Partner · Glazing</span>
+      <h3>Doug Adams</h3>
+      <div class="org">Glass &amp; Door Pro</div>
+      <p>One of our <b>two true partners</b> — and the first monthly-paying one. Confirmed bidder on both fire stations. On China Grove he's confirmed <b>early-to-mid December delivery on all materials, AASD-1 included</b>, with his revised proposal landing Fri Oct 23. Glazing work routes to Doug first.</p>
+    </article>
+    <article class="person true rv d3">
+      <div class="avatar">JR</div>
+      <span class="role">True Partner · DFH, Overhead &amp; Atlanta</span>
+      <h3>Jerry Richards</h3>
+      <div class="org">Apollo Door Systems</div>
+      <p>One of our <b>two true partners</b>. A reciprocity partner — we feed each other work. Quoting China Grove now, offered to project-manage Huntersville, and he's our man on the ground for Atlanta.</p>
+    </article>
+  </div>
+  <div class="bench rv">
+    <strong>+ The bench: 53 companies tracked by trade — prospects &amp; backups, not partners yet</strong>
+    <div class="trades"><span class="chip">Glazing</span><span class="chip">Doors / Frames / Hardware</span><span class="chip">Overhead</span><span class="chip">Dock</span><span class="chip">Automatic entrances</span></div>
+  </div>
+</section>
+
+<!-- SECTION 7: TIM'S WEEK + AGENDA -->
+<section id="week">
+  <div class="sec-head rv">
+    <div><span class="sec-no">06 — Your move, Tim</span><h2>Tim's week &amp;<br><em>the Zoom</em></h2></div>
+    <p class="sec-lede">Five things only Tim can do — and how we'll spend our 90 minutes together before the week ends.</p>
+  </div>
+  <div class="week-grid">
+    <div class="todo rv">
+      <div class="todo-item urgent">
+        <div class="todo-num">1</div>
+        <div><h4>China Grove — Doug's revised proposal lands tomorrow</h4><p>Doug confirmed <b>early-to-mid December delivery for all materials, including the AASD-1 automatic entrance</b>. His revised proposal arrives <b>Fri Oct 23</b> — be ready to move it to Akhil the moment it lands. (Blackburn is off: Wilkie is no longer doing the job, so no 3 PM bid today.)</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-num">2</div>
+        <div><h4>The Jerry meeting</h4><p>Jerry wants to meet us. It's set for <b>next week — we need your availability</b> to lock it in. He's quoting China Grove and offering to PM Huntersville; this relationship is worth the hour.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-num">3</div>
+        <div><h4>Samet Corp call</h4><p>One question to answer: what's the <b>buyout status on Charlotte Firehouse 44</b>? A short call settles whether there's a live package or not.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-num">4</div>
+        <div><h4>Three September callers still waiting</h4><p>Real customers from our own sites who called in September and still haven't had a first call back. <b>Jim Ringley is the hottest</b> — storefront repair, and he asked to get it scheduled.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-num">5</div>
+        <div><h4>Facilities follow-up calls</h4><p>Warm facility contacts to work through — starting with <b>Childress Klein's Margaret Leach, who has a direct line</b>. Relationships first; the work follows.</p></div>
+      </div>
+    </div>
+    <div class="agenda rv d1">
+      <h3>The 90-Minute Zoom</h3>
+      <p class="a-sub">Before the week ends · Snket + Tim</p>
+      <div class="a-row"><div class="a-time">20 min</div><div><b>The model</b><span>This page — the machine, the flywheel, the two money legs.</span></div></div>
+      <div class="a-row"><div class="a-time">30 min</div><div><b>Live pipeline walk-through</b><span>China Grove, both fire stations, IFB, Firetower — where each one stands. Blackburn is cancelled and off the board.</span></div></div>
+      <div class="a-row"><div class="a-time">25 min</div><div><b>Partners &amp; who to call</b><span>Doug &amp; Jerry first — who responds, who needs a nudge, and who gets routed what.</span></div></div>
+      <div class="a-row"><div class="a-time">15 min</div><div><b>Next-week commitments</b><span>Leave with names, calls and dates — nothing vague.</span></div></div>
+      <div class="a-bar" aria-hidden="true"><i style="width:22%;background:#FF8A00"></i><i style="width:33%;background:#FFB020"></i><i style="width:28%;background:#5B83C4"></i><i style="width:17%;background:#fff"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: RULES -->
+<section id="rules">
+  <div class="sec-head rv">
+    <div><span class="sec-no">07 — Non-negotiables</span><h2>Rules of<br><em>the game</em></h2></div>
+    <p class="sec-lede">Six rules. They never bend — they're why partners trust us and why the model works.</p>
+  </div>
+  <div class="rules">
+    <div class="rule dark rv"><small>Rule 01</small>We <em>never</em> install.</div>
+    <div class="rule light rv d1"><small>Rule 02</small>The partner is <em>always</em> the bidder of record.</div>
+    <div class="rule amber rv"><small>Rule 03</small>Money is agreed on a call <em>before bid day</em> — never in a first email.</div>
+    <div class="rule light rv d1"><small>Rule 04</small>No paid ads. <em>Ever.</em></div>
+    <div class="rule light rv"><small>Rule 05</small>No Google Business Profiles — <em>websites only.</em></div>
+    <div class="rule dark rv d1"><small>Rule 06</small>Every opportunity's stage gets <em>verified</em> before we engage. We learned that one the hard way.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-big">Find the work.<br>Match the partner.<br><em>Get everyone paid.</em></div>
+  <p>BUILT FOR TIM'S CATCH-UP — CHARLOTTE COMMERCIAL DOORS · OCTOBER 2026</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- Ticker ---- */
+  var items = ["10 WEBSITES LIVE","2 TRUE PARTNERS — DOUG + JERRY","6 SCANNERS RUNNING","$10K/MO TARGET","WE NEVER INSTALL","PARTNER IS ALWAYS BIDDER OF RECORD","NO PAID ADS — EVER","ATLANTA IS NEXT"];
+  var html = items.map(function(t){return "<span>"+t+" <b>◆</b></span>";}).join("");
+  document.getElementById("tickerTrack").innerHTML = html + html;
+
+  /* ---- Counters ---- */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute("data-count"),10);
+    if(reduced){ el.textContent = target; return; }
+    var start = null, dur = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = Math.round(target * eased);
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counted = false;
+  var cObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !counted){
+        counted = true;
+        document.querySelectorAll("[data-count]").forEach(animateCount);
+        cObs.disconnect();
+      }
+    });
+  },{threshold:.3});
+  cObs.observe(document.getElementById("counters"));
+
+  /* ---- Scroll reveals (fail-safe: content is visible even if the observer never fires) ---- */
+  var rvEls = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+  if("IntersectionObserver" in window && !reduced){
+    var vh = window.innerHeight || 900;
+    rvEls.forEach(function(el){
+      if(el.getBoundingClientRect().top > vh + 240){ el.classList.add("pre"); }
+    });
+    var rObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); e.target.classList.remove("pre"); rObs.unobserve(e.target); } });
+    },{threshold:.08, rootMargin:"0px 0px 240px 0px"});
+    rvEls.forEach(function(el){ rObs.observe(el); });
+    setTimeout(function(){ rvEls.forEach(function(el){ el.classList.add("in"); el.classList.remove("pre"); }); }, 5000);
+  }
+
+  /* ---- Flywheel ---- */
+  var steps = [
+    {t:"Our websites rank on Google", b:"Ten exact-match Charlotte sites sit where facility managers already look. When a door breaks or a project posts, we're the result they find — no ads, no cold outreach needed to start the conversation."},
+    {t:"Work flows in — calls & bid opportunities", b:"Facility managers call the sites. GCs and owners post projects with door packages. The scanners catch both, around the clock, so demand arrives as a stream — not whenever someone remembers to look."},
+    {t:"We match the job to the right partner", b:"Every job gets matched by trade and service area to our two true partners first — glazing to Doug, doors, frames, hardware and overhead to Jerry. The wider 53-company bench is backup; Doug and Jerry are who the work actually goes to."},
+    {t:"The partner bids — as bidder of record", b:"The partner prices it, bids it in their own name, and owns the customer relationship on the job. We're never the GC and never in their way — we put them in the room."},
+    {t:"We coordinate so nothing falls through", b:"Scope, drawings, quotes, scheduling, follow-ups — we run the middle. The China Grove job is the live example: three vendors, one customer, one coordinator keeping it moving."},
+    {t:"The partner pays us", b:"Two ways: a 10–15% coordination margin on won packages — agreed on a call before bid day — and monthly rank-and-rent payments for the call flow, like Doug's. Partner wins work, we take our agreed piece."},
+    {t:"Revenue funds more websites & new cities", b:"Winnings don't sit still. They fund the next domains, the next city, the bigger bench. Atlanta's 12 domains are already verified and waiting — then the wheel spins again, faster."}
+  ];
+  var CX=260, CY=260, R=196, nodesG=document.getElementById("nodes");
+  var NS="http://www.w3.org/2000/svg";
+  var nodeEls=[];
+  steps.forEach(function(s,i){
+    var ang = (-90 + i*(360/steps.length)) * Math.PI/180;
+    var x = CX + R*Math.cos(ang), y = CY + R*Math.sin(ang);
+    var g = document.createElementNS(NS,"g");
+    g.setAttribute("class","node"); g.setAttribute("tabindex","0");
+    g.setAttribute("role","button"); g.setAttribute("aria-label","Flywheel step "+(i+1)+": "+s.t);
+    var c = document.createElementNS(NS,"circle");
+    c.setAttribute("cx",x); c.setAttribute("cy",y); c.setAttribute("r","34"); c.setAttribute("class","face");
+    var t = document.createElementNS(NS,"text");
+    t.setAttribute("x",x); t.setAttribute("y",y+8); t.setAttribute("text-anchor","middle"); t.setAttribute("class","n-num");
+    t.textContent = i+1;
+    g.appendChild(c); g.appendChild(t);
+    g.addEventListener("click",function(){ setStep(i,true); });
+    g.addEventListener("keydown",function(ev){ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); setStep(i,true); } });
+    nodesG.appendChild(g); nodeEls.push(g);
+  });
+  var dotsBox=document.getElementById("flyDots"), dotEls=[];
+  steps.forEach(function(s,i){
+    var b=document.createElement("button");
+    b.type="button"; b.textContent=i+1; b.setAttribute("aria-label","Show step "+(i+1));
+    b.addEventListener("click",function(){ setStep(i,true); });
+    dotsBox.appendChild(b); dotEls.push(b);
+  });
+  var cur=0, playing=!reduced, timer=null;
+  var titleEl=document.getElementById("flyTitle"), bodyEl=document.getElementById("flyBody"),
+      kEl=document.getElementById("flyStepK"), progEl=document.getElementById("flyProg"),
+      toggleBtn=document.getElementById("flyToggle"), ring=document.getElementById("ringRot");
+  function render(){
+    nodeEls.forEach(function(n,i){ n.classList.toggle("active", i===cur); });
+    dotEls.forEach(function(d,i){ d.classList.toggle("on", i===cur); });
+    titleEl.textContent = steps[cur].t;
+    bodyEl.textContent = steps[cur].b;
+    kEl.textContent = "Step "+(cur+1)+" of 7";
+    progEl.style.width = ((cur+1)/steps.length*100)+"%";
+  }
+  function schedule(){
+    clearInterval(timer);
+    if(playing){ timer=setInterval(function(){ cur=(cur+1)%steps.length; render(); }, 3400); }
+  }
+  function setStep(i, pause){
+    cur=i; render();
+    if(pause){ playing=false; syncToggle(); schedule(); }
+  }
+  function syncToggle(){
+    toggleBtn.textContent = playing ? "⏸ Pause the wheel" : "▶ Play the wheel";
+    ring.classList.toggle("paused", !playing);
+  }
+  toggleBtn.addEventListener("click",function(){ playing=!playing; syncToggle(); schedule(); });
+  document.getElementById("flyNext").addEventListener("click",function(){ cur=(cur+1)%steps.length; render(); schedule(); });
+  render(); syncToggle(); schedule();
+
+  /* ---- Calculator ---- */
+  var pkg=document.getElementById("pkg"), mgn=document.getElementById("mgn"),
+      pkgOut=document.getElementById("pkgOut"), mgnOut=document.getElementById("mgnOut"),
+      takeNum=document.getElementById("takeNum"), takeSub=document.getElementById("takeSub");
+  function fmt(n){ return "$"+Math.round(n).toLocaleString("en-US"); }
+  function calc(){
+    var p=parseFloat(pkg.value), m=parseFloat(mgn.value);
+    var take=p*m/100;
+    pkgOut.textContent=fmt(p);
+    mgnOut.textContent=(m%1===0?m:m.toFixed(1))+"%";
+    takeNum.textContent=fmt(take);
+    takeSub.textContent="On a "+fmt(p)+" package at "+(m%1===0?m:m.toFixed(1))+"% — partner keeps "+fmt(p-take)+" and the whole job.";
+  }
+  pkg.addEventListener("input",calc); mgn.addEventListener("input",calc); calc();
+})();
+</script>
+</body>
+</html>
