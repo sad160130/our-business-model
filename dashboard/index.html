@@ -140,6 +140,24 @@
       .mc-stat .v.amber { color: var(--amber); }
       .mc-stat .v.steel { color: var(--steel); }
 
+      .mc-band { margin-top: 14px; padding-top: 11px; border-top: 2px solid var(--line); }
+      .mc-band-head {
+        font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+        text-transform: uppercase; color: var(--steel); line-height: 1.45;
+        margin-top: 10px;
+      }
+      .mc-band .mc-band-head { margin-top: 0; }
+      .mc-band-total {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 30px; font-weight: 700; line-height: 1.1; letter-spacing: 0.3px;
+        margin: 4px 0 2px;
+      }
+      .mc-stat .v small {
+        display: block; font-family: "IBM Plex Mono", monospace;
+        font-size: 11.5px; font-weight: 600; color: var(--muted);
+        text-align: right; margin-top: 3px; white-space: nowrap;
+      }
+
       /* ---------- Section heads ---------- */
       .section-head {
         display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
@@ -371,8 +389,8 @@
           <div class="operators">Charlotte Commercial Doors · Run by <b>Snket Desai</b> &amp; <b>Tim Lamb</b> · One board, both operators, full pipeline visibility</div>
         </div>
         <div class="stamp">
-          Last updated: <b>Fri Oct 23, 2026, 5:11 PM ET</b><br />
-          Data snapshot verified 5:12 PM ET Oct 23 (sheets + both Gmail inboxes, raw API)
+          Last updated: <b>Fri Oct 23, 2026, 5:24 PM ET</b><br />
+          Data snapshot verified 5:24 PM ET Oct 23 (sheets + both Gmail inboxes, raw API)
         </div>
       </header>
 
@@ -396,7 +414,7 @@
         </div>
         <div class="kpi">
           <div class="num">0</div>
-          <div class="lbl"><b>Drafts ready</b> — 0 ready, and both mailboxes hold ZERO drafts total. Drafts folders verified 5:12 PM ET Oct 23 via the raw API: tim@ 0 drafts; snket@ 0 drafts — the afternoon's Tim-voice drafts were SENT, not left as drafts</div>
+          <div class="lbl"><b>Drafts ready</b> — 0 ready, and both mailboxes hold ZERO drafts total. Drafts folders verified 5:24 PM ET Oct 23 via the raw API: tim@ 0 drafts; snket@ 0 drafts — the afternoon's Tim-voice drafts were SENT, not left as drafts</div>
         </div>
         <div class="kpi hot">
           <div class="num">12</div>
@@ -408,24 +426,54 @@
       <section class="moneycards" aria-label="Pipeline value and revenue estimates">
         <article class="moneycard">
           <div class="mc-title">Pipeline value — estimated total door-package value <span class="est">est.</span></div>
-          <div class="big">≈ $4.7M – $8.5M</div>
-          <p class="sub">Modeled estimates from project records — not quotes. Projects with named door scope only; watch-stage mega-projects excluded.</p>
+          <div class="mc-band-head">Band 1 — Active pipeline</div>
+          <div class="big">≈ $5.8M – $12.8M</div>
+          <p class="sub">Modeled estimates from project records — not quotes. Band 1 total only; contingent and long-horizon programs are shown separately below and are never counted in this total.</p>
           <ul class="mc-list">
-            <li><span><b>DeKalb County</b> term contract ~$1.45M/yr up to ~$7.3M over the full 5-yr term if all renewals exercise — CONTINGENT: Apollo-as-prime is OFF (contract outside Apollo's scope, per Jerry Oct 22); any capture now depends on a substitute bidder — confirmation STILL not received as of 5:12 PM ET Oct 23 (overdue — was due early Oct 23 AM). Figure is the contract's size, not expected capture.</span><span class="amt">~$1.45M/yr<small>up to ~$7.3M / 5-yr term</small></span></li>
             <li><span><b>Wake County SSI Hardware + Athens Drive + Carrboro</b> packages</span><span class="amt">$1.55M – $3.6M</span></li>
             <li><span><b>Firetower 77</b> dock package</span><span class="amt">$700K – $1.5M</span></li>
+            <li><span><b>Novant Rock Hill</b> campus door packages — 2027 construction — long horizon inside the active book</span><span class="amt">$500K – $1.2M</span></li>
+            <li><span><b>Wake H-11 / M-19</b> packages — modeled estimate</span><span class="amt">$400K – $900K</span></li>
+            <li><span><b>Carteret Courthouse</b> windows/storefront — modeled estimate</span><span class="amt">$300K – $600K</span></li>
+            <li><span><b>Kinston GTP</b> DFH + glazing — modeled estimate</span><span class="amt">$250K – $600K</span></li>
             <li><span><b>China Grove</b> total door scope</span><span class="amt">$225K – $325K</span></li>
+            <li><span><b>Robeson CC</b> — modeled estimate</span><span class="amt">$200K – $450K</span></li>
+            <li><span><b>Harnett CTE HS</b> — modeled estimate</span><span class="amt">$200K – $450K</span></li>
             <li><span><b>Huntersville FS #5</b> packages</span><span class="amt">$200K – $350K</span></li>
+            <li><span><b>Beaufort County CC</b> — modeled estimate</span><span class="amt">$150K – $350K</span></li>
+            <li><span><b>Jackson County MS</b> — modeled estimate</span><span class="amt">$150K – $350K</span></li>
             <li><span><b>Carolina Pines</b> docks</span><span class="amt">$150K – $250K</span></li>
+            <li><span><b>Gateway Plaza 08A + 08B</b> — modeled estimate — sub-route capture only</span><span class="amt">$100K – $250K</span></li>
             <li><span><b>IFB Solutions</b></span><span class="amt">$90K – $170K</span></li>
+            <li><span><b>Mattamuskeet</b> — modeled estimate</span><span class="amt">$80K – $200K</span></li>
+            <li><span><b>Fayetteville PSAP</b> — modeled estimate</span><span class="amt">$80K – $180K</span></li>
             <li><span><b>Asheville-Oakley</b> glazing</span><span class="amt">$60K – $120K</span></li>
             <li><span><b>Henderson</b> Bus Garage</span><span class="amt">$60K – $120K</span></li>
-            <li><span><b>Fort Bragg Landfill DFH</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$40K – $120K</span></li>
+            <li><span><b>Yates Mill</b> — modeled estimate</span><span class="amt">$60K – $150K</span></li>
             <li><span><b>UNC-Chapel Hill 08g Coiling Doors &amp; Grilles</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$60K – $150K</span></li>
-            <li><span><b>SC Security Interior Door Replacement</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$30K – $90K</span></li>
             <li><span><b>SC Door and Door Hardware Updates</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$50K – $150K</span></li>
+            <li><span><b>Fort Bragg Landfill DFH</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$40K – $120K</span></li>
             <li><span><b>GA Fire Station Door Replacement ITB 27-FD01</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$40K – $100K</span></li>
+            <li><span><b>SC Security Interior Door Replacement</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$30K – $90K</span></li>
+            <li><span><b>SC Front Door Vandalism</b> — modeled estimate</span><span class="amt">$20K – $50K</span></li>
+            <li><span><b>SC Four Exterior Metal Doors</b> — modeled estimate</span><span class="amt">$15K – $40K</span></li>
           </ul>
+          <div class="mc-band">
+            <div class="mc-band-head">Band 2 — Contingent · NOT in the Band 1 total</div>
+            <ul class="mc-list">
+              <li><span><b>DeKalb County</b> term contract ~$1.45M/yr up to ~$7.3M over the full 5-yr term if all renewals exercise — CONTINGENT: Apollo-as-prime is OFF (contract outside Apollo's scope, per Jerry Oct 22); no eligible bidder exists today; any capture now depends on a substitute bidder not yet confirmed — Jerry's substitute-bidder confirmation STILL not received as of 5:24 PM ET Oct 23 (overdue — was due early Oct 23 AM). Figure is the contract's size, not expected capture.</span><span class="amt">~$1.45M/yr<small>up to ~$7.3M / 5-yr term</small></span></li>
+            </ul>
+          </div>
+          <div class="mc-band">
+            <div class="mc-band-head">Band 3 — Long-horizon programs · door-package slices of bond/capital programs, multi-year · NOT in the Band 1 total</div>
+            <div class="mc-band-total">≈ $2.3M – $5.5M</div>
+            <ul class="mc-list">
+              <li><span><b>New Hanover Schools bond</b> — modeled estimate</span><span class="amt">$700K – $1.6M</span></li>
+              <li><span><b>Spartanburg District Six</b> — modeled estimate</span><span class="amt">$600K – $1.5M</span></li>
+              <li><span><b>Brunswick Schools bond</b> — modeled estimate</span><span class="amt">$600K – $1.4M</span></li>
+              <li><span><b>Fulton County Schools Capital Plan</b> — modeled estimate</span><span class="amt">$400K – $1M</span></li>
+            </ul>
+          </div>
         </article>
         <article class="moneycard green-top">
           <div class="mc-title">Revenue for Snket + Tim — estimated coordination fees @ 10% <span class="est">est.</span></div>
@@ -434,21 +482,29 @@
             <span class="v">$6,000</span>
           </div>
           <div class="mc-stat">
-            <span class="k"><b>Win-adjusted expected</b> — at a ~1-in-3 win rate across the pipeline</span>
-            <span class="v amber">≈ $160K – $280K</span>
+            <span class="k"><b>Band 1 — If everything lands</b> — full 10% across the Band 1 active pipeline</span>
+            <span class="v steel">≈ $580K – $1.28M</span>
           </div>
           <div class="mc-stat">
-            <span class="k"><b>If everything lands</b> — full 10% across the pipeline range</span>
-            <span class="v steel">≈ $470K – $850K</span>
+            <span class="k"><b>Band 1 — Win-adjusted expected</b> — at a ~1-in-3 win rate across the Band 1 pipeline</span>
+            <span class="v amber">≈ $190K – $430K</span>
           </div>
-          <p class="sub">Modeled estimates from project records — not quotes. Fees are confirmed in writing with the partner before bid day; public awards are self-verified. This panel now reflects the full active pipeline, including the Oct 23 BidNet batch — all non-booked figures are estimates.</p>
+          <div class="mc-stat">
+            <span class="k"><b>Band 2 — Contingent fees if captured</b> — 10% est. on the DeKalb term contract. Contingent — excluded from the Band 1 lines above</span>
+            <span class="v steel">≈ $145K/yr<small>up to ≈ $730K / 5-yr term</small></span>
+          </div>
+          <div class="mc-stat">
+            <span class="k"><b>Band 3 — Long-horizon program fees</b> — 10% est., multi-year. Long-horizon — excluded from the Band 1 lines above</span>
+            <span class="v">≈ $230K – $550K</span>
+          </div>
+          <p class="sub">Modeled estimates from project records — not quotes. Fees are confirmed in writing with the partner before bid day; public awards are self-verified. Three-band model: Band 1 active pipeline, Band 2 contingent (DeKalb — no eligible bidder today), Band 3 long-horizon bond/capital programs. Booked revenue counts confirmed records only — all other figures are estimates.</p>
         </article>
       </section>
 
       <!-- ================= REVENUE BY LEVER ================= -->
       <div class="section-head">
         <h2>Revenue by Lever</h2>
-        <span class="sub">Six revenue levers — status as of Fri Oct 23, 2026, 5:11 PM ET</span>
+        <span class="sub">Six revenue levers — status as of Fri Oct 23, 2026, 5:24 PM ET</span>
       </div>
             <section class="levers">
         <article class="lever">
@@ -473,8 +529,8 @@
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L5</span><h3>Atlanta Pocket (Jerry)</h3><span class="pill amber">Building</span></div>
-          <p>DeKalb County overhead doors &amp; gates <b>ITB 2026-106-ITB verified live, bids Oct 28</b> — Snket sent Jerry the brief Oct 22, 4:21 PM (one catch flagged). 4 more Atlanta early signals watch-listed: Fulton Schools Capital Plan 2027, APS A.D. Williams Elementary CM-at-Risk, Cobb 2028 SPLOST facilities, Piedmont Newton Hospital relocation. Snket also sent Apollo the Athens Drive overhead brief Oct 22, 6:17 PM and a Wake County schools overhead + dock first-look Oct 22, 6:34 PM. <b>Jerry bid capability — verified Oct 22</b> from his own emails + Apollo Capabilities Package V2: Apollo CAN bid automatic/manual doors + DFH packages as a subcontractor-bidder (on BuildingConnected; capabilities statement claims SAM.gov UEI WPL2DCRWJ833, GA@WORK, Bonfire; furnish + install + warranty standard). Caveats: no prequal or bid filed yet anywhere; capabilities statement lists zero named company references; subcontractor posture. Apollo CANNOT bid overhead/dock (Jerry's own words, Oct 22) and CANNOT prime DeKalb-type public contracts on current evidence (insurance stated only as "available upon request"; no bonding evidence). Apollo launched ~Jul 2026, solo/founder-led; Jerry is an AAADM Certified Inspector (verified via LinkedIn, credential 251167, through Jan 2027), formerly Lead Service Technician at Vortex Doors and a technician at Advanced Door Services. <b>Jerry's late-night replies Oct 22:</b> Athens (11:11 PM) — DFH in Apollo scope, overhead NOT, Capabilities Package V2 attached. DeKalb (11:13 PM) — outside Apollo scope, but Jerry found a possible substitute contact, messaged him, and will confirm by early Oct 23 AM — <b>still not received as of 5:12 PM ET Oct 23 (overdue)</b>. His 11:55 PM overview also settles Firetower: his dock partner HAS crews for a 1M SF job and can travel into the Carolinas, but is booked through year-end — needs a 2027 start and wants drawings/detail before numbers. Snket replied to the overview and sent Jerry <b>10 project briefs Oct 23, 12:15–12:23 AM</b> (Beaufort CC, Mattamuskeet, IFB Solutions, Robeson CC, APS A.D. Williams, Fulton County Schools, Wake Early/Parkside BP 08A + 28B, Henderson County Bus Garage, Asheville-Oakley DFH, plus the overview reply). <b>Oct 23, 7:51 AM:</b> Snket sent Jerry a follow-up email (“Quick follow-ups from yesterday”) with five asks, including the DeKalb overhead partner's name and structure (bids Oct 28) and a straight yes/no on Apollo as Athens BP-08A DFH bidder of record (prequal locks ~Oct 31). <b>Oct 23, 9:12 AM:</b> Snket sent Jerry two more decision asks — IFB Solutions DFH package (proposals due Oct 30) and Mattamuskeet School DFH slice (bids Mon Oct 26). <b>Oct 23, 12:22 PM:</b> Snket emailed Jerry asking him to confirm Oct 28 for the China Grove itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec) — confirmation owed. DeKalb substitute-bidder confirmation <b>STILL not received as of 5:12 PM ET Oct 23</b> (overdue — was due early Oct 23 AM). <b>Oct 23, 4:27 PM:</b> Snket sent Jerry the <b>Georgia Fire Station Door Replacement Project brief (ITB 27-FD01)</b> — closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Atlanta-metro location not confirmed — Jerry first if Atlanta metro + DFH. <b>Jerry replied to tim@ Fri Oct 23 afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — that reply does not close the DeKalb substitute-bidder confirmation, which is still outstanding.</p>
-          <div class="rev"><b>DeKalb bids Oct 28</b> <span>— Apollo-as-prime OFF (out of scope); substitute-bidder confirmation STILL not received as of 5:12 PM ET Oct 23 (overdue — was due early Oct 23 AM) · GA Fire Station ITB 27-FD01 brief sent to Jerry Oct 23, 4:27 PM (closes Nov 4)</span></div>
+          <p>DeKalb County overhead doors &amp; gates <b>ITB 2026-106-ITB verified live, bids Oct 28</b> — Snket sent Jerry the brief Oct 22, 4:21 PM (one catch flagged). 4 more Atlanta early signals watch-listed: Fulton Schools Capital Plan 2027, APS A.D. Williams Elementary CM-at-Risk, Cobb 2028 SPLOST facilities, Piedmont Newton Hospital relocation. Snket also sent Apollo the Athens Drive overhead brief Oct 22, 6:17 PM and a Wake County schools overhead + dock first-look Oct 22, 6:34 PM. <b>Jerry bid capability — verified Oct 22</b> from his own emails + Apollo Capabilities Package V2: Apollo CAN bid automatic/manual doors + DFH packages as a subcontractor-bidder (on BuildingConnected; capabilities statement claims SAM.gov UEI WPL2DCRWJ833, GA@WORK, Bonfire; furnish + install + warranty standard). Caveats: no prequal or bid filed yet anywhere; capabilities statement lists zero named company references; subcontractor posture. Apollo CANNOT bid overhead/dock (Jerry's own words, Oct 22) and CANNOT prime DeKalb-type public contracts on current evidence (insurance stated only as "available upon request"; no bonding evidence). Apollo launched ~Jul 2026, solo/founder-led; Jerry is an AAADM Certified Inspector (verified via LinkedIn, credential 251167, through Jan 2027), formerly Lead Service Technician at Vortex Doors and a technician at Advanced Door Services. <b>Jerry's late-night replies Oct 22:</b> Athens (11:11 PM) — DFH in Apollo scope, overhead NOT, Capabilities Package V2 attached. DeKalb (11:13 PM) — outside Apollo scope, but Jerry found a possible substitute contact, messaged him, and will confirm by early Oct 23 AM — <b>still not received as of 5:24 PM ET Oct 23 (overdue)</b>. His 11:55 PM overview also settles Firetower: his dock partner HAS crews for a 1M SF job and can travel into the Carolinas, but is booked through year-end — needs a 2027 start and wants drawings/detail before numbers. Snket replied to the overview and sent Jerry <b>10 project briefs Oct 23, 12:15–12:23 AM</b> (Beaufort CC, Mattamuskeet, IFB Solutions, Robeson CC, APS A.D. Williams, Fulton County Schools, Wake Early/Parkside BP 08A + 28B, Henderson County Bus Garage, Asheville-Oakley DFH, plus the overview reply). <b>Oct 23, 7:51 AM:</b> Snket sent Jerry a follow-up email (“Quick follow-ups from yesterday”) with five asks, including the DeKalb overhead partner's name and structure (bids Oct 28) and a straight yes/no on Apollo as Athens BP-08A DFH bidder of record (prequal locks ~Oct 31). <b>Oct 23, 9:12 AM:</b> Snket sent Jerry two more decision asks — IFB Solutions DFH package (proposals due Oct 30) and Mattamuskeet School DFH slice (bids Mon Oct 26). <b>Oct 23, 12:22 PM:</b> Snket emailed Jerry asking him to confirm Oct 28 for the China Grove itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec) — confirmation owed. DeKalb substitute-bidder confirmation <b>STILL not received as of 5:24 PM ET Oct 23</b> (overdue — was due early Oct 23 AM). <b>Oct 23, 4:27 PM:</b> Snket sent Jerry the <b>Georgia Fire Station Door Replacement Project brief (ITB 27-FD01)</b> — closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Atlanta-metro location not confirmed — Jerry first if Atlanta metro + DFH. <b>Jerry replied to tim@ Fri Oct 23 afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — that reply does not close the DeKalb substitute-bidder confirmation, which is still outstanding.</p>
+          <div class="rev"><b>DeKalb bids Oct 28</b> <span>— Apollo-as-prime OFF (out of scope); substitute-bidder confirmation STILL not received as of 5:24 PM ET Oct 23 (overdue — was due early Oct 23 AM) · GA Fire Station ITB 27-FD01 brief sent to Jerry Oct 23, 4:27 PM (closes Nov 4)</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L6</span><h3>Rank-and-Rent Sites</h3><span class="pill green">Live / Normal</span></div>
@@ -489,7 +545,7 @@
       <!-- ================= WAITING / DRAFTS ================= -->
       <div class="section-head">
         <h2>Waiting &amp; Drafts</h2>
-        <span class="sub">Who owes us what — and what's actually sitting in the drafts folders (verified Oct 23, 5:12 PM ET, raw API)</span>
+        <span class="sub">Who owes us what — and what's actually sitting in the drafts folders (verified Oct 23, 5:24 PM ET, raw API)</span>
       </div>
             <section class="two-panel">
         <div class="w-panel">
@@ -498,7 +554,7 @@
           <div class="w-item"><span class="who">Akhil</span><p><b>China Grove approval + deposit by Oct 30</b> — revised client proposal SENT by Snket Oct 23, 11:24 AM ET ($152,212.58, PDF attached); approval + deposit by Oct 30 holds the mid-December install. Terms 50% deposit / 40% during installation / 10% on completion; pricing valid 60 days through Dec 22, 2026</p></div>
           <div class="w-item"><span class="who">Doug</span><p><b>Revised China Grove proposal — DELIVERED Oct 23, 10:41 AM</b> (resolved; turned around to Akhil same day, 11:24 AM). Still open from Tim's Oct 23, 7:49 AM asks: <b>Carteret bid confirm</b> for Oct 29, 11:00 AM · <b>Beaufort CC heads-up receipt</b> · <b>Edifice prequal municipal / fire-station references</b> by early November for the Nov 12 Huntersville prequal. <b>Plus:</b> reply owed to Tim's Oct 23, 4:54 PM <b>Mattamuskeet</b> ask — “need your yes/no today” (bids Mon Oct 26, 2:00 PM; supersedes the 9:10 AM glazing decision ask). <b>Plus:</b> reply owed to Tim's Oct 23 afternoon <b>Gateway Plaza follow-up</b> — the CM's Prequalified Bidders List (Addendum #4) shows Glass &amp; Door Pro is NOT on 08B; Tim asked about Doug's existing relationships with the prequalified firms (A1 Glass is local) and whether he wants an intro before the Tue Oct 27 bids; sub-route only via a prequalified firm</p></div>
           <div class="w-item"><span class="who">GHK</span><p><b>Garret — China Grove hollow-metal/overhead quote now owed BY Wed Oct 28</b> — Garret REPLIED Fri Oct 23, 1:04 PM ET (contact@ghkdoors.com, to snket@): GHK will have the quote over by Wednesday, October 28; the team is currently out of town working on projects and heading back soon. Dated commitment — no longer open-ended. (Snket sent a status check Oct 23, 12:22 PM.) <b>Snket replied Oct 23, 1:54 PM</b> accepting the Wed Oct 28 date and asking for frames priced separately + lead times. <b>Also owed:</b> reply to Snket's Oct 23, 4:27 PM UNC-Chapel Hill 08g prequal ask</p></div>
-          <div class="w-item"><span class="who">Jerry</span><p><b>Jerry / Apollo</b> — <b>DeKalb substitute-bidder confirmation <span class="overdue">OVERDUE</span></b> (due early Oct 23 AM; STILL not received as of 5:12 PM ET Oct 23). <b>New inbound Oct 23 PM (UNREAD in tim@):</b> Jerry confirmed <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — noted, but it does not close the DeKalb confirmation. <b>Plus:</b> China Grove hollow-metal Oct 28 confirmation — Snket emailed Jerry Oct 23, 12:22 PM asking him to confirm Oct 28 for the itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec). Follow-ups <b>SENT by Snket Oct 23, 7:51 AM</b> covering: (1) DeKalb overhead partner name + structure (prime or pass-through), bids Oct 28; (2) <b>Athens BP-08A</b> — straight yes/no on Apollo as DFH bidder of record, prequal locks ~Oct 31; (3) <b>China Grove itemized quote + supplier lead times</b> status; (4) <b>Huntersville #5</b> — confirm Apollo will prequalify for DFH; (5) <b>meeting times</b> for next week. <b>Plus two new decision asks sent Oct 23, 9:12 AM:</b> IFB Solutions DFH package (due Oct 30) and Mattamuskeet DFH slice (bids Oct 26)</p></div>
+          <div class="w-item"><span class="who">Jerry</span><p><b>Jerry / Apollo</b> — <b>DeKalb substitute-bidder confirmation <span class="overdue">OVERDUE</span></b> (due early Oct 23 AM; STILL not received as of 5:24 PM ET Oct 23). <b>New inbound Oct 23 PM (UNREAD in tim@):</b> Jerry confirmed <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — noted, but it does not close the DeKalb confirmation. <b>Plus:</b> China Grove hollow-metal Oct 28 confirmation — Snket emailed Jerry Oct 23, 12:22 PM asking him to confirm Oct 28 for the itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec). Follow-ups <b>SENT by Snket Oct 23, 7:51 AM</b> covering: (1) DeKalb overhead partner name + structure (prime or pass-through), bids Oct 28; (2) <b>Athens BP-08A</b> — straight yes/no on Apollo as DFH bidder of record, prequal locks ~Oct 31; (3) <b>China Grove itemized quote + supplier lead times</b> status; (4) <b>Huntersville #5</b> — confirm Apollo will prequalify for DFH; (5) <b>meeting times</b> for next week. <b>Plus two new decision asks sent Oct 23, 9:12 AM:</b> IFB Solutions DFH package (due Oct 30) and Mattamuskeet DFH slice (bids Oct 26)</p></div>
           <div class="w-item"><span class="who">Piedmont</span><p><b>Tanna Thomas</b> — Hartman confirms (Tim sent “Hartman (Rock Hill) + Triangle brief — quick confirms” Oct 23, 7:48 AM) still awaiting reply. <b>NEW:</b> IFB Solutions DFH bidder-of-record ask sent Oct 23, 9:10 AM; proposals due Oct 30. <b>NEW:</b> Tim → Tanna Gateway Plaza ask sent Oct 23 afternoon — is Piedmont on the CM's 08A or 08B prequalified list? (The CM's Addendum #4 list shows NEITHER Doug nor Piedmont prequalified; sub-route only via a prequalified firm; bids Tue Oct 27, 2:00 PM EDT). <b>NEW:</b> Fort Bragg Landfill DFH yes/no owed after Tim's Oct 23, 4:54 PM ask — package closes Mon Oct 26, 1:00 PM</p></div>
           <div class="w-item"><span class="who">Cody</span><p><b>Cody Treece / Edifice</b> — reply owed to Tim's Oct 23, 4:56 PM prequals bidder-of-record structure follow-up</p></div>
           <div class="w-item"><span class="who">S. Dock</span><p><b>Blair Jones</b> — NEW: IFB Solutions six-dock-doors pricing ask sent Oct 23, 9:10 AM; awaiting reply</p></div>
@@ -515,7 +571,7 @@
         </div>
         <div class="w-panel">
           <h3>Drafts ready to send</h3>
-          <p class="wsub">Verified against the actual drafts folders Oct 23, 5:12 PM ET via the raw API — tim@: 0 drafts; snket@: 0 drafts. <b>0 ready to send, 0 drafts total in either mailbox.</b> The afternoon's Tim-voice drafts were SENT, not left as drafts.</p>
+          <p class="wsub">Verified against the actual drafts folders Oct 23, 5:24 PM ET via the raw API — tim@: 0 drafts; snket@: 0 drafts. <b>0 ready to send, 0 drafts total in either mailbox.</b> The afternoon's Tim-voice drafts were SENT, not left as drafts.</p>
           <h4 class="wgroup">Sent — Oct 23, afternoon · new sends</h4>
           <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Jerry / Apollo — Georgia Fire Station Door Replacement Project brief, ITB 27-FD01 (closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Jerry first if Atlanta metro + DFH)<span class="tag sent">sent · snket@</span></p></div>
           <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Garret / GHK — UNC-Chapel Hill New Residence Hall 1, Package 08g (Coiling Doors &amp; Grilles) prequal ask<span class="tag sent">sent · snket@</span></p></div>
@@ -578,7 +634,7 @@
         <span class="sub">Everything that moved, newest first</span>
       </div>
             <section class="timeline">
-        <div class="t-item"><span class="t-time">Oct 23 · 5:12 PM</span><p><b>Inbox verification (raw API):</b> tim@ 0 drafts · snket@ 0 drafts — the afternoon's Tim-voice drafts were SENT, not left as drafts. <b>Jerry replied to tim@ this afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable). But Jerry's DeKalb substitute-bidder confirmation is <span class="bad">STILL not received as of 5:12 PM ET Oct 23</span> (overdue — was due early Oct 23 AM; DeKalb bids Oct 28).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 5:24 PM</span><p><b>Inbox verification (raw API):</b> tim@ 0 drafts · snket@ 0 drafts — the afternoon's Tim-voice drafts were SENT, not left as drafts. <b>Jerry replied to tim@ this afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable). But Jerry's DeKalb substitute-bidder confirmation is <span class="bad">STILL not received as of 5:24 PM ET Oct 23</span> (overdue — was due early Oct 23 AM; DeKalb bids Oct 28).</p></div>
         <div class="t-item"><span class="t-time">Oct 23 · 4:56 PM</span><p><b>Tim → Cody Treece / Edifice:</b> prequals bidder-of-record structure follow-up SENT.</p></div>
         <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Tanna Thomas / Piedmont Door Solutions:</b> Fort Bragg DFH closes <b>Mon Oct 26, 1:00 PM</b> — Piedmont's yes/no needed.</p></div>
         <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Doug / Glass &amp; Door Pro:</b> Mattamuskeet bids <b>Mon Oct 26, 2:00 PM</b> — yes/no needed today.</p></div>
