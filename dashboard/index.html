@@ -82,7 +82,7 @@
         font-size: 34px; font-weight: 700; line-height: 1; letter-spacing: 0.3px;
       }
       .kpi .num small { font-size: 19px; font-weight: 600; color: var(--muted); }
-      .kpi .lbl { font-size: 12.5px; color: var(--muted); margin-top: 5px; line-height: 1.35; }
+      .kpi .lbl { font-size: 12.5px; color: var(--muted); margin-top: 5px; line-height: 1.3; }
       .kpi .lbl b { color: var(--steel); font-weight: 600; }
 
       /* ---------- Money cards (pipeline & revenue view) ---------- */
@@ -192,7 +192,7 @@
         padding: 2px 7px; border-radius: 4px; color: var(--steel);
       }
       .lever h3 { font-size: 15.5px; font-weight: 600; margin: 0; flex: 1; }
-      .lever p { margin: 0 0 8px; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+      .lever p { margin: 0 0 8px; font-size: 13px; color: var(--muted); line-height: 1.4; }
       .lever p b { color: var(--steel); font-weight: 600; }
       .lever .rev {
         border-top: 1px dashed var(--line); padding-top: 8px;
@@ -248,7 +248,7 @@
       .card {
         background: var(--panel); border: 1px solid var(--line);
         border-left: 3px solid var(--faint);
-        border-radius: 6px; padding: 11px 12px 10px; margin-bottom: 9px;
+        border-radius: 6px; padding: 9px 11px 8px; margin-bottom: 8px;
         cursor: grab; box-shadow: 0 1px 3px rgba(34, 48, 62, 0.10);
       }
       .card:active { cursor: grabbing; }
@@ -260,7 +260,7 @@
       .card.tone-grey  { border-left-color: var(--faint); opacity: 0.85; }
       .card h4 { font-size: 14.5px; font-weight: 600; margin: 0 0 2px; line-height: 1.3; }
       .card .co { font-size: 12.5px; color: var(--blue); font-weight: 500; margin-bottom: 5px; }
-      .card .detail { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0 0 8px; }
+      .card .detail { font-size: 12.8px; color: var(--muted); line-height: 1.4; margin: 0 0 6px; }
       .card .detail b { color: var(--steel); font-weight: 600; }
       .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
       .chip {
@@ -274,7 +274,7 @@
       .chip.due-plain { color: var(--muted); }
       .chip.owner { color: var(--steel); background: #e6edf4; border-color: #c9d6e4; }
       .card .note {
-        font-size: 12.5px; line-height: 1.5; color: var(--muted);
+        font-size: 12.3px; line-height: 1.4; color: var(--muted);
         border-top: 1px dashed var(--line-soft); padding-top: 7px; margin: 0;
       }
       .card .note b { color: var(--steel); font-weight: 600; }
@@ -386,7 +386,7 @@
       <header class="topbar">
         <div>
           <h1>CCD <span class="accent">Operations</span> Dashboard</h1>
-          <div class="operators">Charlotte Commercial Doors · Run by <b>Snket Desai</b> &amp; <b>Tim Lamb</b> · One board, both operators, full pipeline visibility</div>
+          <div class="operators">Charlotte Commercial Doors · <b>Snket Desai</b> &amp; <b>Tim Lamb</b></div>
         </div>
         <div class="stamp">
           Last updated: <b>Sat Oct 24, 2026, 4:50 PM ET</b><br />
@@ -395,30 +395,30 @@
       </header>
 
       <!-- ================= KPI STRIP ================= -->
-            <section class="kpis" aria-label="Key numbers">
+      <section class="kpis" aria-label="Key numbers">
         <div class="kpi">
           <div class="num">112</div>
-          <div class="lbl"><b>Opportunities tracked</b> — partner-signal rows. Live bid packages in play: China Grove · Huntersville #5 · Asheville-Oakley #9 · Athens Drive HS · Carrboro Elementary · Wake SSI 2A.1 · DeKalb ITB · Carteret Courthouse · Beaufort County CC · Kinston GTP · Yates Mill · Fort Bragg Landfill DFH · Gateway Plaza · UNC-Chapel Hill 08g</div>
+          <div class="lbl"><b>Opportunities tracked</b> — 14 live bids</div>
         </div>
         <div class="kpi">
           <div class="num">21</div>
-          <div class="lbl"><b>Direct customer leads</b> — 16 Client Leads tab + 4 WhatConverts strong leads + 1 Facebook group lead (Jessie Lang, added Oct 24)</div>
+          <div class="lbl"><b>Direct leads</b> — 16 + 4 WC + 1 FB</div>
         </div>
         <div class="kpi good">
           <div class="num">2</div>
-          <div class="lbl"><b>True partners</b> — Doug / Glass &amp; Door Pro · Jerry / Apollo. Everyone else is bench.</div>
+          <div class="lbl"><b>True partners</b> — Doug · Jerry</div>
         </div>
         <div class="kpi money">
           <div class="num">$6,000</div>
-          <div class="lbl"><b>Booked revenue confirmed</b> — China Grove coordination margin (Doug's revised proposal received Oct 23; client-facing revised total $152,212.58 sent to Akhil Oct 23, 11:24 AM ET with the proposal PDF attached; approval + deposit by Oct 30 holds the mid-December install)</div>
+          <div class="lbl"><b>Booked</b> — China Grove · deposit due Oct 30</div>
         </div>
         <div class="kpi">
           <div class="num">0</div>
-          <div class="lbl"><b>Drafts ready</b> — 0 ready: both mailboxes verified empty Oct 24, 4:52 PM ET via the raw API (tim@ 0 drafts; snket@ 0 drafts). The tim@ draft to Doug (created Sat Oct 24, 12:15 PM ET) — the Jessie Lang 60-inch follow-up — was SENT Oct 24, 2:58 PM ET. The Jessie Lang fit asks themselves were SENT (verified in the Sent folders), not drafts</div>
+          <div class="lbl"><b>Drafts ready</b> — both inboxes empty</div>
         </div>
         <div class="kpi hot">
           <div class="num">12</div>
-          <div class="lbl"><b>Red-zone deadlines (&lt;10 days)</b> — Mon Oct 26 (2d): Mattamuskeet School bids · Fort Bragg Landfill DFH closes 1:00 PM · Tue Oct 27 (3d): Gateway Plaza bids 2:00 PM · SC Security Interior Door Replacement closes 5:00 PM · Wed Oct 28 (4d): DeKalb County bids · Beaufort County CC bids 3:00 PM · GHK + Jerry China Grove hollow-metal quotes due · Thu Oct 29 (5d): Carteret County Courthouse · Fri Oct 30 (6d): China Grove approval/deposit deadline · IFB Solutions proposals due · SC Four Exterior Metal Doors closes · Sat Oct 31 (7d): Athens Drive prequal locks · CLOSED Fri Oct 23, 5:00 PM EDT: SC Exterior Door Replacement + SC Electronic Access Control (coverage-check items — expired)</div>
+          <div class="lbl"><b>Red-zone &lt;10d</b> — Oct 26–31: bids, quotes + deposit</div>
         </div>
       </section>
 
@@ -428,89 +428,71 @@
           <div class="mc-title">Pipeline value — estimated total door-package value <span class="est">est.</span></div>
           <div class="mc-band-head">Band 1 — Active pipeline</div>
           <div class="big">≈ $5.7M – $12.7M</div>
-          <p class="sub">Modeled estimates from project records — not quotes. Band 1 only: active projects with an assigned partner/lane.</p>
+          <p class="sub">Band 1 active only · modeled, not quotes. Top packages:</p>
           <ul class="mc-list">
             <li><span><b>Wake County SSI Hardware + Athens Drive + Carrboro</b> packages</span><span class="amt">$1.55M – $3.6M</span></li>
             <li><span><b>Firetower 77</b> dock package</span><span class="amt">$700K – $1.5M</span></li>
-            <li><span><b>Novant Rock Hill</b> campus door packages — 2027 construction — long horizon inside the active book</span><span class="amt">$500K – $1.2M</span></li>
-            <li><span><b>Wake H-11 / M-19</b> packages — modeled estimate</span><span class="amt">$400K – $900K</span></li>
-            <li><span><b>Carteret Courthouse</b> windows/storefront — modeled estimate</span><span class="amt">$300K – $600K</span></li>
-            <li><span><b>Kinston GTP</b> DFH + glazing — modeled estimate</span><span class="amt">$250K – $600K</span></li>
+            <li><span><b>Novant Rock Hill</b> campus door packages — 2027 construction</span><span class="amt">$500K – $1.2M</span></li>
+            <li><span><b>Wake H-11 / M-19</b> packages</span><span class="amt">$400K – $900K</span></li>
+            <li><span><b>Carteret Courthouse</b> windows/storefront</span><span class="amt">$300K – $600K</span></li>
+            <li><span><b>Kinston GTP</b> DFH + glazing</span><span class="amt">$250K – $600K</span></li>
             <li><span><b>China Grove</b> total door scope</span><span class="amt">$225K – $325K</span></li>
-            <li><span><b>Robeson CC</b> — modeled estimate</span><span class="amt">$200K – $450K</span></li>
-            <li><span><b>Harnett CTE HS</b> — modeled estimate</span><span class="amt">$200K – $450K</span></li>
-            <li><span><b>Huntersville FS #5</b> packages</span><span class="amt">$200K – $350K</span></li>
-            <li><span><b>Beaufort County CC</b> — modeled estimate</span><span class="amt">$150K – $350K</span></li>
-            <li><span><b>Jackson County MS</b> — modeled estimate</span><span class="amt">$150K – $350K</span></li>
-            <li><span><b>Carolina Pines</b> docks</span><span class="amt">$150K – $250K</span></li>
-            <li><span><b>Gateway Plaza 08A + 08B</b> — modeled estimate — sub-route capture only</span><span class="amt">$100K – $250K</span></li>
-            <li><span><b>IFB Solutions</b></span><span class="amt">$90K – $170K</span></li>
-            <li><span><b>Mattamuskeet</b> — modeled estimate</span><span class="amt">$80K – $200K</span></li>
-            <li><span><b>Fayetteville PSAP</b> — modeled estimate</span><span class="amt">$80K – $180K</span></li>
-            <li><span><b>Asheville-Oakley</b> glazing</span><span class="amt">$60K – $120K</span></li>
-            <li><span><b>Henderson</b> Bus Garage</span><span class="amt">$60K – $120K</span></li>
-            <li><span><b>UNC-Chapel Hill 08g Coiling Doors &amp; Grilles</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$60K – $150K</span></li>
-            <li><span><b>SC Door and Door Hardware Updates</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$50K – $150K</span></li>
-            <li><span><b>Fort Bragg Landfill DFH</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$40K – $120K</span></li>
-            <li><span><b>GA Fire Station Door Replacement ITB 27-FD01</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$40K – $100K</span></li>
-            <li><span><b>SC Security Interior Door Replacement</b> — modeled estimate from the Oct 23 BidNet batch</span><span class="amt">$30K – $90K</span></li>
-            <li><span><b>SC Front Door Vandalism</b> — modeled estimate</span><span class="amt">$20K – $50K</span></li>
-            <li><span><b>SC Four Exterior Metal Doors</b> — modeled estimate</span><span class="amt">$15K – $40K</span></li>
+            <li><span><b>+19 more packages</b> — Robeson, Harnett, Huntersville, Beaufort, IFB, Mattamuskeet &amp; others</span><span class="amt">$15K – $450K ea.</span></li>
           </ul>
-          <p class="sub">Yates Mill ($60K–$150K est.) — unassigned watch note: excluded from the Band 1 total until a partner is lined up (none assigned, no bidding GC identified).</p>
+          <p class="sub">Yates Mill excluded — no partner yet.</p>
         </article>
         <article class="moneycard green-top">
           <div class="mc-title">Revenue for Snket + Tim — estimated coordination fees @ 10% <span class="est">est.</span></div>
           <div class="mc-stat">
-            <span class="k"><b>Booked: $6,000</b> — China Grove margin, confirmed · <b>+ Doug monthly — terms under review:</b> Tim replied to Doug Oct 23, 11:17 AM — revised proposal received, client turnaround same day; Doug's proposed terms (2% of awarded amount, transitioning to $1,000/month after the first award) are UNDER REVIEW by Snket + Tim and will be settled in writing before the first award. Snket's recorded position stays: Doug agreed 10% of every bid won (2026-10-23); standard new-partner structure $2,500/mo + 3–5%. Snket decision — NOT agreed.</span>
+            <span class="k"><b>Booked: $6,000</b> — China Grove · Doug fee disputed (10% vs 2%)</span>
             <span class="v">$6,000</span>
           </div>
           <div class="mc-stat">
-            <span class="k"><b>Band 1 — If everything lands</b> — full 10% across the Band 1 active pipeline</span>
+            <span class="k"><b>If everything lands</b> — 10% × Band 1</span>
             <span class="v steel">≈ $570K – $1.27M</span>
           </div>
           <div class="mc-stat">
-            <span class="k"><b>Band 1 — Win-adjusted expected</b> — at a ~1-in-3 win rate across the Band 1 pipeline</span>
+            <span class="k"><b>Win-adjusted</b> — ~1-in-3 win rate</span>
             <span class="v amber">≈ $190K – $420K</span>
           </div>
-          <p class="sub">Modeled estimates from project records — not quotes. Band 1 only (active projects with an assigned partner/lane), per Snket's Oct 23 simplification; contingent and long-horizon programs are tracked in the sheets but not shown here. Booked revenue counts confirmed records only — all other figures are estimates.</p>
+          <p class="sub">Modeled — not quotes.</p>
         </article>
       </section>
 
       <!-- ================= REVENUE BY LEVER ================= -->
       <div class="section-head">
         <h2>Revenue by Lever</h2>
-        <span class="sub">Six revenue levers — status as of Sat Oct 24, 2026, 4:50 PM ET</span>
+        <span class="sub">Status — Oct 24, 2026</span>
       </div>
-            <section class="levers">
+      <section class="levers">
         <article class="lever">
           <div class="lhead"><span class="lid">L1</span><h3>China Grove Coordination</h3><span class="pill green">Active</span></div>
-          <p><b>$6,000 margin booked</b> on the glazing package. Akhil (QBS) replied Oct 22, 4:08 PM — <b>PROCEED</b> with the quote now on current info; unresolved items priced as additional/optional per door with assumptions listed. Doug's <b>REVISED proposal was RECEIVED Fri Oct 23, 10:41 AM</b> and turned around to the client the same day: <b>Snket sent Akhil the revised client proposal Oct 23, 11:24 AM ET</b> with PDF “china-grove-client-proposal-2026-10-23.pdf” attached. <b>Revised pricing:</b> aluminum entries + AASD-1 <b>$85,246.63</b>; interior glass partitions <b>$66,965.95</b>; <b>TOTAL $152,212.58</b> (up from preliminary $149,345.67 on the revised entry/AASD-1 pricing). <b>Schedule improvement:</b> AASD-1 now <b>6–8 weeks for delivery + completed installation from deposit</b> (replaces the 15-week allowance); other doors/partitions 6–8 weeks to frame install, glass complete ~8–10 weeks. <b>Terms:</b> 50% deposit / 40% during installation / 10% on completion; pricing valid 60 days through Dec 22, 2026. <b>Approval + deposit by Oct 30 holds the mid-December install — Akhil now owes approval/deposit by Oct 30.</b> Open assumptions carried in the proposal: writable-glass finish TBC; door count 6 singles + 5 pairs (7th single priced as addition if confirmed); access control included for AASD-1 only; SD/PD hollow-metal quoted separately; ED out of scope. Piedmont pedestrian package: approval deadline Nov 1 (effectively Fri Oct 30) to hold mid-Dec install. <b>Jerry/Apollo is now actively pricing</b> (per his Oct 22, 11:55 PM “Overview of Everything” email): pricing <b>4 automatic packages for AASD-1</b> — Horton 3150 priced; Door Controls DC One, Record 5100 via Champion, and Stanley Dura-Glide quotes requested (all with electric lock / breakout / clear anodized; lead times being asked); <b>hollow-metal RFQs are out</b> to door/frame suppliers with frames priced separately to release first; rolling steel / high-speed passed to his overhead/dock partner. <b>GHK REPLIED Fri Oct 23, 1:04 PM ET</b> (Garret, contact@ghkdoors.com, to snket@): GHK will have the China Grove hollow-metal / overhead quote over <b>by Wednesday, October 28</b> — the team is currently out of town working on projects and heading back soon. Hollow-metal is now the critical path (frames needed mid-Nov, install mid-Dec): Snket emailed Jerry Oct 23, 12:22 PM asking him to confirm Oct 28 for the itemized hollow-metal quote with frames priced separately, and sent Garret a status check the same time. <b>Snket replied to Garret Oct 23, 1:54 PM</b> accepting the Wed Oct 28 quote date and asking for frames priced separately + lead times, and sent Garret a second ask Oct 23, 4:27 PM on UNC-Chapel Hill 08g prequal. Doug's Oct 23 email also proposed fee terms (2% of awarded amount; $1,000/mo after first award) that differ from the recorded agreed structure — Tim replied Oct 23, 11:17 AM: terms under review by Snket + Tim, to be settled in writing before the first award; do not present as agreed.</p>
-          <div class="rev"><b>$6,000 margin booked</b> <span>— revised client proposal SENT to Akhil Oct 23, 11:24 AM ET ($152,212.58, PDF attached) — approval + deposit by Oct 30 holds the mid-Dec install</span></div>
+          <p><b>$6K booked.</b> Proposal <b>$152,213</b> sent Oct 23. Deposit due <b>Oct 30</b> for mid-Dec install. <b>GHK quote Oct 28</b> — critical path.</p>
+          <div class="rev"><b>$6,000 booked</b> <span>— deposit due Oct 30</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L2</span><h3>Doug Monthly Partnership</h3><span class="pill green">Active</span></div>
-          <p>Doug / Glass &amp; Door Pro is the <b>first monthly-paying partner</b> (agreed Oct 21). Doug Pipeline: <b>17 rows — 14 active routes (incl. Kinston BP0840.1 glazing, reinstated as a Doug route — Routed, engagement pending) + 1 resolved (Gateway Plaza) + 1 closed (Blackburn) + 1 void (ECU Health Duplin — source unverified).</b> <b>Gateway Plaza row RESOLVED Oct 23 PM:</b> the CM's official Prequalified Bidders List (Addendum #4, Oct 20) shows Glass &amp; Door Pro is NOT among the 08B prequalified firms (A1 Glass and Aluminum, NC Glazing and Fabrication, GCCM, BMF Corporation are) — Doug can only supply/install under one of them; Tim's follow-up to Doug was SENT Oct 23 afternoon asking about existing relationships (A1 Glass is local) and whether he wants an intro before the Tue Oct 27 bids. Newest route: <b>Spartanburg County School District Six $395M bond program</b> (Watch — matched to Doug first for glazing; Tim's heads-up email to Doug <b>SENT Fri Oct 23, 11:16 AM ET</b> — it was a draft at the last build). Also new: <b>Tim → Doug Mattamuskeet glazing decision ask SENT Oct 23, 9:10 AM</b> (bids Mon Oct 26). Earlier route: <b>Beaufort County CC storefront slice</b> — heads-up <b>SENT to Doug Oct 23, 12:33 AM</b> (it was the tim@ draft r-8586767565457692304; the Sent folder confirms it went out), awaiting Doug's fast yes/no; bids Wed Oct 28, 3:00 PM (moved a day earlier from Oct 29 — Tim emailed Doug the correction Oct 24, 11:07 AM). Kinston BP0840.1 glazing REASSIGNED to Doug on Oct 23 (Snket) — Palmetto State Glass was red-flagged in the Oct 23 full-board sentiment vetting (7 of 20 reviews 1-star, driver-conduct + no-show themes) and demoted to fallback only. Tim’s Kinston lane ask to Doug was SENT Fri Oct 23, 6:30 PM ET (“Kinston glazing package (BP0840.1, bids Nov 10) — do you want the lane?”) and Tim’s prequal-add email to Meredith Terrell at Barnhill/BTAL was SENT Fri Oct 23, 6:29 PM ET — Doug’s yes and the BTAL prequal-add answer are now owed (bids Nov 10, 2:00 PM, prequalified bidders only). Other active routes: China Grove, Huntersville #5, Asheville-Oakley #9 (both confirmed bidder), Athens BP-08F, Carrboro 0840, Wake Early/Parkside BP 08F, Yates Mill glazing slice, Carteret (Doug-only), Mattamuskeet storefront/glazing slice, Falls Park, Firetower glazing slice (held).</p>
-          <div class="rev"><b>Monthly — terms under review</b> <span>(see Revenue panel): Doug countered Oct 23 at 2% of award, transitioning to $1,000/mo after the first award; Tim replied Oct 23, 11:17 AM — terms under review by Snket + Tim, to be settled in writing before the first award. Recorded agreed structure per Snket is 10% of wins; standard is $2,500/mo + 3–5%. Not settled.</span></div>
+          <p><b>17 rows · 14 active.</b> New: Spartanburg · Mattamuskeet (Oct 26) · Beaufort (Oct 28) · Kinston → Doug. Gateway: sub-route only.</p>
+          <div class="rev"><b>Monthly</b> <span>— 10% recorded vs 2% counter · not settled</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L3</span><h3>Bid Engine (Opportunities)</h3><span class="pill green">Active</span></div>
-          <p>Expanded Oct 22 to <b>3 tiers</b> — Charlotte ring / statewide NC-SC / Atlanta (Jerry). Newest find: City of Madison, GA — New Fire Station #22 (RFP 2027-3500-01; Georgia Procurement Registry verified firsthand Oct 24; ~11,000 SF, four drive-through bays; Division 08 named — Flush Wood Doors + Door Hardware; submittals due Nov 13, 2026 5:00 PM; mandatory pre-bid Oct 22 has passed for prime proposers, so door trades route via the awarded prime GC; Georgia regional bench — coverage check, no named bench carrier in Morgan County). <b>NCACC Headquarters — Full Building Alteration</b> (Raleigh; City of Raleigh permit issued Oct 20/21, $5.4M est.; Division 08 implied but no door package named; Tim emailed Bobbitt (Blake Holmes) Oct 24, 8:07 AM — awaiting reply; stage still UNVERIFIED until the GC confirms a package is open; Watch, Oct 24). Oct 23 PM: <b>Fort Bragg Landfill Facility — Doors, Frames &amp; Hardware package</b> (BidNet NC; closes Mon Oct 26, 2026, 1:00 PM EDT — red zone; no local Cumberland County installer, runs through Piedmont or a non-local lane); <b>Gateway Plaza &amp; Base Trail — Durham Rail Trail</b> (Balfour Beatty–Holt Brothers JV / City of Durham, Bid 27-1102) — RESOLVED Oct 23 PM: the CM's official Prequalified Bidders List (Addendum #4, Oct 20) shows NEITHER Doug nor Piedmont is prequalified; bids Tue Oct 27, 2:00 PM EDT; sub-route only via a prequalified firm; <b>UNC-Chapel Hill New Residence Hall 1, Package 08g Coiling Doors &amp; Grilles</b> (LeChase–SGS) — prequalified bidders only; UNC Facilities' own page gives bids Thu Nov 12, 1:00 PM (BidNet shows Nov 11 — UNC's page is authoritative); plus a <b>BidNet SC/GA coverage-check batch</b> (all flagged coverage check / Snket decision, NOT clean pursuits): SC Exterior Door Replacement (CLOSED TODAY Fri Oct 23, 5:00 PM EDT), SC Electronic Access Control (CLOSED TODAY Fri Oct 23, 5:00 PM EDT), SC Security Interior Door Replacement (closes Tue Oct 27, 5:00 PM EDT), SC Four Exterior Metal Doors (closes Fri Oct 30, 5:00 PM EDT), SC Front Door Vandalism Protection — bullet-resistant door + rolling shutter (closes Tue Nov 10, 5:00 PM EST), SC Door and Door Hardware Updates (closes Thu Nov 19, 2:00 PM EST), and GA Fire Station Door Replacement Project, ITB 27-FD01 (closes Wed Nov 4, 2:00 PM EST — Atlanta-metro location not confirmed; Jerry first if Atlanta metro + DFH). Earlier Oct 23 find: <b>Spartanburg County School District Six — 2026 Bond Program</b>, Roebuck / Spartanburg SC (Watch — $395M bond approved Mar 31, 2026; 3 new schools: new Dawkins Middle School + 2 new elementary schools; no GC/CM or bid dates yet; glazing/storefront packages expected within the five-year window; Doug first-match for glazing, Piedmont SC covers DFH bench, Jerry partial fit as second lane). Earlier Oct 23 finds: <b>New Hanover County Schools — 2026 School Bond</b> ($320,525,000 GO bonds), Wilmington NC (Watch — bond order adopted Jun 15, 2026; referendum Nov 3, 2026; pre-vote, pre-bid stage; new high school phase, new middle and elementary schools imply future Division 08 packages; no door package itemized yet, no Doug Pipeline row) and <b>Brunswick County Schools — 2026 School Bond</b> ($349.6M GO bonds), northern Brunswick County NC (Watch — referendum Nov 3, 2026; pre-vote, pre-bid; two new schools planned; no bid date yet). Earlier finds (late Oct 22 scanner run): <b>Beaufort County Community College New Skills Building</b>, Washington NC (A. R. Chesson Construction; doors/windows/storefront; bids Oct 29, 2026, 2:00 PM — NEW, red zone) and <b>Harnett County CTE High School</b>, Lillington NC (early signal / Watch — $123M project, design phase just starting, no bid date). Also recorded: <b>ECU Health Duplin Hospital ED Addition (Barnhill) was VOIDED</b> on re-verification — the Greater Diversity listing could not be re-opened or corroborated (403/404, site search empty); do not pursue. Evening Oct 22 finds (stored after the 5:09 PM snapshot): Kinston Global TransPark MRO, Robeson CC Healthcare, Wake Early College HS H-11 / Parkside Middle M-19, Yates Mill County Park, Carteret County Courthouse (GLAZING ONLY — Doug) and Fayetteville 911 Call Center CMAR — plus Cody Treece's per-project prequal clarification logged. Late-evening finds (9:56 PM scanner run): Jackson County Middle School CMAR pre-bid (Sylva NC) and Mattamuskeet School Building 800 Renovation (bids Oct 26). Note: Tim <b>SENT</b> the Jackson County Division 08 interest email to Joe Menard at Vannoy Oct 22, 8:38 PM — the sheet still records it as a draft, but the Sent folder and a delivery notice confirm the primary recipient was sent; the cc to Neil Asher was <b>BLOCKED</b> (550 recipient rejected). <b>Partner Tracker grows to 74 companies Oct 23 evening</b> — partner-engine Pass C added 8 vetted bench firms (Overhead Door Company of Wilmington, Overhead Door Company of Augusta/Aiken and Palmetto Metal Products vetted clean; Bilt Rite, Overhead Door Company of Savannah, McCarthy Inc, Northco Dock &amp; Door and Atlantic Glass vetted — caution; all bench, not contacted per the tracker), Tim’s Pass C introduction wave went out 6:08–6:09 PM ET to four of them, and the Review Scores tab expanded to 74 companies with a full-board sentiment-verdict column added Oct 23 (Palmetto State Glass red-flagged — Kinston glazing reassigned to Doug, Palmetto fallback only).</p>
-          <div class="rev"><b>112 rows</b> <span>— partner signals tracked (+2 new rows this run: Walmart / Whiting-Turner Franklin 85 Logistics Center, Carnesville GA + Mitsubishi Power Americas Savannah Machinery Works expansion, Pooler GA — both Georgia early signals in Watch); 17 live bid / prequal packages</span></div>
+          <p><b>3 tiers</b> NC/SC/GA. New: Madison GA · NCACC · Fort Bragg (Oct 26). UNC 08g prequal-only. <b>74 partners</b> tracked.</p>
+          <div class="rev"><b>112 rows</b> <span>— 17 live packages</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L4</span><h3>Direct Service Leads (Hartman Model)</h3><span class="pill green">Active</span></div>
-          <p>Hartman USA Rock Hill job routed to <b>Piedmont (selected partner)</b>; Tim sent Tanna the live-job email Oct 22, 1:26 PM. Vortex priced it <b>~$1,770</b> (estimate); <b>$2,100 not-to-exceed</b> approval being sought from Eddie's boss. Newest lead: <b>Harold Dill (Columbus, NC)</b> — Facebook keyword sweep, posted Fri Oct 23, 11:42 AM ET: Genie garage door motor — door goes up but will not go down, red light on the motor comes on and nothing happens; asking who works on Genie motors. Residential, status New. <b>Tier 3 — coverage check:</b> Columbus NC (Polk Co., between Asheville and Greenville-Spartanburg) is outside Doug's service area and outside Tier 1/2 — Snket decides coverage before any reply; comments so far are DIY sensor-alignment advice only, need still open. Earlier newest: <b>Legacy Heights Senior Living (Ballantyne, Charlotte — 11230 Ballantyne Trace Ct, 122 beds)</b> — PRIMARY-SOURCE VERIFIED Oct 23 against NC DHHS DHSR survey records: smoke-tight corridor doors not maintained (tag C 189), first cited Feb 13, 2024 (19 gap findings plus a disconnected closer) and RE-CITED at the Aug 6, 2025 follow-up (splitting stair-exit frame, doors needing excessive force, one door no longer closes) — deficiency STILL OPEN, the only one of five verified DHHS facilities still open. Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval). <b>Summit Place of SouthPark (2101 Runnymede Lane, Charlotte, 120 beds)</b> — NC DHHS survey Aug 6, 2025 (tag C 121) cited cross-corridor doors not closing/latching (door by Room 321, SCU pair with latching hardware removed, three more failing doors, five doors wedged/propped open); no plan of correction posted — deficiency open. Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval). <b>East Towne (4815 N Sharon Amity Rd, Charlotte, 120 beds)</b> — NC DHHS follow-up Apr 17, 2025 (tag C 189) cited corridor doors not maintained (doors not closing/latching, holes through corridor doors, wedged-open door, missing fire-rated labels). FLAG: softest of the three — POC/follow-up status could not be checked; confirm before relying on it. Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval). <b>Tim sent Tanna/Piedmont an IFB bidder-of-record ask Oct 23, 9:10 AM</b> (separate project ask; Hartman confirms were sent 7:48 AM).</p>
-          <div class="rev"><b>21 direct leads</b> <span>— 16 Client Leads + 4 WhatConverts strong + 1 Facebook group lead (Jessie Lang, Oct 24)</span></div>
+          <p>Hartman → <b>Piedmont</b> ($1,770 / $2,100 NTE). <b>3 DHHS senior-living leads</b> open — drafts awaiting approval. Dill = coverage check.</p>
+          <div class="rev"><b>21 leads</b> <span>— 16 + 4 WC + 1 FB</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L5</span><h3>Atlanta Pocket (Jerry)</h3><span class="pill amber">Building</span></div>
-          <p>DeKalb County overhead doors &amp; gates <b>ITB 2026-106-ITB verified live, bids Oct 28</b> — Snket sent Jerry the brief Oct 22, 4:21 PM (one catch flagged). 4 more Atlanta early signals watch-listed: Fulton Schools Capital Plan 2027, APS A.D. Williams Elementary CM-at-Risk, Cobb 2028 SPLOST facilities, Piedmont Newton Hospital relocation. Snket also sent Apollo the Athens Drive overhead brief Oct 22, 6:17 PM and a Wake County schools overhead + dock first-look Oct 22, 6:34 PM. <b>Jerry bid capability — verified Oct 22</b> from his own emails + Apollo Capabilities Package V2: Apollo CAN bid automatic/manual doors + DFH packages as a subcontractor-bidder (on BuildingConnected; capabilities statement claims SAM.gov UEI WPL2DCRWJ833, GA@WORK, Bonfire; furnish + install + warranty standard). Caveats: no prequal or bid filed yet anywhere; capabilities statement lists zero named company references; subcontractor posture. Apollo CANNOT bid overhead/dock (Jerry's own words, Oct 22) and CANNOT prime DeKalb-type public contracts on current evidence (insurance stated only as "available upon request"; no bonding evidence). Apollo launched ~Jul 2026, solo/founder-led; Jerry is an AAADM Certified Inspector (verified via LinkedIn, credential 251167, through Jan 2027), formerly Lead Service Technician at Vortex Doors and a technician at Advanced Door Services. <b>Jerry's late-night replies Oct 22:</b> Athens (11:11 PM) — DFH in Apollo scope, overhead NOT, Capabilities Package V2 attached. DeKalb (11:13 PM) — outside Apollo scope, but Jerry found a possible substitute contact, messaged him, and will confirm by early Oct 23 AM — <b>still not received as of 10:50 AM ET Oct 24 (overdue)</b>. His 11:55 PM overview also settles Firetower: his dock partner HAS crews for a 1M SF job and can travel into the Carolinas, but is booked through year-end — needs a 2027 start and wants drawings/detail before numbers. Snket replied to the overview and sent Jerry <b>10 project briefs Oct 23, 12:15–12:23 AM</b> (Beaufort CC, Mattamuskeet, IFB Solutions, Robeson CC, APS A.D. Williams, Fulton County Schools, Wake Early/Parkside BP 08A + 28B, Henderson County Bus Garage, Asheville-Oakley DFH, plus the overview reply). <b>Oct 23, 7:51 AM:</b> Snket sent Jerry a follow-up email (“Quick follow-ups from yesterday”) with five asks, including the DeKalb overhead partner's name and structure (bids Oct 28) and a straight yes/no on Apollo as Athens BP-08A DFH bidder of record (prequal locks ~Oct 31). <b>Oct 23, 9:12 AM:</b> Snket sent Jerry two more decision asks — IFB Solutions DFH package (proposals due Oct 30) and Mattamuskeet School DFH slice (bids Mon Oct 26). <b>Oct 23, 12:22 PM:</b> Snket emailed Jerry asking him to confirm Oct 28 for the China Grove itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec) — confirmation owed. DeKalb substitute-bidder confirmation <b>STILL not received as of 10:50 AM ET Oct 24</b> (overdue — was due early Oct 23 AM). <b>Oct 23, 4:27 PM:</b> Snket sent Jerry the <b>Georgia Fire Station Door Replacement Project brief (ITB 27-FD01)</b> — closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Atlanta-metro location not confirmed — Jerry first if Atlanta metro + DFH. <b>Jerry replied to tim@ Fri Oct 23 afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — that reply does not close the DeKalb substitute-bidder confirmation, which is still outstanding.</p>
-          <div class="rev"><b>DeKalb bids Oct 28</b> <span>— Apollo-as-prime OFF (out of scope); substitute-bidder confirmation STILL not received as of 10:50 AM ET Oct 24 (overdue — was due early Oct 23 AM) · GA Fire Station ITB 27-FD01 brief sent to Jerry Oct 23, 4:27 PM (closes Nov 4)</span></div>
+          <p><b>DeKalb Oct 28</b> — Apollo prime OFF, substitute <b>overdue</b>. Scope: DFH/auto YES · overhead/dock NO. Firetower dock = 2027 only.</p>
+          <div class="rev"><b>DeKalb Oct 28</b> <span>— substitute overdue</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L6</span><h3>Rank-and-Rent Sites</h3><span class="pill green">Live / Normal</span></div>
-          <p><b>10 Charlotte EMD sites live</b> — 18 calls in 30 days, 3 strong (per WhatConverts review). Atlanta EMD pattern (<b>12 domains</b>) verified available; registration is Snket's action. <b>WhatConverts session restored Oct 22 evening</b> (Snket approved the sign-in); catch-up review complete: 0 calls since the 5:07 PM ET watermark — today's only call was the Hartman lead at 10:38 AM. Hourly call scanner running normally again.</p>
+          <p><b>10 EMDs live</b> · 18 calls/30d, 3 strong. <b>12 Atlanta domains</b> available — registration is Snket's.</p>
           <div class="rev"><b>18 calls / 30 days</b> <span>— 3 strong</span></div>
         </article>
       </section>
@@ -521,102 +503,102 @@
       <!-- ================= AWARD WATCH — TIMING & PROTECTION ================= -->
       <div class="section-head">
         <h2>Award Watch — Timing &amp; Written Protection</h2>
-        <span class="sub">How fast a partner win becomes visible to us — and the paper that has to exist before one does</span>
+        <span class="sub">How fast we'd know — and the paper needed first</span>
       </div>
       <section class="two-panel">
         <div class="w-panel">
           <h3>How fast we'd know</h3>
-          <p class="wsub">The award layer runs on every hourly bid-engine cycle, so once a result is published we catch it within about an hour. The real delay is publication — and for sub-level wins, publication often never happens.</p>
-          <div class="w-item"><span class="who">Bid tab</span><p><b>Same day to ~3 days</b> — apparent winner at public openings. Carteret (Oct 29) is read aloud; Athens BP-08F (Nov 10) opens publicly. This is the fastest, hardest proof a partner won or lost.</p></div>
-          <div class="w-item"><span class="who">Formal</span><p><b>~3–14 days</b> — official award notices and portal postings after a public opening (e.g. the Fort Bragg DFH package award after the Oct 26 close).</p></div>
-          <div class="w-item"><span class="who">Board OK</span><p><b>~2–6 weeks</b> — school-board / county / city contract approvals. The winner may surface in an agenda packet before the meeting, but formal confirmation waits for the vote.</p></div>
-          <div class="w-item"><span class="who">CM / sub</span><p><b>Often never</b> — CM trade packages and sub-under-GC wins: some CMs publish awarded-bidder lists, most do not. Public data names the prime, not the door subcontractor.</p></div>
-          <div class="w-item"><span class="who">Private</span><p><b>Never</b> — private owners (IFB Solutions, Firetower, Falls Park) publish no award record at all. Only the contract paperwork proves a win.</p></div>
+          <p class="wsub">Delay = publication. Sub wins often never publish.</p>
+          <div class="w-item"><span class="who">Bid tab</span><p><b>Same day–3 days</b> — public openings (Carteret, Athens).</p></div>
+          <div class="w-item"><span class="who">Formal</span><p><b>~3–14 days</b> — formal award notices.</p></div>
+          <div class="w-item"><span class="who">Board OK</span><p><b>~2–6 weeks</b> — board/county approvals.</p></div>
+          <div class="w-item"><span class="who">CM / sub</span><p><b>Often never</b> — prime named, sub not.</p></div>
+          <div class="w-item"><span class="who">Private</span><p><b>Never</b> — private owners publish nothing. Paperwork only.</p></div>
         </div>
         <div class="w-panel">
           <h3>The protection, in writing</h3>
-          <p class="wsub">Public data covers the left of Board 4. These three items cover the rest — none of them works retroactively, so they go in before the bid, not after the win.</p>
-          <div class="w-item"><span class="who">Doug %</span><p><b>Settle the rate before the first award.</b> Recorded: 10% of every bid won. Doug's Oct 23 counter: 2% of award, then $1,000/mo. Tim's Oct 23 reply holds the line — under review, settled in writing before any award. First test cases are already on the calendar: Carteret Oct 29, Athens Nov 10.</p></div>
-          <div class="w-item"><span class="who">Clause</span><p><b>Per-project reporting clause on every routed bid:</b> result reported within 3 business days of opening / award, subcontract amount + award confirmation provided, and CCD may verify directly with the GC, CM or owner. A "we lost" on a publicly opened bid gets checked against the bid tab — no exceptions.</p></div>
-          <div class="w-item"><span class="who">Apollo</span><p><b>No fee % on record for Jerry yet</b> — and his DeKalb substitute is unnamed with its confirmation overdue. Both get fixed in writing before IFB (Oct 30) and DeKalb (Oct 28) are decided, or those wins carry no enforceable fee.</p></div>
-          <div class="w-item"><span class="who">$1M test</span><p>Run every new lane through one question before it is routed: <b>if this partner wins $1M here and reports a loss, what proves otherwise?</b> If the answer is "nothing," the reporting clause and a settled rate are the price of routing it.</p></div>
+          <p class="wsub">Must be in writing before the bid — never retroactive.</p>
+          <div class="w-item"><span class="who">Doug %</span><p><b>Settle before first award.</b> 10% recorded vs 2% counter. Tests: Carteret, Athens.</p></div>
+          <div class="w-item"><span class="who">Clause</span><p><b>Every routed bid:</b> report in 3 days + amount + proof. CCD verifies direct.</p></div>
+          <div class="w-item"><span class="who">Apollo</span><p><b>No fee % for Jerry</b> + DeKalb substitute unnamed. Fix before Oct 28/30.</p></div>
+          <div class="w-item"><span class="who">$1M test</span><p><b>If a $1M win is reported as a loss, what proves otherwise?</b> If nothing — don't route it.</p></div>
         </div>
       </section>
 
       <!-- ================= WAITING / DRAFTS ================= -->
       <div class="section-head">
         <h2>Waiting &amp; Drafts</h2>
-        <span class="sub">Who owes us what — and what's actually sitting in the drafts folders (verified Oct 24, 4:52 PM ET, raw API)</span>
+        <span class="sub">Open loops + sent log (verified Oct 24)</span>
       </div>
-            <section class="two-panel">
+      <section class="two-panel">
         <div class="w-panel">
           <h3>They owe us</h3>
-          <p class="wsub">Open loops, by person. Nothing here closes itself.</p>
-          <div class="w-item"><span class="who">Akhil</span><p><b>China Grove approval + deposit by Oct 30</b> — revised client proposal SENT by Snket Oct 23, 11:24 AM ET ($152,212.58, PDF attached); approval + deposit by Oct 30 holds the mid-December install. Terms 50% deposit / 40% during installation / 10% on completion; pricing valid 60 days through Dec 22, 2026</p></div>
-          <div class="w-item"><span class="who">Doug</span><p><b>Doug / Glass &amp; Door Pro — Jessie Lang fit answer still pending</b> — Tim's fit ask on the Charlotte 28211 window-to-door job (60-inch French door unit, door provided by her) sent Sat Oct 24, 11:46 AM ET; follow-up sent Oct 24, 2:58 PM ET; fit confirmation still owed</p></div>
-          <div class="w-item"><span class="who">Jerry</span><p><b>Jerry — Jessie Lang: passed for Apollo</b>, offered to ask his contacts; Snket reply prepared to accept and share job details (no customer contact info)</p></div>
-          <div class="w-item"><span class="who">Doug</span><p><b>Revised China Grove proposal — DELIVERED Oct 23, 10:41 AM</b> (resolved; turned around to Akhil same day, 11:24 AM). Still open from Tim's Oct 23, 7:49 AM asks: <b>Carteret bid confirm</b> for Oct 29, 11:00 AM · <b>Beaufort CC heads-up receipt</b> · <b>Edifice prequal municipal / fire-station references</b> by early November for the Nov 12 Huntersville prequal. <b>Plus:</b> reply owed to Tim's Oct 23, 4:54 PM <b>Mattamuskeet</b> ask — “need your yes/no today” (bids Mon Oct 26, 2:00 PM; supersedes the 9:10 AM glazing decision ask). <b>Plus:</b> reply owed to Tim's Oct 23 afternoon <b>Gateway Plaza follow-up</b> — the CM's Prequalified Bidders List (Addendum #4) shows Glass &amp; Door Pro is NOT on 08B; Tim asked about Doug's existing relationships with the prequalified firms (A1 Glass is local) and whether he wants an intro before the Tue Oct 27 bids; sub-route only via a prequalified firm. <b>Plus:</b> reply owed to Tim’s Oct 23, 6:30 PM <b>Kinston BP0840.1 glazing lane ask</b> (bids Nov 10)</p></div>
-          <div class="w-item"><span class="who">BTAL</span><p><b>BTAL / Barnhill — Meredith Terrell:</b> answer owed on Tim’s Oct 23, 6:29 PM prequal-add email — can Glass &amp; Door Pro be added to the BP0840.1 prequalified bidders list for NC Global TransPark MRO 9-12 (Kinston), bids Nov 10, 2:00 PM?</p></div>
-          <div class="w-item"><span class="who">GHK</span><p><b>Garret — China Grove hollow-metal/overhead quote now owed BY Wed Oct 28</b> — Garret REPLIED Fri Oct 23, 1:04 PM ET (contact@ghkdoors.com, to snket@): GHK will have the quote over by Wednesday, October 28; the team is currently out of town working on projects and heading back soon. Dated commitment — no longer open-ended. (Snket sent a status check Oct 23, 12:22 PM.) <b>Snket replied Oct 23, 1:54 PM</b> accepting the Wed Oct 28 date and asking for frames priced separately + lead times. <b>Also owed:</b> reply to Snket's Oct 23, 4:27 PM UNC-Chapel Hill 08g prequal ask</p></div>
-          <div class="w-item"><span class="who">Bobbitt</span><p><b>Blake Holmes / Bobbitt Construction</b> — owes the NCACC Headquarters Alteration (Raleigh) package-status reply: Tim emailed him Oct 24, 8:07 AM ET asking whether the doors/frames/hardware package and the storefront/entrance package are still open for subcontractor pricing or already awarded. Awaiting reply; stage still UNVERIFIED until the GC confirms a package is open</p></div>
-          <div class="w-item"><span class="who">Jerry</span><p><b>Jerry / Apollo</b> — <b>DeKalb substitute-bidder confirmation <span class="overdue">OVERDUE</span></b> (due early Oct 23 AM; STILL not received as of 10:50 AM ET Oct 24). <b>New inbound Oct 23 PM (UNREAD in tim@):</b> Jerry confirmed <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable) — noted, but it does not close the DeKalb confirmation. <b>Plus:</b> China Grove hollow-metal Oct 28 confirmation — Snket emailed Jerry Oct 23, 12:22 PM asking him to confirm Oct 28 for the itemized hollow-metal quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec). Follow-ups <b>SENT by Snket Oct 23, 7:51 AM</b> covering: (1) DeKalb overhead partner name + structure (prime or pass-through), bids Oct 28; (2) <b>Athens BP-08A</b> — straight yes/no on Apollo as DFH bidder of record, prequal locks ~Oct 31; (3) <b>China Grove itemized quote + supplier lead times</b> status; (4) <b>Huntersville #5</b> — confirm Apollo will prequalify for DFH; (5) <b>meeting times</b> for next week. <b>Plus two new decision asks sent Oct 23, 9:12 AM:</b> IFB Solutions DFH package (due Oct 30) and Mattamuskeet DFH slice (bids Oct 26). <b>Plus:</b> Madison GA DFH coverage yes/no — Snket emailed Jerry Oct 24, 8:08 AM asking whether Madison (Morgan County, ~1 hr east of Atlanta, outside his stated Metro Atlanta / North Georgia market) is a trip he would take for a DFH furnish-and-install sub package under the awarded prime builder after the Nov 13 submittal deadline — answer owed</p></div>
-          <div class="w-item"><span class="who">Piedmont</span><p><b>Tanna Thomas</b> — Hartman confirms (Tim sent “Hartman (Rock Hill) + Triangle brief — quick confirms” Oct 23, 7:48 AM) still awaiting reply. <b>NEW:</b> IFB Solutions DFH bidder-of-record ask sent Oct 23, 9:10 AM; proposals due Oct 30. <b>NEW:</b> Tim → Tanna Gateway Plaza ask sent Oct 23 afternoon — is Piedmont on the CM's 08A or 08B prequalified list? (The CM's Addendum #4 list shows NEITHER Doug nor Piedmont prequalified; sub-route only via a prequalified firm; bids Tue Oct 27, 2:00 PM EDT). <b>NEW:</b> Fort Bragg Landfill DFH yes/no owed after Tim's Oct 23, 4:54 PM ask — package closes Mon Oct 26, 1:00 PM</p></div>
-          <div class="w-item"><span class="who">Cody</span><p><b>Cody Treece / Edifice</b> — reply owed to Tim's Oct 23, 4:56 PM prequals bidder-of-record structure follow-up</p></div>
-          <div class="w-item"><span class="who">S. Dock</span><p><b>Blair Jones</b> — NEW: IFB Solutions six-dock-doors pricing ask sent Oct 23, 9:10 AM; awaiting reply</p></div>
-          <div class="w-item"><span class="who">MINER</span><p><b>MINER</b> — NEW: IFB Solutions six-dock-doors pricing ask sent Oct 23, 9:10 AM; awaiting reply</p></div>
-          <div class="w-item"><span class="who">Cedar</span><p><b>Cedar Management Group — vendor onboarding ADVANCED; nothing owed by Cedar now — WE owe Cedar a reply.</b> Cedar replied Fri Oct 23, 12:03 PM ET (support@mycmg.com, ticket #XN10400348), copied their vendor specialist; Tim replied 12:11 PM ET requesting the onboarding form/link and COI/W-9 requirements (specialist auto-ack, ticket #XN10419283). The vendor specialist then replied in detail 1:22 PM ET (UNREAD in tim@): Cedar uses third-party vendor <b>Vive at $149/yr</b> for vendors (extra security layer for HOAs); she asked what areas CCD services and, if interested, to send the business physical address so she can send the Vive link; it does not guarantee business/quotes but puts CCD in a status where she can share company info with Cedar clients and managers. <b>Next step — Snket/Tim decision:</b> reply with service areas + business physical address to get the Vive link, and decide whether to pay the $149/yr Vive fee. Cedar manages ~750 associations — a portfolio door-work channel</p></div>
+          <p class="wsub">Open loops, by person.</p>
+          <div class="w-item"><span class="who">Akhil</span><p><b>China Grove approval + deposit by Oct 30</b> — $152,213 sent Oct 23.</p></div>
+          <div class="w-item"><span class="who">Doug</span><p><b>Jessie Lang fit answer pending</b> — asked Oct 24.</p></div>
+          <div class="w-item"><span class="who">Jerry</span><p><b>Jessie Lang: passed</b> — accept-offer reply ready for Snket.</p></div>
+          <div class="w-item"><span class="who">Doug</span><p>Still owed: <b>Carteret</b> (Oct 29) · <b>Beaufort</b> receipt · <b>prequal refs</b> · <b>Mattamuskeet</b> (Oct 26) · <b>Gateway</b> sub-route · <b>Kinston</b> (Nov 10).</p></div>
+          <div class="w-item"><span class="who">BTAL</span><p><b>Meredith Terrell:</b> Kinston prequal-add? Asked Oct 23.</p></div>
+          <div class="w-item"><span class="who">GHK</span><p><b>Garret — China Grove quote due Oct 28.</b> Also: UNC 08g prequal.</p></div>
+          <div class="w-item"><span class="who">Bobbitt</span><p><b>Blake Holmes:</b> NCACC packages still open? Asked Oct 24.</p></div>
+          <div class="w-item"><span class="who">Jerry</span><p><b>DeKalb substitute <span class="overdue">OVERDUE</span>.</b> Also: China Grove Oct 28 · Athens 08A · IFB (Oct 30) · Mattamuskeet (Oct 26) · Madison GA.</p></div>
+          <div class="w-item"><span class="who">Piedmont</span><p><b>Tanna Thomas</b> — Hartman · IFB (Oct 30) · Gateway sub-route · Fort Bragg (Oct 26).</p></div>
+          <div class="w-item"><span class="who">Cody</span><p><b>Cody Treece</b> — prequals follow-up reply owed.</p></div>
+          <div class="w-item"><span class="who">S. Dock</span><p><b>Blair Jones</b> — IFB dock pricing. Awaiting reply.</p></div>
+          <div class="w-item"><span class="who">MINER</span><p><b>MINER</b> — IFB dock pricing. Awaiting reply.</p></div>
+          <div class="w-item"><span class="who">Cedar</span><p><b>We owe Cedar the reply</b> — areas + address; decide $149/yr fee.</p></div>
           <div class="w-item"><span class="who">HGR</span><p><b>Firetower 77 package-structure reply</b></p></div>
           <div class="w-item"><span class="who">Novant</span><p><b>Matthew Stiene</b> — reply to Oct 21 intro</p></div>
           <div class="w-item"><span class="who">Weston</span><p><b>Weston Inc.</b> — reply to Oct 21 intro (Carolina Pines)</p></div>
-          <div class="w-item"><span class="who">Momentum</span><p>Email delivery <b>FAILED</b> — a further Delivery Status Notification (Failure) arrived <b>Sat Oct 24, 11:05 AM ET</b> for info@momentumoverheaddoors.com (recipient server timed out), on top of the Oct 24, 12:24 AM ET failure notice. Outreach is confirmed undelivered — an alternate contact route is needed.</p></div>
-          <div class="w-item"><span class="who">OD-Gvl</span><p><b>Overhead Door Company of Greenville</b> — Delivery Status Notification (Delay) — latest notice <b>Oct 24, 8:26 AM ET</b> for info@overheaddoorgreenville.com; recipient server timed out, Gmail will retry for 23 more hours. Delay only — not a failure, not a reply. (Earlier delay notice Oct 23, 9:44 AM.)</p></div>
-          <div class="w-item"><span class="who">Apollo</span><p><b>RESOLVED</b> — Apollo/Jerry replied Oct 22, 11:11 PM — Athens: DFH in scope, overhead out; the same scope answer settles Wake BP 08D (out of scope). No reply outstanding on those two.</p></div>
-          <div class="w-item"><span class="who">Metcon</span><p><b>Robeson — prequal email BOUNCED Oct 22, 6:30 PM (550)</b>; alternate route needed before Robeson prequal can land</p></div>
-          <div class="w-item"><span class="who">Vannoy</span><p><b>Jackson County</b> — cc copy to Neil Asher <b>BLOCKED</b> Oct 22, 8:38 PM (550 recipient rejected); Joe Menard copy sent — confirm receipt / alternate Vannoy contact if needed</p></div>
+          <div class="w-item"><span class="who">Momentum</span><p>Email <b>FAILED</b> Oct 24. Alt route needed.</p></div>
+          <div class="w-item"><span class="who">OD-Gvl</span><p><b>OD Greenville</b> — delivery delayed, Gmail retrying.</p></div>
+          <div class="w-item"><span class="who">Apollo</span><p><b>RESOLVED</b> — Athens DFH in, overhead out.</p></div>
+          <div class="w-item"><span class="who">Metcon</span><p><b>Robeson email BOUNCED</b> — alt route needed.</p></div>
+          <div class="w-item"><span class="who">Vannoy</span><p><b>Jackson County</b> — cc <b>BLOCKED</b>; Menard copy sent.</p></div>
         </div>
         <div class="w-panel">
           <h3>Drafts ready to send</h3>
-          <p class="wsub">Verified against the actual drafts folders Oct 24, 4:52 PM ET via the raw API — tim@: 0 drafts; snket@: 0 drafts. <b>None ready — both mailboxes empty.</b> The Jessie Lang fit asks are NOT drafts — both were sent (verified in the Sent folders), and the Tim → Doug 60-inch follow-up draft was sent Oct 24, 2:58 PM ET.</p>
-          <h4 class="wgroup">Sent — Oct 24, afternoon · was the morning's draft</h4>
-          <div class="w-item"><span class="who">2:58 PM</span><p>Tim → Doug — Jessie Lang 60-inch follow-up SENT (was the tim@ draft created 12:15 PM) — follow-up on the Jessie Lang fit check with the confirmed 60-inch French door detail (widening the opening and a header are almost certainly part of the job) so Doug prices the fit with it in hand.<span class="tag sent">sent · tim@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23, evening · new sends</h4>
+          <p class="wsub"><b>0 drafts — both mailboxes empty.</b> Log of sent mail below.</p>
+          <h4 class="wgroup">Sent — Oct 24, afternoon</h4>
+          <div class="w-item"><span class="who">2:58 PM</span><p>Tim → Doug — Jessie Lang 60-inch follow-up SENT (was the morning's draft).<span class="tag sent">sent · tim@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 23, evening</h4>
           <div class="w-item"><span class="who">6:29 PM</span><p>Tim → Meredith Terrell / BTAL — Kinston BP0840.1 prequal-add email<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">6:30 PM</span><p>Tim → Doug — Kinston glazing package lane ask, bids Nov 10<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">6:08–6:09 PM</span><p>Tim Pass C bench-introduction wave — McCarthy Inc (coastal GA doors/frames/hardware) · Overhead Door Company of Savannah · Bilt Rite Overhead Garage Doors (Columbia) · Overhead Door Company of Wilmington (Ross Jewell)<span class="tag sent">sent · tim@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23, afternoon · new sends</h4>
-          <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Jerry / Apollo — Georgia Fire Station Door Replacement Project brief, ITB 27-FD01 (closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Jerry first if Atlanta metro + DFH)<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Garret / GHK — UNC-Chapel Hill New Residence Hall 1, Package 08g (Coiling Doors &amp; Grilles) prequal ask<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">PM batch</span><p>Tim bench-outreach batch SENT — Express Entrance (SC automatic bench) · Dock Door &amp; Grille Solutions (Athens BP-08C overhead prequal) · U.S. Door Service (Atlanta automatic/ADA overflow) · Covenant Architectural (Atlanta DFH first package) · Door Resources (Atlanta DFH)<span class="tag sent">sent · tim@</span> <b>Note:</b> Covenant Architectural email BOUNCED Oct 23 PM (precon@ recipient address invalid) — not delivered/awaited; alternate contact needed.</p></div>
+          <div class="w-item"><span class="who">6:08–6:09 PM</span><p>Tim Pass C bench-introduction wave — McCarthy Inc · Overhead Door Company of Savannah · Bilt Rite · Overhead Door Company of Wilmington<span class="tag sent">sent · tim@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 23, afternoon</h4>
+          <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Jerry / Apollo — Georgia Fire Station Door Replacement brief, ITB 27-FD01 (closes Nov 4)<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">4:27 PM</span><p>Snket → Garret / GHK — UNC-Chapel Hill 08g prequal ask<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">PM batch</span><p>Tim bench-outreach batch SENT — Express Entrance · Dock Door &amp; Grille · U.S. Door Service · Covenant Architectural · Door Resources<span class="tag sent">sent · tim@</span> <b>Note:</b> Covenant email BOUNCED (precon@ invalid) — alternate contact needed.</p></div>
           <div class="w-item"><span class="who">PM</span><p>Tim → Copenhaver Construction — Jackson County Middle School Division 08 interest<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">PM</span><p>Tim → Tanna Thomas / Piedmont — Gateway Plaza: is Piedmont on the CM's 08A or 08B prequalified list?<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">PM</span><p>Tim → Doug — Gateway Plaza prequalified list is out; Doug not on 08B; A1 Glass sub-route / intro ask<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">PM</span><p>Tim → Doug — Gateway Plaza: Doug not on 08B; A1 Glass sub-route / intro ask<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">PM</span><p>Tim → Overhead Door Company of Fayetteville — intro<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">PM</span><p>Tim → U.S. Doorways — Athens BP-08A second DFH lane<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">1:54 PM</span><p>Snket → Garret / GHK — accepting the Wed Oct 28 China Grove quote date; frames priced separately + lead times asked<span class="tag sent">sent · snket@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23, early afternoon · new sends</h4>
-          <div class="w-item"><span class="who">12:22 PM</span><p>Snket → Jerry / Apollo — China Grove hollow-metal: confirm Oct 28 for the itemized quote, frames priced separately (critical path; frames mid-Nov, install mid-Dec)<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">12:22 PM</span><p>Snket → Garret / GHK — China Grove hollow-metal / overhead quote status check (Garret replied 1:04 PM: quote by Wed Oct 28)<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">12:11 PM</span><p>Tim → Cedar vendor specialist — onboarding form/link + COI/W-9 requirements ask (specialist auto-ack, ticket #XN10419283; detailed Vive reply came 1:22 PM)<span class="tag sent">sent · tim@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23, late morning · no longer drafts / new sends</h4>
-          <div class="w-item"><span class="who">11:24 AM</span><p>Snket → Akhil — revised China Grove client proposal SENT ($152,212.58; PDF “china-grove-client-proposal-2026-10-23.pdf” attached; approval + deposit by Oct 30)<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">11:17 AM</span><p>Tim → Doug — fee counter under review (2% of award, transitioning to $1,000/mo after first award); terms to be settled in writing before the first award<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">11:16 AM</span><p>Tim → Doug — Spartanburg District Six $395M bond glazing heads-up SENT (was the tim@ draft created Oct 23, 10:52 AM; tim@ drafts now 0)<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">1:54 PM</span><p>Snket → Garret / GHK — accepting the Wed Oct 28 China Grove quote date; frames separately + lead times asked<span class="tag sent">sent · snket@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 23, early afternoon</h4>
+          <div class="w-item"><span class="who">12:22 PM</span><p>Snket → Jerry / Apollo — China Grove hollow-metal: confirm Oct 28, frames priced separately<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">12:22 PM</span><p>Snket → Garret / GHK — China Grove hollow-metal / overhead quote status check (replied 1:04 PM: quote by Oct 28)<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">12:11 PM</span><p>Tim → Cedar vendor specialist — onboarding form/link + COI/W-9 requirements ask<span class="tag sent">sent · tim@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 23, late morning</h4>
+          <div class="w-item"><span class="who">11:24 AM</span><p>Snket → Akhil — revised China Grove proposal SENT ($152,212.58, PDF attached; approval + deposit by Oct 30)<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">11:17 AM</span><p>Tim → Doug — fee counter under review; terms to be settled in writing before the first award<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">11:16 AM</span><p>Tim → Doug — Spartanburg District Six $395M bond glazing heads-up SENT<span class="tag sent">sent · tim@</span></p></div>
           <h4 class="wgroup">Sent — Oct 23, 9:10–9:12 AM · decision asks out</h4>
-          <div class="w-item"><span class="who">9:10 AM</span><p>Tim → Doug — Mattamuskeet School glazing slice decision ask (bids Mon Oct 26)<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">9:10 AM</span><p>Tim → Tanna Thomas, Piedmont — IFB Solutions DFH bidder of record? (proposals due Oct 30)<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">9:10 AM</span><p>Tim → Doug — Mattamuskeet School glazing slice decision ask (bids Oct 26)<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">9:10 AM</span><p>Tim → Tanna Thomas, Piedmont — IFB Solutions DFH bidder of record? (due Oct 30)<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">9:10 AM</span><p>Tim → Blair Jones, Southern Dock — IFB Solutions six dock doors pricing ask<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">9:10 AM</span><p>Tim → MINER (minerprequal) — IFB Solutions six dock doors pricing ask<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">9:12 AM</span><p>Snket → Jerry / Apollo — IFB Solutions DFH package ask<span class="tag sent">sent · snket@</span></p></div>
           <div class="w-item"><span class="who">9:12 AM</span><p>Snket → Jerry / Apollo — Mattamuskeet School DFH slice decision ask<span class="tag sent">sent · snket@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23 morning · no longer drafts / new sends</h4>
+          <h4 class="wgroup">Sent — Oct 23 morning</h4>
           <div class="w-item"><span class="who">7:48 AM</span><p>Tim → Tanna Thomas, Piedmont — Hartman (Rock Hill) + Triangle brief confirms<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">7:49 AM</span><p>Tim → Cedar Management Group — gate and common-area door follow-up (ticket #XN10400348)<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">7:49 AM</span><p>Tim → Cedar Management Group — gate and common-area door follow-up<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">7:49 AM</span><p>Tim → Doug — China Grove revised proposal + a few confirms<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">7:51 AM</span><p>Snket → Jerry / Apollo — Quick follow-ups from yesterday (DeKalb overhead partner, Athens BP-08A, China Grove quote, Huntersville prequal, meeting times)<span class="tag sent">sent · snket@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 23 early AM · no longer drafts</h4>
-          <div class="w-item"><span class="who">12:15–12:23</span><p>Snket → Jerry — reply to “Overview of Everything From Today” + 9 project briefs: Beaufort CC · Mattamuskeet · IFB Solutions · Robeson CC · APS A.D. Williams Elementary · Fulton County Schools · Wake Early/Parkside BP 08A + 28B · Henderson County Bus Garage · Asheville-Oakley DFH<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">12:33 AM</span><p>Tim → Doug — Beaufort County CC storefront slice heads-up, bids Oct 29 (was the tim@ draft; confirmed in Sent)<span class="tag sent">sent · tim@</span></p></div>
-          <h4 class="wgroup">Sent — Oct 22 · no longer drafts</h4>
+          <div class="w-item"><span class="who">7:51 AM</span><p>Snket → Jerry / Apollo — Quick follow-ups (DeKalb partner, Athens BP-08A, China Grove quote, Huntersville prequal, meeting times)<span class="tag sent">sent · snket@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 23 early AM</h4>
+          <div class="w-item"><span class="who">12:15–12:23</span><p>Snket → Jerry — reply to “Overview of Everything From Today” + 9 project briefs: Beaufort CC · Mattamuskeet · IFB Solutions · Robeson CC · APS A.D. Williams · Fulton County Schools · Wake Early/Parkside · Henderson Bus Garage · Asheville-Oakley DFH<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">12:33 AM</span><p>Tim → Doug — Beaufort County CC storefront slice heads-up, bids Oct 29<span class="tag sent">sent · tim@</span></p></div>
+          <h4 class="wgroup">Sent — Oct 22</h4>
           <div class="w-item"><span class="who">1:26 PM</span><p>Tim → Tanna — Hartman live job<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">4:10 PM</span><p>Tim → Cody — Doug's contact<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">4:14 PM</span><p>Tim → Doug — prequal invite chain<span class="tag sent">sent · tim@</span></p></div>
@@ -625,16 +607,16 @@
           <div class="w-item"><span class="who">4:28 PM</span><p>Snket → Jerry — China Grove relay<span class="tag sent">sent · snket@</span></p></div>
           <div class="w-item"><span class="who">5:06 PM</span><p>Tim → Cody — Asheville prequal response (clears response-needed)<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">5:10 PM</span><p>Tim → Tanna — three Triangle bids for Piedmont<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">6:16 PM</span><p>Tim → Doug — Athens Drive + Carrboro glazing brief (was the tim@ draft)<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">6:17 PM</span><p>Snket → Apollo (info@) — Athens Drive overhead brief (was the snket@ draft)<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">6:16 PM</span><p>Tim → Doug — Athens Drive + Carrboro glazing brief<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">6:17 PM</span><p>Snket → Apollo (info@) — Athens Drive overhead brief<span class="tag sent">sent · snket@</span></p></div>
           <div class="w-item"><span class="who">6:29 PM</span><p>Tim → Metcon prequal team — Robeson CC prequal confirmation · sent but BOUNCED 6:30 PM (550)<span class="tag sent">tim@</span></p></div>
           <div class="w-item"><span class="who">6:30 PM</span><p>Tim → Palmetto State Glass — Kinston GTP glazing introduction<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">6:30 PM</span><p>Tim → Barnhill (BTAL) — Kinston GTP prequalification<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">6:33 PM</span><p>Tim → Doug — two Wake County items (Yates Mill + Wake Early / Parkside)<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">6:33 PM</span><p>Tim → Doug — URGENT Carteret Courthouse glazing-only IFB, due Oct 29<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">6:34 PM</span><p>Snket → Apollo (info@) — Wake County schools overhead + dock first-look<span class="tag sent">sent · snket@</span></p></div>
-          <div class="w-item"><span class="who">8:38 PM</span><p>Tim → Joe Menard, Vannoy Construction — Jackson County Middle School Division 08 interest sent (cc to Neil Asher blocked, 550)<span class="tag sent">sent · tim@</span></p></div>
-          <div class="w-item"><span class="who">11:45 PM</span><p>Snket → Jerry — Athens DFH reply (bid as Apollo or vendor support) sent<span class="tag sent">sent · snket@</span></p></div>
+          <div class="w-item"><span class="who">8:38 PM</span><p>Tim → Joe Menard, Vannoy — Jackson County Middle School Division 08 interest (cc to Neil Asher blocked, 550)<span class="tag sent">sent · tim@</span></p></div>
+          <div class="w-item"><span class="who">11:45 PM</span><p>Snket → Jerry — Athens DFH reply sent<span class="tag sent">sent · snket@</span></p></div>
           <div class="w-item"><span class="who">11:46 PM</span><p>Snket → Jerry — DeKalb substitute questions sent<span class="tag sent">sent · snket@</span></p></div>
         </div>
       </section>
@@ -644,60 +626,60 @@
         <h2>Activity — Thu Oct 22 into Fri Oct 23</h2>
         <span class="sub">Everything that moved, newest first</span>
       </div>
-            <section class="timeline">
-        <div class="t-item"><span class="t-time">Oct 24 · 4:12 PM</span><p><b>Snket → Jerry:</b> Mitsubishi Power Pooler brief sent — informational only (Pooler is outside Jerry's Metro Atlanta / North Georgia market).</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 4:11 PM</span><p><b>Tim → McCarthy</b> (Division 08) and <b>Tim → Overhead Door Savannah</b> (overhead/dock): Mitsubishi Power Pooler heads-ups sent.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · PM</span><p><b>Two new Georgia early signals stored</b> — Walmart / Whiting-Turner Franklin 85 Logistics Center (Carnesville GA) and Mitsubishi Power Americas Savannah Machinery Works expansion (Pooler GA); Partner Signals now <b>112</b>.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 2:58 PM</span><p><b>Tim → Doug:</b> Jessie Lang 60-inch follow-up <b>SENT</b> (was the morning's draft) — drafts now <b>0</b> in both mailboxes.</p></div>
+      <section class="timeline">
+        <div class="t-item"><span class="t-time">Oct 24 · 4:12 PM</span><p><b>Snket → Jerry:</b> Mitsubishi Power Pooler brief sent — informational only (outside Jerry's market).</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 4:11 PM</span><p><b>Tim → McCarthy</b> (Div 08) and <b>Tim → Overhead Door Savannah</b>: Mitsubishi Power Pooler heads-ups sent.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · PM</span><p><b>Two new Georgia early signals stored</b> — Walmart Carnesville + Mitsubishi Power Pooler; Partner Signals now <b>112</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 2:58 PM</span><p><b>Tim → Doug:</b> Jessie Lang 60-inch follow-up <b>SENT</b> — drafts now <b>0</b> in both mailboxes.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 2:33 PM</span><p><b>Snket → Jerry:</b> Walmart Carnesville early-signal brief sent.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · PM</span><p><b>Jerry recorded as passing on Jessie Lang</b> (per lead sheet; no email reply) — not a fit for Apollo; he offered to ask his contacts, and a reply accepting his offer with the job details (no customer contact info) is prepared for Snket.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 12:22 PM</span><p><b>New lead — Jessie Lang</b> (Charlotte 28211, Matthews area; Charlotte Real Estate Investors Facebook group, found Oct 24): window changed to a door, door provided by her, ASAP — confirmed detail: a <b>60-inch French door unit</b>, wider than the window it replaces. Snket DM'd her Oct 24. <b>Fit asks SENT</b> — Tim → Doug 11:46 AM ET and Snket → Jerry 12:22 PM ET; awaiting fit confirmations. Direct leads now <b>21</b>.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 12:15 PM</span><p><b>Tim draft created → Doug:</b> follow-up on the Jessie Lang fit check with the confirmed 60-inch French door detail (widening the opening and a header are almost certainly part of the job) so Doug prices the fit with it in hand — <b>1 draft ready</b> for Snket/Tim to send.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 11:07 AM</span><p><b>Beaufort County CC bid date moved:</b> Chesson plan room moved the New Skills Building deadline a day earlier — bids now <b>Wed Oct 28, 3:00 PM</b> (was Thu Oct 29). Tim emailed Doug the correction 11:07 AM ET; owner-deadline verification pending — working to Oct 28. Stays in the red zone.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 11:05 AM</span><p><b>Momentum delivery failure confirmed:</b> a further Delivery Status Notification (Failure) arrived 11:05 AM ET for info@momentumoverheaddoors.com (recipient server timed out) — outreach <span class="bad">confirmed undelivered</span>; an alternate contact route is needed.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 10:50 AM</span><p><b>Refresh verified:</b> two sends this morning — <b>Tim → Bobbitt / Blake Holmes 8:07 AM</b> on NCACC package status; <b>Snket → Jerry 8:08 AM</b> on Madison GA DFH coverage. One delivery-delay notice for Overhead Door Greenville (8:26 AM, retrying, not a failure). Partner Signals routing notes refined on NCACC + Madison with count still <b>110</b>; all other sheets unchanged; no new inbound reply/lead; drafts still <b>0</b> in both mailboxes.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 7:50 AM</span><p><b>Refresh verified:</b> sheets and both inboxes unchanged since the 4:50 AM refresh except one new Pain Point stored (Overhead Door Company of Charlotte — $500 after-hours call-out fee complaint, Dale Hinson review via Trustindex; price theme only, no live need stated). Partner Signals still <b>110 rows</b>, direct leads still <b>20</b>, drafts still <b>0</b> in both mailboxes. No new opportunity, lead, partner reply, or draft change.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · early</span><p><b>New opportunity stored:</b> City of Madison, GA New Fire Station #22 (RFP 2027-3500-01, Georgia Procurement Registry verified; Division 08 Flush Wood Doors + Door Hardware; submittals due Nov 13, 2026) — Georgia regional bench, coverage check, no assigned partner; Partner Signals now <b>110 rows</b>. No new email, lead, partner reply, or draft changes in either mailbox since the Oct 24 1:50 AM refresh.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · 12:24 AM</span><p><b>Delivery failure:</b> Tim's outreach to Momentum Overhead Doors (info@momentumoverheaddoors.com) failed — recipient server timed out / did not accept connections; message <span class="bad">not delivered</span>. Supersedes the Oct 23 delay notice.</p></div>
-        <div class="t-item"><span class="t-time">Oct 24 · early</span><p><b>New watch opportunity stored:</b> NCACC Headquarters Full Building Alteration, Raleigh NC (Bobbitt Construction, permit issued Oct 20/21, $5.4M est.) — permit-intel early signal, Division 08 implied but no door package named, stage unverified; Partner Signals now <b>109 rows</b>. No other sheet, inbox, or draft changes since the Oct 23 10:50 PM refresh.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 8:11 PM</span><p><b>Delivery failure:</b> Tim's outreach to Covenant Architectural (precon@covenantarchitectural.com) bounced — recipient address marked invalid; alternate contact needed. All other records unchanged since the 7:50 PM refresh.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 6:44 PM</span><p><b>Inbox verification (raw API):</b> tim@ 0 drafts · snket@ 0 drafts. The two Kinston emails are confirmed SENT — Tim → Meredith Terrell / BTAL prequal-add at 6:29 PM and Tim → Doug Kinston glazing lane ask at 6:30 PM (an earlier 6:33 PM check still showed them as drafts — the known Gmail connector lag; Sent folder now confirms both). No new inbound in either mailbox since the last check. Jerry's DeKalb substitute-bidder confirmation <span class="bad">STILL not received</span> (overdue; DeKalb bids Oct 28).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 6:08–6:09 PM</span><p><b>Tim Pass C introduction wave SENT:</b> McCarthy Inc, Overhead Door Company of Savannah, Bilt Rite, Overhead Door Company of Wilmington. Partner Tracker now <b>74 companies</b>; Review Scores expanded to 74 with full-board sentiment verdicts.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><b>Three DHHS direct leads verified and stored:</b> Legacy Heights (deficiency STILL OPEN on the primary record), Summit Place of SouthPark (new) and East Towne (new, flagged) — direct leads now <b>20</b>. Revenue panel simplified to Band 1 only at Snket's direction (Bands 2 and 3 no longer displayed).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 5:24 PM</span><p><b>Inbox verification (raw API):</b> tim@ 0 drafts · snket@ 0 drafts — the afternoon's Tim-voice drafts were SENT, not left as drafts. <b>Jerry replied to tim@ this afternoon (UNREAD)</b> confirming <b>Platinum Overhead Doors' Michael</b> as his overhead vendor contact (Michael and his father known to Jerry; Platinum reputable). But Jerry's DeKalb substitute-bidder confirmation is <span class="bad">STILL not received as of 5:24 PM ET Oct 23</span> (overdue — was due early Oct 23 AM; DeKalb bids Oct 28).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 4:56 PM</span><p><b>Tim → Cody Treece / Edifice:</b> prequals bidder-of-record structure follow-up SENT.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Tanna Thomas / Piedmont Door Solutions:</b> Fort Bragg DFH closes <b>Mon Oct 26, 1:00 PM</b> — Piedmont's yes/no needed.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Doug / Glass &amp; Door Pro:</b> Mattamuskeet bids <b>Mon Oct 26, 2:00 PM</b> — yes/no needed today.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 4:27 PM</span><p><b>Snket → Jerry:</b> Georgia Fire Station Door Replacement Project brief, <b>ITB 27-FD01</b> SENT (closes Wed Nov 4, 2:00 PM EST; city/scope locked on the public layer; Jerry first if Atlanta metro + DFH). <b>Snket → Garret / GHK:</b> UNC-Chapel Hill New Residence Hall 1, Package 08g prequal ask SENT.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><span class="good"><b>Gateway Plaza RESOLVED:</b></span> the CM's official Prequalified Bidders List (Addendum #4, Oct 20) shows <b>NEITHER Doug nor Piedmont is prequalified</b> for Bid 27-1102 (Durham Rail Trail) — sub-route only via a prequalified firm (08B: A1 Glass and Aluminum, NC Glazing and Fabrication, GCCM, BMF Corporation). Bids Tue Oct 27, 2:00 PM EDT — NEW to the red zone. Doug Pipeline grows to <b>17 rows</b> (Gateway row added as RESOLVED).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><b>Tim bench-outreach batch SENT:</b> Express Entrance (SC automatic bench) · Dock Door &amp; Grille Solutions (Athens BP-08C overhead prequal) · U.S. Door Service (Atlanta automatic/ADA overflow) · Covenant Architectural (Atlanta DFH first package) · Door Resources (Atlanta DFH) · Copenhaver Construction (Jackson County Middle School Division 08 interest) · Overhead Door Company of Fayetteville (intro) · U.S. Doorways (Athens BP-08A second DFH lane). <b>Note:</b> Covenant Architectural email bounced Oct 23, 8:11 PM (precon@ invalid) — not delivered/awaited. <b>Gateway follow-ups SENT:</b> Tim → Tanna / Piedmont (08A/08B prequal check) and Tim → Doug (not on 08B; A1 Glass sub-route).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · PM scan</span><p><b>Scanner</b> — Partner Signals grow to <b>108 rows</b>: Fort Bragg Landfill DFH package (closes Mon Oct 26, 1:00 PM EDT — red zone; no local Cumberland County installer), UNC-Chapel Hill 08g, and the BidNet SC/GA coverage-check batch stored (two SC items closed TODAY Oct 23, 5:00 PM EDT — expired). Partner Tracker grows to <b>66 companies</b> with the partner-engine Pass A/B bench adds.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 1:54 PM</span><p><b>Snket → Garret / GHK:</b> accepted the Wed Oct 28 China Grove quote date; asked for frames priced separately + lead times.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 1:22 PM</span><p><b>Cedar vendor specialist replies in detail</b> (UNREAD in tim@): Cedar uses third-party vendor <b>Vive at $149/yr</b> for vendors (extra security layer for HOAs); she asks what areas CCD services and, if interested, to send the business physical address so she can send the Vive link; it does not guarantee business/quotes but puts CCD in a status where she can share company info with Cedar clients and managers. <b>Next step — Snket/Tim decision:</b> reply with service areas + business physical address, and decide on the $149/yr Vive fee. Cedar manages ~750 associations.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 1:04 PM</span><p><span class="good"><b>Garret / GHK replies:</b></span> China Grove hollow-metal / overhead quote will be over <b>by Wednesday, October 28</b> — GHK is currently out of town working on projects and heading back soon. This ends the “quote outstanding since Oct 19 / GHK silent” status — it is now a dated commitment.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 12:22 PM</span><p><b>Snket → Jerry:</b> China Grove hollow-metal — confirm Oct 28 for the itemized quote with frames priced separately (hollow-metal is now the critical path; frames needed mid-Nov, install mid-Dec). <b>Snket → Garret / GHK:</b> status check sent.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 12:11 PM</span><p><b>Tim → Cedar vendor specialist:</b> requested the onboarding form/link and COI/W-9 requirements; specialist auto-acknowledged 12:11 PM (ticket #XN10419283).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 12:03 PM</span><p><b>Cedar Management Group replies</b> (support@mycmg.com, ticket #XN10400348): thanked CCD for its interest in becoming a vendor, copied their vendor specialist, and directed questions to vendorspecialist@mycmg.com — vendor onboarding advanced.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 11:42 AM</span><p><b>New lead — Harold Dill</b> (Facebook keyword sweep, Columbus, NC): Genie garage door motor — door goes up but will not go down, red light on the motor comes on and nothing happens; asking who works on Genie motors. Residential, status New. <b>Tier 3 — coverage check:</b> Columbus NC (Polk Co.) is outside Doug's service area and outside Tier 1/2 — Snket decides coverage before any reply; comments so far are DIY sensor-alignment advice only, need still open.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 11:24 AM</span><p><span class="good"><b>Snket → Akhil:</b></span> revised China Grove client proposal <b>SENT</b> — total <b>$152,212.58</b> (aluminum entries + AASD-1 $85,246.63; interior glass partitions $66,965.95), PDF “china-grove-client-proposal-2026-10-23.pdf” attached; AASD-1 now 6–8 weeks delivery + completed installation from deposit; terms 50/40/10, pricing valid through Dec 22, 2026; <b>approval + deposit by Oct 30</b> holds the mid-December install. Note: the 2 superseded pre-send drafts of this email in snket@ are now gone / cleaned up — both mailboxes hold 0 drafts as of 5:12 PM ET.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 11:17 AM</span><p><b>Tim → Doug:</b> fee counter <b>under review</b> — Doug's proposed terms (2% of awarded amount, transitioning to $1,000/month after the first award) will be settled in writing before the first award; revised proposal received, client turnaround same day. NOT agreed — Snket's recorded position stays: Doug agreed 10% of every bid won (2026-10-23); standard new-partner structure $2,500/mo + 3–5%.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 11:16 AM</span><p><b>Tim → Doug:</b> Spartanburg District Six heads-up <b>SENT</b> (the tim@ draft from 10:52 AM is now sent; tim@ drafts = 0). Still Watch: $395M bond program, 3 new schools, no GC/CM or bid dates yet; Doug first-match for glazing. As of 5:12 PM ET: Jerry's DeKalb substitute-bidder confirmation is <span class="bad">STILL not received (overdue)</span>.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 10:52 AM</span><p><b>New tim@ draft created:</b> Tim → Doug, Spartanburg District Six $395M bond glazing heads-up — later sent at 11:16 AM (see above).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 10:41 AM</span><p><span class="good"><b>DOUG DELIVERED:</b></span> revised China Grove proposal received (attached PDF) — the due-today item is in hand; next step is the client-facing rebuild on the revised base + $6,000 margin for Akhil ahead of the Oct 30 gate. His email also proposed fee terms (2% of awarded amount, then $1,000/mo after a first award) that differ from the recorded agreed structure — Snket to settle.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 9:44 AM</span><p><b>Delivery Status Notification (Delay)</b> for info@overheaddoorgreenville.com; Gmail retrying ~46 more hours.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 9:10–9:12</span><p><b>Six decision asks sent:</b> IFB Solutions to Piedmont (DFH bidder of record), Southern Dock + MINER (six dock doors) and Jerry (DFH package); Mattamuskeet go/no-go asks to Doug (glazing slice) and Jerry (DFH slice), bids Mon Oct 26.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · AM scan</span><p><b>Scanner</b> — 1 new Watch opportunity stored: Spartanburg County School District Six $395M bond program (3 new schools, Roebuck/Spartanburg SC); Doug Pipeline grows to 16 rows (Spartanburg matched to Doug first for glazing).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 7:51 AM</span><p><b>Snket → Jerry:</b> five follow-ups sent (DeKalb overhead partner name/structure, Athens BP-08A bidder-of-record yes/no, China Grove itemized quote status, Huntersville #5 DFH prequal confirm, meeting times next week).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 7:49 AM</span><p><b>Tim → Doug:</b> China Grove revised proposal chased (due today, client waiting, same-day turnaround promised) + Carteret bid confirm + Beaufort CC receipt + Edifice prequal references by early Nov.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 7:49 AM</span><p><b>Tim → Cedar Management Group:</b> follow-up on gate and common-area door work across its associations (ticket #XN10400348).</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 7:48 AM</span><p><b>Tim → Tanna / Piedmont:</b> Hartman (Rock Hill) + Triangle brief — quick confirms sent.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · AM scan</span><p><b>Morning scanner</b> — 2 new Watch early signals stored: New Hanover County Schools 2026 School Bond ($320.5M, referendum Nov 3, 2026) and Brunswick County Schools 2026 School Bond ($349.6M, referendum Nov 3, 2026); 1 new direct lead stored: Legacy Heights, Charlotte — corridor doors failing to close/latch per NC DHHS inspection.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 1:41 AM</span><p><b>Momentum delivery-delay notice</b> — new Delivery Status Notification (Delay) for info@momentumoverheaddoors.com; Gmail retrying (~20 more hours). Do not resend yet.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 12:33 AM</span><p><b>Tim → Doug:</b> Beaufort County CC storefront slice heads-up sent (bids Oct 29) — the former tim@ draft, confirmed in the Sent folder.</p></div>
-        <div class="t-item"><span class="t-time">Oct 23 · 12:15–12:23</span><p><b>Snket → Jerry:</b> reply to “Overview of Everything From Today” + <b>9 project briefs</b> — Beaufort CC, Mattamuskeet, IFB Solutions, Robeson CC, APS A.D. Williams Elementary, Fulton County Schools, Wake Early/Parkside BP 08A + 28B, Henderson County Bus Garage, Asheville-Oakley DFH.</p></div>
-        <div class="t-item"><span class="t-time">Late eve.</span><p><b>Scanner (late Oct 22 run):</b> stored <b>Beaufort County CC New Skills Building</b> (bids Oct 29, red zone) + <b>Harnett County CTE High School</b> (watch) — and <span class="bad">voided ECU Health Duplin</span> (source unverified; listing 403/404, uncorroborated).</p></div>
-        <div class="t-item"><span class="t-time">23:55</span><p><b>Jerry “Overview of Everything” email:</b> China Grove — pricing <b>4 automatic options for AASD-1</b> (Horton 3150 priced; DC One, Record 5100, Stanley Dura-Glide requested) + hollow-metal RFQs out, frames priced separately to release first; rolling steel/high-speed to his overhead/dock partner. <span class="good">Firetower dock partner confirmed</span> — crews for a 1M SF job, can travel into the Carolinas, booked through year-end so <b>2027 start only</b>; wants drawings/detail before numbers.</p></div>
-        <div class="t-item"><span class="t-time">23:13</span><p><b>Jerry DeKalb reply:</b> contract outside Apollo scope — but he found a possible substitute contact, messaged him, and will confirm by early Oct 23 AM (still not received as of 5:12 PM ET Oct 23 — overdue).</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · PM</span><p><b>Jerry recorded as passing on Jessie Lang</b> — not a fit for Apollo; he offered to ask his contacts, and a reply accepting (job details only) is prepared for Snket.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 12:22 PM</span><p><b>New lead — Jessie Lang</b> (Charlotte 28211): window → <b>60-inch French door</b>, door provided by her, ASAP. Snket DM'd her. Fit asks sent to Doug (11:46 AM) and Jerry (12:22 PM). Direct leads now <b>21</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 12:15 PM</span><p><b>Tim draft created → Doug:</b> Jessie Lang 60-inch follow-up — sent at 2:58 PM (see above).</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 11:07 AM</span><p><b>Beaufort County CC bid date moved:</b> bids now <b>Wed Oct 28, 3:00 PM</b> (was Oct 29). Tim emailed Doug the correction; stays in the red zone.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 11:05 AM</span><p><b>Momentum delivery failure confirmed</b> — outreach <span class="bad">undelivered</span>; alternate contact route needed.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 10:50 AM</span><p><b>Refresh verified:</b> Tim → Bobbitt 8:07 AM (NCACC package status); Snket → Jerry 8:08 AM (Madison GA coverage). One delivery-delay notice (OD Greenville). Signals still <b>110</b>; drafts <b>0</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 7:50 AM</span><p><b>Refresh verified:</b> sheets/inboxes unchanged except one new Pain Point stored (OD Charlotte $500 after-hours fee complaint — price theme only). Signals <b>110</b>, leads <b>20</b>, drafts <b>0</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · early</span><p><b>New opportunity:</b> Madison GA Fire Station #22 (Div 08 named; submittals due Nov 13) — coverage check, no assigned partner. Signals now <b>110</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · 12:24 AM</span><p><b>Delivery failure:</b> Tim's outreach to Momentum Overhead Doors <span class="bad">not delivered</span> (server timed out).</p></div>
+        <div class="t-item"><span class="t-time">Oct 24 · early</span><p><b>New watch opportunity:</b> NCACC HQ Alteration, Raleigh ($5.4M permit) — Div 08 implied, stage unverified. Signals now <b>109</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 8:11 PM</span><p><b>Delivery failure:</b> Tim's outreach to Covenant Architectural bounced (address invalid) — alternate contact needed.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 6:44 PM</span><p><b>Inbox verification:</b> 0 drafts in both mailboxes. The two Kinston emails confirmed SENT (6:29/6:30 PM). Jerry's DeKalb confirmation <span class="bad">still not received</span>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 6:08–6:09 PM</span><p><b>Tim Pass C introduction wave SENT:</b> McCarthy Inc, OD Savannah, Bilt Rite, OD Wilmington. Partner Tracker now <b>74 companies</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><b>Three DHHS direct leads verified:</b> Legacy Heights (still open), Summit Place of SouthPark, East Towne (flagged) — direct leads now <b>20</b>. Revenue panel simplified to Band 1 only.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 5:24 PM</span><p><b>Inbox verification:</b> 0 drafts — afternoon drafts were SENT. <b>Jerry replied (UNREAD)</b> naming Platinum's Michael as his overhead contact. DeKalb substitute confirmation <span class="bad">still not received</span>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 4:56 PM</span><p><b>Tim → Cody Treece / Edifice:</b> prequals bidder-of-record follow-up SENT.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Tanna / Piedmont:</b> Fort Bragg DFH closes <b>Mon Oct 26, 1:00 PM</b> — yes/no needed.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 4:54 PM</span><p><b>Tim → Doug:</b> Mattamuskeet bids <b>Mon Oct 26, 2:00 PM</b> — yes/no needed today.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 4:27 PM</span><p><b>Snket → Jerry:</b> GA Fire Station ITB 27-FD01 brief SENT (closes Nov 4). <b>Snket → Garret / GHK:</b> UNC 08g prequal ask SENT.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><span class="good"><b>Gateway Plaza RESOLVED:</b></span> neither Doug nor Piedmont is prequalified for Bid 27-1102 — sub-route only via a prequalified firm. Bids Oct 27, 2 PM. Doug Pipeline now <b>17 rows</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · PM</span><p><b>Tim bench-outreach batch SENT</b> (8 firms incl. Copenhaver, OD Fayetteville, U.S. Doorways) + Gateway follow-ups to Tanna and Doug. Covenant email bounced 8:11 PM.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · PM scan</span><p><b>Scanner</b> — signals grow to <b>108</b>: Fort Bragg DFH (closes Oct 26), UNC 08g, BidNet SC/GA batch (2 SC items closed Oct 23). Partner Tracker grows to <b>66</b>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 1:54 PM</span><p><b>Snket → Garret / GHK:</b> accepted the Wed Oct 28 quote date; frames separately + lead times asked.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 1:22 PM</span><p><b>Cedar vendor specialist replies:</b> vendor route is Vive at $149/yr; wants our service areas + business address to send the link. <b>Decision owed:</b> reply + whether to pay the fee. ~750 associations.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 1:04 PM</span><p><span class="good"><b>Garret / GHK replies:</b></span> China Grove hollow-metal / overhead quote will be over <b>by Wed Oct 28</b> — now a dated commitment.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 12:22 PM</span><p><b>Snket → Jerry:</b> China Grove hollow-metal — confirm Oct 28, frames priced separately. <b>Snket → Garret / GHK:</b> status check sent.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 12:11 PM</span><p><b>Tim → Cedar vendor specialist:</b> onboarding form/link + COI/W-9 requirements asked (auto-ack received).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 12:03 PM</span><p><b>Cedar Management Group replies</b> — vendor onboarding advanced; specialist copied in.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 11:42 AM</span><p><b>New lead — Harold Dill</b> (Columbus NC): Genie motor fault. Residential, Tier 3 coverage check — Snket decides before any reply.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 11:24 AM</span><p><span class="good"><b>Snket → Akhil:</b></span> revised proposal SENT — <b>$152,212.58</b>, PDF attached; AASD-1 6–8 weeks from deposit; approval + deposit by Oct 30 holds mid-Dec install. Both mailboxes now hold 0 drafts.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 11:17 AM</span><p><b>Tim → Doug:</b> fee counter <b>under review</b> — Doug's terms (2% → $1,000/mo) will be settled in writing before the first award. NOT agreed — recorded position stays 10% of wins.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 11:16 AM</span><p><b>Tim → Doug:</b> Spartanburg District Six heads-up SENT. Jerry's DeKalb confirmation <span class="bad">still not received (overdue)</span>.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 10:52 AM</span><p><b>New tim@ draft created:</b> Tim → Doug, Spartanburg District Six glazing heads-up — sent at 11:16 AM (see above).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 10:41 AM</span><p><span class="good"><b>Doug delivered:</b></span> revised China Grove proposal received; client rebuild + $6K margin for Akhil next. His email also proposed fee terms differing from the recorded structure — Snket to settle.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 9:44 AM</span><p><b>Delivery delay notice</b> for OD Greenville; Gmail retrying.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 9:10–9:12</span><p><b>Six decision asks sent:</b> IFB Solutions to Piedmont, Southern Dock, MINER, Jerry; Mattamuskeet go/no-go to Doug + Jerry (bids Oct 26).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · AM scan</span><p><b>Scanner</b> — 1 new Watch opportunity: Spartanburg District Six $395M bond program. Doug Pipeline grows to 16 rows.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 7:51 AM</span><p><b>Snket → Jerry:</b> five follow-ups sent (DeKalb partner, Athens BP-08A, China Grove quote, Huntersville prequal, meeting times).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 7:49 AM</span><p><b>Tim → Doug:</b> China Grove proposal chased + Carteret confirm + Beaufort receipt + Edifice references by early Nov.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 7:49 AM</span><p><b>Tim → Cedar Management Group:</b> gate and common-area door follow-up sent.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 7:48 AM</span><p><b>Tim → Tanna / Piedmont:</b> Hartman (Rock Hill) + Triangle brief confirms sent.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · AM scan</span><p><b>Morning scanner</b> — 2 new Watch signals (New Hanover $320.5M bond, Brunswick $349.6M bond — referendums Nov 3) + 1 new direct lead (Legacy Heights).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 1:41 AM</span><p><b>Momentum delivery-delay notice</b> — Gmail retrying. Do not resend yet.</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 12:33 AM</span><p><b>Tim → Doug:</b> Beaufort County CC storefront heads-up sent (bids Oct 29).</p></div>
+        <div class="t-item"><span class="t-time">Oct 23 · 12:15–12:23</span><p><b>Snket → Jerry:</b> reply to “Overview of Everything” + <b>9 project briefs</b> (Beaufort CC, Mattamuskeet, IFB, Robeson CC, APS A.D. Williams, Fulton Schools, Wake Early/Parkside, Henderson Bus Garage, Asheville-Oakley DFH).</p></div>
+        <div class="t-item"><span class="t-time">Late eve.</span><p><b>Scanner (late Oct 22):</b> stored <b>Beaufort County CC</b> (bids Oct 29, red zone) + <b>Harnett CTE HS</b> (watch) — and <span class="bad">voided ECU Health Duplin</span> (source unverified).</p></div>
+        <div class="t-item"><span class="t-time">23:55</span><p><b>Jerry “Overview of Everything”:</b> China Grove — pricing <b>4 automatic options for AASD-1</b> + hollow-metal RFQs out. <span class="good">Firetower dock partner confirmed</span> — crews for 1M SF, 2027 start only, wants drawings before numbers.</p></div>
+        <div class="t-item"><span class="t-time">23:13</span><p><b>Jerry DeKalb reply:</b> contract outside Apollo scope — possible substitute found, confirmation promised early Oct 23 AM (still not received — overdue).</p></div>
         <div class="t-item"><span class="t-time">23:11</span><p><b>Jerry Athens reply:</b> DFH in Apollo scope, overhead NOT — Capabilities Package V2 attached.</p></div>
         <div class="t-item"><span class="t-time">09:50–09:58</span><p><b>Doug:</b> Blackburn via Trudy (Wilkie out — <span class="bad">bid cancelled</span>); <span class="good">China Grove Dec delivery confirmed incl. AASD-1</span>, revised proposal due Oct 23 AM.</p></div>
         <div class="t-item"><span class="t-time">10:38</span><p><b>Hartman USA call</b> (Eddie Douglas) — new strong lead; Piedmont selected; brief sent 1:26 PM.</p></div>
@@ -705,20 +687,20 @@
         <div class="t-item"><span class="t-time">14:56</span><p><span class="bad">Rock Hill Fire Station #7 voided</span> on re-verification.</p></div>
         <div class="t-item"><span class="t-time">16:03–16:30</span><p><b>Cody Asheville chain:</b> contact request → Tim sent Doug's contact 4:10 PM → Cody per-project prequal concern 4:30 PM.</p></div>
         <div class="t-item"><span class="t-time">16:08</span><p><span class="good">Akhil: PROCEED</span> with China Grove quote on current info, optionals separated.</p></div>
-        <div class="t-item"><span class="t-time">~17:02</span><p><b>Two new early signals stored:</b> Corvid Technologies Mooresville; Utili-Serve Conover (Partner Signals rows 76–77 in sheet order).</p></div>
+        <div class="t-item"><span class="t-time">~17:02</span><p><b>Two new early signals stored:</b> Corvid Technologies Mooresville; Utili-Serve Conover.</p></div>
         <div class="t-item"><span class="t-time">17:06</span><p><b>Tim → Cody reply sent</b> (response-needed cleared). <b>17:10</b> — Tim → Piedmont Triangle brief sent.</p></div>
-        <div class="t-item"><span class="t-time">18:16–18:34</span><p><b>Send wave:</b> 8 emails out — Doug briefed on Athens/Carrboro, Wake County items and urgent Carteret; Apollo briefed on Athens overhead and Wake schools; Kinston prequal + glazing intro sent; Robeson prequal sent.</p></div>
-        <div class="t-item"><span class="t-time">18:30</span><p>Robeson prequal email to Metcon <span class="bad">BOUNCED (550 permanent failure)</span> — alternate route needed.</p></div>
-        <div class="t-item"><span class="t-time">Evening</span><p><b>7 new Partner Signals stored (83 total):</b> Cody prequal clarification, Kinston GTP, Robeson CC, Wake Early / Parkside, Yates Mill, Carteret (Doug-only) and Fayetteville 911 CMAR. Doug Pipeline grows to 11 rows.</p></div>
-        <div class="t-item"><span class="t-time">20:38</span><p><b>Tim → Vannoy:</b> Jackson County Middle School Division 08 interest email sent (cc to Neil Asher <span class="bad">blocked, 550</span> — primary recipient sent).</p></div>
-        <div class="t-item"><span class="t-time">Evening</span><p><b>Scanner 9:56 PM run — Partner Signals now 88 total:</b> Jackson County Middle School pre-bid (Sylva) and Mattamuskeet School renovation (bids Oct 26, red zone) stored; Jerry's two replies logged tonight as rows 87–88. <b>Doug Pipeline 13 rows (12 active + 1 superseded)</b> — Kinston glazing row superseded (Palmetto route); Mattamuskeet glazing slice active.</p></div>
+        <div class="t-item"><span class="t-time">18:16–18:34</span><p><b>Send wave:</b> 8 emails out — Doug briefed on Athens/Carrboro, Wake County, Carteret; Apollo on Athens overhead + Wake schools; Kinston prequal + glazing intro; Robeson prequal.</p></div>
+        <div class="t-item"><span class="t-time">18:30</span><p>Robeson prequal email to Metcon <span class="bad">BOUNCED (550)</span> — alternate route needed.</p></div>
+        <div class="t-item"><span class="t-time">Evening</span><p><b>7 new Partner Signals stored (83 total):</b> Kinston GTP, Robeson CC, Wake Early / Parkside, Yates Mill, Carteret (Doug-only), Fayetteville 911 CMAR + Cody prequal clarification. Doug Pipeline grows to 11 rows.</p></div>
+        <div class="t-item"><span class="t-time">20:38</span><p><b>Tim → Vannoy:</b> Jackson County Middle School Division 08 interest sent (cc to Neil Asher <span class="bad">blocked, 550</span>).</p></div>
+        <div class="t-item"><span class="t-time">Evening</span><p><b>Scanner 9:56 PM — signals now 88:</b> Jackson County MS pre-bid + Mattamuskeet (bids Oct 26) stored. Doug Pipeline 13 rows.</p></div>
         <div class="t-item"><span class="t-time">21:56</span><p><b>Mattamuskeet School Building 800 Renovation stored</b> (bids Oct 26).</p></div>
         <div class="t-item"><span class="t-time">23:45–23:46</span><p><b>Snket sent both Jerry replies</b> (Athens DFH + DeKalb substitute questions).</p></div>
         <div class="t-item"><span class="t-time">Evening</span><p><b>WhatConverts session restored</b>, catch-up review complete (0 calls since 5:07 PM).</p></div>
       </section>
 
       <!-- ================= RULES ================= -->
-            <footer class="rules">
+      <footer class="rules">
         <div class="r-title">How this operation runs</div>
         <span><b>Middleman positioning only</b> — no pay-per-call language up front.</span>
         <span><b>All partner outreach as Tim Lamb</b> — exception: Jerry, emailed from Snket's mailbox.</span>
@@ -739,466 +721,467 @@
          Card fields: t title · co company/GC · d detail (may use <b>)
          · val value chip · due [{label, date}] · own owner chip
          · tone green|amber|red|blue|grey · note status · act last action
+         Card copy is highlights-only by design (compressed Oct 24).
          ============================================================ */
       var SNAPSHOT = new Date(2026, 9, 24); // Oct 24, 2026
 
       var BOARDS = [
         {
           id: "opps", title: "Board 1 — Opportunities",
-          sub: "112 partner-signal rows tracked · 17 live bid packages in play. Watch holds named early signals. Drag cards between columns as they move.",
+          sub: "112 rows · 17 live. Drag to move.",
           cols: 5,
           columns: [
             { name: "New", dot: "blue", cards: [
-              { t: "City of Madison, GA — New Fire Station #22 (RFP 2027-3500-01)", co: "City of Madison, GA · Madison, Morgan County, GA · Tier C-2 — Georgia regional bench · NEW Oct 24",
-                d: "New fire station, ~11,000 SF with four drive-through bays, 1100 Mary Magnan Boulevard, Madison, GA 30650. Official RFP verified firsthand Oct 24 at the Georgia Procurement Registry: issued Oct 8, 2026; project manual (2WR of Georgia #25-02527) names Division 08 scope verbatim — Section 081416 Flush Wood Doors and Section 087100 Door Hardware; four drive-through bays plainly imply overhead/bay doors. This is a prime-GC proposal — no trade packages let yet; stage verified open (GC not yet selected, construction not started). Mandatory pre-bid meeting Oct 22, 2026 1:00 PM has PASSED for prime proposers — door trades route via the awarded prime GC, not as prime. Supersedes the Oct 15 bid-network mirror item previously logged UNVERIFIED — now corroborated at the official source.",
+              { t: "City of Madison, GA — New Fire Station #22 (RFP 2027-3500-01)", co: "City of Madison, GA · Morgan County, GA · NEW Oct 24",
+                d: "11K SF, 4 bays. Div 08 doors/hardware. Via awarded prime.",
                 due: [{ label: "Submittals due Nov 13, 5:00 PM", date: "2026-11-13" }],
                 own: "Georgia regional bench — coverage check", tone: "blue",
-                note: "Coverage check — Madison/Morgan County has no named bench carrier (outside Jerry Richards / Apollo Metro Atlanta &amp; North Georgia market; no Doug row for Georgia); line up overhead/DFH coverage with the awarded prime GC after the Nov 13, 2026 deadline. Snket emailed Jerry Richards / Apollo Oct 24, 8:08 AM asking for a yes/no on whether Madison is a trip he would take for a DFH furnish-and-install sub package under the awarded prime builder after the Nov 13 submittal deadline — Jerry's coverage answer is owed." },
-              { t: "Fort Bragg Landfill Facility — Doors, Frames & Hardware", co: "BidNet NC · Fort Bragg / Cumberland County, NC · Tier B · NEW Oct 23 PM",
-                d: "Doors, Frames &amp; Hardware package (BidNet NC). <b>No local Cumberland County installer</b> — runs through Piedmont or a non-local lane.",
+                note: "Jerry coverage asked Oct 24." },
+              { t: "Fort Bragg Landfill Facility — Doors, Frames & Hardware", co: "BidNet NC · Fort Bragg / Cumberland County, NC · NEW Oct 23 PM",
+                d: "DFH package. <b>No local installer</b> — Piedmont / non-local.",
                 due: [{ label: "Closes Oct 26, 1:00 PM EDT", date: "2026-10-26" }],
                 own: "Piedmont or non-local lane", tone: "red",
                 note: "<span class='flag'>RED ZONE — closes Mon Oct 26, 1:00 PM EDT.</span>" },
-              { t: "BidNet SC / GA Coverage-Check Batch", co: "BidNet · SC + GA · NEW Oct 23 PM · coverage check / Snket decision — NOT clean pursuits",
-                d: "Issuing organization/city locked on the public listings. <b>SC Exterior Door Replacement</b> — CLOSED TODAY Fri Oct 23, 5:00 PM EDT (expired). <b>SC Electronic Access Control</b> — CLOSED TODAY Fri Oct 23, 5:00 PM EDT (expired). <b>SC Security Interior Door Replacement</b> — closes Tue Oct 27, 5:00 PM EDT. <b>SC Four Exterior Metal Doors</b> — closes Fri Oct 30, 5:00 PM EDT. <b>SC Front Door Vandalism Protection</b> (bullet-resistant door + rolling shutter) — closes Tue Nov 10, 5:00 PM EST. <b>SC Door and Door Hardware Updates</b> — closes Thu Nov 19, 2:00 PM EST. <b>GA Fire Station Door Replacement Project, ITB 27-FD01</b> — closes Wed Nov 4, 2:00 PM EST; Atlanta-metro location not confirmed — Jerry first if Atlanta metro + DFH (brief sent to Jerry Oct 23, 4:27 PM).",
+              { t: "BidNet SC / GA Coverage-Check Batch", co: "BidNet · SC + GA · NEW Oct 23 PM · coverage check — NOT clean pursuits",
+                d: "Coverage checks only. SC Security closes Oct 27 · GA Fire ITB Nov 4. 2 SC items closed Oct 23.",
                 own: "Coverage check — Snket decides", tone: "amber" },
-              { t: "Beaufort County Community College — New Skills Building", co: "A. R. Chesson Construction · Washington, NC · Tier B",
-                d: "Doors / windows / storefront package. New scanner find, late Oct 22. Doug storefront slice routed — heads-up <b>SENT to Doug Oct 23, 12:33 AM</b> (was the tim@ draft; confirmed in Sent), awaiting his fast yes/no. Jerry briefed Oct 23, 12:16 AM.",
+              { t: "Beaufort County Community College — New Skills Building", co: "A. R. Chesson Construction · Washington, NC",
+                d: "Doors/windows/storefront. Doug + Jerry briefed.",
                 due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
                 own: "Doug (storefront slice) · Jerry briefed", tone: "red",
-                note: "<span class='flag'>RED ZONE — bids Wed Oct 28, 3:00 PM.</span> Chesson plan room moved the deadline a day earlier (was Oct 29); Tim emailed Doug the correction Sat Oct 24, 11:07 AM ET; owner-deadline verification pending — working to Oct 28." },
+                note: "<span class='flag'>RED ZONE — bids Oct 28, 3 PM.</span>" },
               { t: "Henderson County PS Bus Garage", co: "Edifice · Henderson County, NC",
-                d: "Overhead formal package.",
+                d: "Overhead package.",
                 due: [{ label: "Prequal Jan 29, 2027", date: "2027-01-29" }],
                 own: "Unassigned", tone: "blue",
                 note: "Revisit December." },
-              { t: "Corning Wilmington Expansion (Project Pearl 2)", co: "Corning · Wilmington, NC · Tier B",
-                d: "Engagement approved Oct 22.",
+              { t: "Corning Wilmington Expansion (Project Pearl 2)", co: "Corning · Wilmington, NC",
+                d: "Approved to engage Oct 22.",
                 own: "Watch pre-bid", tone: "blue",
                 note: "Trigger to act: GC / bid announcement." },
               { t: "Charlotte Firehouse 44 / River District", co: "Samet Corp · Charlotte",
-                d: "Design-builder confirmed (Samet Corp).",
+                d: "Samet = design-builder.",
                 own: "Route set", tone: "blue",
                 note: "Engagement route set." },
               { t: "Atrium Health Behavioral Health Hospital", co: "Atrium Health · University City",
-                d: "No GC announced. SupplierGATEWAY registration route (owner-side pack).",
+                d: "No GC yet. SupplierGATEWAY route.",
                 own: "Pending Snket go", tone: "amber" },
               { t: "Idlewood Capital NoDa Retail Conversion", co: "Idlewood Capital · Charlotte (NoDa)",
-                d: "Owner approach pack ready; Tim draft in mailbox to Idlewood (draft-first).",
+                d: "Owner pack + Tim draft ready.",
                 own: "Draft-first", tone: "blue" },
             ]},
             { name: "Engaged", dot: "green", cards: [
               { t: "Firetower 77", co: "HGR Construction (GC) · Rock Hill, SC",
-                d: "Intro sent Oct 21 (no partners named); awaiting HGR reply on package structure. <b>Dock capacity confirmed via Jerry Oct 22, 11:55 PM</b> — his dock partner has crews available for a job this size (1M SF) and can travel into the Carolinas, but is booked through year-end: <b>2027 start only</b>, and wants drawings/detail before numbers.",
+                d: "Awaiting HGR on structure. Jerry dock partner: 1M SF crews, <b>2027 only</b>, needs drawings.",
                 val: "Glazing/storefront slice est. $30–80K (estimate)",
                 own: "HGR reply owed", tone: "amber",
-                note: "Next step: <b>Snket's drawings/detail decision</b> (dock partner won't price without them)." },
+                note: "Next: <b>drawings decision</b>." },
               { t: "Falls Park Conference District", co: "Furman Co. (developer) · Greenville, SC",
-                d: "Developer engaged; Tim intro drafted to Furman (Doug not named).",
+                d: "Developer engaged. Tim intro drafted.",
                 own: "Doug (glazing, on reply)", tone: "amber",
                 note: "Glazing slice routes to Doug on reply." },
               { t: "IFB Solutions Expansion", co: "IFB Solutions · Winston-Salem · RFP IFB-2026-1",
-                d: "Tim engagement email sent Oct 21 to Ken Edwards.",
+                d: "Ken Edwards emailed Oct 21.",
                 due: [{ label: "Proposals due Oct 30", date: "2026-10-30" }],
                 own: "Tim", tone: "red",
-                note: "IFB asks out Oct 23, 9:10–9:12 AM — Piedmont DFH bidder of record; Southern Dock + MINER six dock doors pricing; Jerry DFH package." },
+                note: "Asks out: Piedmont DFH · docks · Jerry DFH." },
               { t: "Novant Health Rock Hill Campus", co: "Novant Health · Rock Hill, SC",
-                d: "Tim email sent Oct 21 to Matthew Stiene, SVP Construction; awaiting reply.",
+                d: "Matthew Stiene emailed Oct 21. Awaiting reply.",
                 val: "$300M campus",
                 own: "Reply awaited", tone: "blue" },
               { t: "Carolina Pines Logistics", co: "Weston Inc.",
-                d: "Tim intro sent Oct 21; dock package notes to Southern Dock / MINER sent; awaiting reply.",
+                d: "Intro sent Oct 21. Awaiting reply.",
                 own: "Reply awaited", tone: "blue" }
             ]},
             { name: "Prequal / Bid", dot: "amber", cards: [
-              { t: "Gateway Plaza & Base Trail — Durham Rail Trail", co: "Balfour Beatty–Holt Brothers JV / City of Durham · Bid 27-1102 · NEW Oct 23 PM",
-                d: "<b>RESOLVED Oct 23 PM:</b> the CM's official Prequalified Bidders List (Addendum #4, Oct 20) shows <b>NEITHER Doug nor Piedmont is prequalified</b>. Sub-route only via a prequalified firm. Tim's follow-ups SENT Oct 23 afternoon: to Doug (existing relationships with the prequalified firms / intro ask — A1 Glass is local) and to Tanna / Piedmont (08A / 08B list check).",
+              { t: "Gateway Plaza & Base Trail — Durham Rail Trail", co: "Balfour Beatty–Holt Brothers JV / City of Durham · Bid 27-1102",
+                d: "<b>Neither Doug nor Piedmont prequalified.</b> Sub-route only.",
                 due: [{ label: "Bids Oct 27, 2:00 PM EDT", date: "2026-10-27" }],
                 own: "Sub-route via prequalified firm only", tone: "red",
-                note: "<span class='flag'>RED ZONE — NEW: bids Tue Oct 27, 2:00 PM EDT.</span> Direct bid is OFF for Doug and Piedmont." },
-              { t: "UNC-Chapel Hill New Residence Hall 1 — Package 08g Coiling Doors & Grilles", co: "LeChase–SGS · Chapel Hill, NC · Tier B · NEW Oct 23 PM",
-                d: "Prequalified bidders only. UNC Facilities' own page gives bids <b>Thu Nov 12, 1:00 PM</b> (BidNet shows Nov 11 — UNC's page is authoritative). Snket sent Garret / GHK a prequal ask Oct 23, 4:27 PM.",
+                note: "<span class='flag'>RED ZONE — bids Oct 27, 2 PM.</span> Direct bid OFF." },
+              { t: "UNC-Chapel Hill New Residence Hall 1 — Package 08g Coiling Doors & Grilles", co: "LeChase–SGS · Chapel Hill, NC · NEW Oct 23 PM",
+                d: "Prequalified only. GHK prequal asked Oct 23.",
                 due: [{ label: "Bids Nov 12, 1:00 PM", date: "2026-11-12" }],
                 own: "Prequalified bidders only", tone: "amber" },
               { t: "Mattamuskeet School Building 800 Renovation", co: "A. R. Chesson Construction · Swanquarter, Hyde County NC",
-                d: "A. R. Chesson Construction — Swanquarter, Hyde County NC. Bids due Mon Oct 26, 2026, 2:00 PM. Scope verbatim: doors/frames/hardware/storefront/glazing. Doug glazing slice routed (Doug Pipeline). Coverage check — eastern NC bench for the DFH portion is Snket's decision.",
+                d: "Doors/frames/glazing. Doug glazing; DFH = coverage call.",
                 due: [{ label: "Bids Oct 26", date: "2026-10-26" }],
                 own: "Doug (glazing slice) · DFH coverage check", tone: "red",
-                note: "Decision asks sent Oct 23: Doug glazing slice 9:10 AM · Jerry DFH slice 9:12 AM. <span class='flag'>RED ZONE — bids due Mon Oct 26, 2:00 PM.</span>" },
+                note: "Asks sent Oct 23. <span class='flag'>RED ZONE — bids Oct 26, 2 PM.</span>" },
               { t: "China Grove Manufacturing Facility", co: "QBS Construction · customer: Akhil · China Grove, NC",
-                d: "Glazing / Doug: revised proposal RECEIVED Oct 23, 10:41 AM and <b>turned around to the client the same day — Snket sent Akhil the revised client proposal Oct 23, 11:24 AM ET</b> with PDF “china-grove-client-proposal-2026-10-23.pdf” attached. <b>Revised pricing:</b> aluminum entries + AASD-1 <b>$85,246.63</b>; interior glass partitions <b>$66,965.95</b>; <b>TOTAL $152,212.58</b> (up from preliminary $149,345.67). <b>Schedule:</b> AASD-1 now 6–8 weeks for delivery + completed installation from deposit (replaces the 15-week allowance); other doors/partitions 6–8 weeks to frame install, glass complete ~8–10 weeks. <b>Terms:</b> 50% deposit / 40% during installation / 10% on completion; pricing valid 60 days through Dec 22, 2026. <b>Approval + deposit by Oct 30 holds the mid-December install.</b> Open assumptions carried in the proposal: writable-glass finish TBC; door count 6 singles + 5 pairs (7th single priced as addition if confirmed); access control included for AASD-1 only; SD/PD hollow-metal quoted separately; ED out of scope. Pedestrian / Piedmont: approval gate Oct 30, hard deadline Nov 1. Overhead: GHK + Apollo quoting.",
+                d: "Proposal <b>$152,213</b> sent Oct 23. AASD-1 <b>6–8 wks from deposit</b>. Terms 50/40/10.",
                 val: "$152,212.58 client-facing revised total · $6K margin",
                 due: [{ label: "Approval + deposit Oct 30", date: "2026-10-30" }, { label: "Piedmont hard deadline Nov 1", date: "2026-11-01" }],
                 own: "Snket (customer side)", tone: "green",
-                note: "<b>Akhil approved proceed Oct 22, 4:08 PM</b> — quote on current info, unresolved items priced as additional/optional per door with assumptions listed; he now owes approval + deposit by Oct 30. <b>Jerry is pricing 4 automatic options for AASD-1</b> (Horton 3150 priced; DC One, Record 5100, Stanley Dura-Glide requested) + hollow-metal RFQs out, frames priced separately to release first (Oct 22, 11:55 PM). <b>GHK REPLIED Oct 23, 1:04 PM</b> — Garret will have the hollow-metal / overhead quote over by Wed Oct 28 (team out of town, heading back soon); Snket asked Jerry Oct 23, 12:22 PM to confirm Oct 28 for his itemized hollow-metal quote, frames priced separately." },
+                note: "<b>Deposit due Oct 30.</b> GHK + Jerry quotes due <b>Oct 28</b>." },
               { t: "Huntersville Fire Station #5", co: "Edifice · CM Cody Treece · Huntersville, NC",
-                d: "Doug confirmed turnkey glazing bidder.",
+                d: "Doug = turnkey glazing bidder.",
                 due: [{ label: "Annual prequal Nov 12", date: "2026-11-12" }],
                 own: "Doug (glazing)", tone: "amber",
-                note: "Doug owes municipal references for the prequal." },
+                note: "Doug owes prequal references." },
               { t: "Asheville-Oakley Fire Station #9", co: "Edifice · Asheville, NC",
-                d: "Doug registered as glazing bidder of record.",
+                d: "Doug = glazing bidder of record.",
                 due: [{ label: "Prequal Dec 11", date: "2026-12-11" }],
                 own: "Doug (glazing)", tone: "green",
-                note: "Oct 22: Cody asked for Doug's contact 4:03 PM → Tim sent it 4:10 → Cody raised per-project direct-prequal concern 4:30 → Tim replied 5:06 PM clarifying Glass &amp; Door Pro files prequal + bid directly as bidder of record. <b>Response-needed flag CLEARED.</b>" },
-              { t: "Athens Drive High School", co: "Balfour Beatty / WCPSS · Raleigh · Tier B",
-                d: "<b>BP-08C overhead — Jerry/Apollo assignment OFF.</b> Jerry replied Oct 22, 11:11 PM: doors/frames/hardware ARE in Apollo scope, overhead doors are NOT (Capabilities Package V2 attached). BP-08C needs reassignment — Piedmont or Raleigh overhead bench (Snket decision). <b>BP-08A DFH lane is open to Apollo:</b> Snket's reply SENT Oct 22, 11:45 PM asks whether Jerry bids Athens BP-08A DFH + Carrboro 0810 DFH as Apollo or supports as vendor. Piedmont holds the Triangle brief (sent Oct 22, 5:10 PM). Prequal locks ~Oct 31; bids Nov 10, 2:00 PM.",
+                note: "Prequal chain cleared Oct 22." },
+              { t: "Athens Drive High School", co: "Balfour Beatty / WCPSS · Raleigh",
+                d: "<b>08C overhead OFF Apollo.</b> <b>08A DFH open</b> to Apollo — answer owed.",
                 due: [{ label: "Prequal locks Oct 31", date: "2026-10-31" }, { label: "Glass bids Nov 10", date: "2026-11-10" }],
                 own: "Tim coordinating", tone: "red" },
-              { t: "Carrboro Elementary Replacement — Release 2", co: "Clancy &amp; Theys · Tier B",
-                d: "Package <b>0840 Aluminum/Glass</b>. Included in the Doug brief <b>SENT Oct 22, 6:16 PM</b> and the Piedmont brief sent Oct 22, 5:10 PM.",
+              { t: "Carrboro Elementary Replacement — Release 2", co: "Clancy &amp; Theys",
+                d: "Pkg <b>0840 Aluminum/Glass</b>. Doug + Piedmont briefed.",
                 due: [{ label: "Bid Nov 30", date: "2026-11-30" }],
                 own: "Tim coordinating", tone: "amber" },
-              { t: "Wake County SSI Hardware Improvements Pkg 2A.1", co: "WCPSS · 12 schools · Tier B",
-                d: "Hardware package; included in the Piedmont brief sent Oct 22, 5:10 PM.",
+              { t: "Wake County SSI Hardware Improvements Pkg 2A.1", co: "WCPSS · 12 schools",
+                d: "Hardware pkg, 12 schools. Piedmont briefed.",
                 own: "Piedmont", tone: "amber" },
-              { t: "DeKalb County Overhead Doors &amp; Gates ITB", co: "ITB 2026-106-ITB · DeKalb County, GA · Atlanta — Jerry / Apollo",
-                d: "Apollo-as-prime OFF — Jerry replied Oct 22, 11:13 PM: the contract is outside Apollo's scope. Substitute route: Jerry found a possible substitute bidder, has messaged him — confirmation STILL not received as of 10:50 AM ET Oct 24 (overdue — was due early Oct 23 AM; no reply). Snket's reply SENT Oct 22, 11:46 PM asks who the substitute is, how the structure works, and the LSBE position. All DeKalb money figures CONTINGENT on the substitute route. Bids due Wed Oct 28, 3:00 PM ET via OpenGov.",
+              { t: "DeKalb County Overhead Doors & Gates ITB", co: "ITB 2026-106-ITB · DeKalb County, GA · Jerry / Apollo",
+                d: "Apollo prime OFF. Substitute <b>confirmation overdue</b>.",
                 due: [{ label: "Bids Oct 28", date: "2026-10-28" }],
                 own: "Apollo prime OFF · substitute pending", tone: "red" },
-              { t: "Carteret County Courthouse Window + Storefront Replacement", co: "Carteret County · Beaufort, NC · Tier B · GLAZING ONLY (Doug)",
-                d: "IFB 100926CHW — ~154 windows, breezeway storefront doors, storefront systems, curtain-wall windows. Exclusively glazing/storefront — no other door packages. Tim sent Doug the URGENT brief Oct 22, 6:33 PM.",
+              { t: "Carteret County Courthouse Window + Storefront Replacement", co: "Carteret County · Beaufort, NC · GLAZING ONLY (Doug)",
+                d: "~154 windows + storefront. Glazing only. Brief sent Oct 22.",
                 due: [{ label: "Proposals due Oct 29", date: "2026-10-29" }],
                 own: "Doug (glazing only)", tone: "red" },
-              { t: "NC Global TransPark MRO 9-12 (Kinston)", co: "Barnhill / TA Loving JV (BTAL) · Kinston, NC · Tier B",
-                d: "Glazing BP0840.1 → Doug / Glass &amp; Door Pro — REASSIGNED to Doug Oct 23 by Snket (Palmetto State Glass red-flagged in the Oct 23 full-board sentiment vetting and demoted to fallback only). Tim's lane ask to Doug SENT Oct 23, 6:30 PM; prequal-add email to Meredith Terrell at Barnhill/BTAL SENT Oct 23, 6:29 PM — Doug's yes and the BTAL prequal-add answer are now owed. DFH BP0800.2 → Piedmont. Bids Nov 10, 2:00 PM, prequalified bidders only.",
+              { t: "NC Global TransPark MRO 9-12 (Kinston)", co: "Barnhill / TA Loving JV (BTAL) · Kinston, NC",
+                d: "Glazing → <b>Doug</b>. DFH → Piedmont. Prequal only. Answers owed.",
                 due: [{ label: "Bids Nov 10", date: "2026-11-10" }],
                 own: "Tim coordinating", tone: "amber" },
-              { t: "Wake Early College HS H-11 / Parkside Middle M-19", co: "Balfour Beatty (CM) · Wake County, NC · Tier B",
-                d: "BP 08D Overhead Doors + Dock Equipment was offered to Jerry Oct 22 — NO reply, and Jerry's Oct 22 scope answers (overhead/dock outside Apollo scope) effectively settle it: BP 08D is OUT of Apollo scope — reassign to bench. BP 08F glazing offered to Doug (sent). BP 28B Security/Access Control still unassigned. Prequal contact Grant Stoneking (•••5150); prequal due 10 days before each bid date (Q4 2026).",
+              { t: "Wake Early College HS H-11 / Parkside Middle M-19", co: "Balfour Beatty (CM) · Wake County, NC",
+                d: "08F glazing → Doug. 08D overhead to bench. 28B unassigned.",
                 own: "Doug (glass) · BP 08D to bench", tone: "amber" },
-              { t: "Historic Yates Mill County Park Renovation — RFB #26-092", co: "Wake County · Raleigh, NC · Tier B",
-                d: "084113 Aluminum-Framed Entrances and Storefronts + 088000 Glazing inside a single-prime GC bid (also 083323 Overhead Coiling Doors, 087100 Hardware) — Doug route runs through the bidding GCs. Tim briefed Doug Oct 22, 6:33 PM.",
+              { t: "Historic Yates Mill County Park Renovation — RFB #26-092", co: "Wake County · Raleigh, NC",
+                d: "Storefront/glazing in single-prime bid. Via bidding GCs.",
                 due: [{ label: "Bids Nov 5", date: "2026-11-05" }],
                 own: "Doug (glazing slice)", tone: "amber" },
-              { t: "Robeson CC Healthcare Education Building", co: "Robeson Community College · Lumberton, NC · Tier B",
-                d: "New ~27,000 GSF healthcare education building — prequalification stage; scope includes doors and windows. Tim sent the prequalification confirmation to the Metcon prequal team Oct 22, 6:29 PM — it BOUNCED (550 permanent failure, 6:30 PM); an alternate route is needed.",
+              { t: "Robeson CC Healthcare Education Building", co: "Robeson Community College · Lumberton, NC",
+                d: "27K SF, prequal stage. Metcon email <b>bounced</b> — alt route needed.",
                 own: "Tim — alternate route needed", tone: "red",
-                note: "⚠ Prequal email bounced — do not assume Metcon received it." }
+                note: "⚠ Do not assume Metcon received it." }
             ]},
             { name: "Watch", dot: "blue", cards: [
               { t: "Walmart — Franklin 85 Logistics Center", co: "Walmart / Whiting-Turner · Carnesville, GA · NEW Oct 24", tone: "blue", val: "$1.3B fulfillment center",
-                d: "1.5M SF, $1.3B fulfillment center in Carnesville, GA. Dock equipment scope. Whiting-Turner selected as GC; site prep late 2026, construction early 2027. Pre-bid early signal — no bid date, no packages yet.",
+                d: "1.5M SF. Whiting-Turner GC. Early 2027 — no packages yet.",
                 own: "Georgia regional bench — coverage check",
-                note: "Lane: Georgia regional bench, coverage check (no Doug row — Georgia). Snket sent Jerry an early-signal brief on Oct 24 at 2:33 PM ET." },
+                note: "Jerry briefed Oct 24 (info only)." },
               { t: "Mitsubishi Power Americas — Savannah Machinery Works Expansion", co: "Mitsubishi Power Americas · Pooler, GA · NEW Oct 24", tone: "blue", val: "$490M expansion",
-                d: "$490M expansion, +450,000 SF. Division 08 + overhead/dock scope implied; no GC named, no packages yet; pre-construction (groundbreaking ahead). Pre-bid early signal — no bid date, no package value.",
+                d: "450K SF expansion. No GC/packages yet.",
                 own: "Georgia regional bench",
-                note: "Heads-ups sent Oct 24 — Tim to McCarthy (Division 08) and Tim to Overhead Door Savannah (overhead/dock) at 4:11 PM ET, and Snket to Jerry at 4:12 PM ET (informational — Pooler is outside Jerry's Metro Atlanta / North Georgia market)." },
-              { t: "NC Association of County Commissioners HQ — Full Building Alteration", co: "NCACC (owner) / Bobbitt Construction (GC, permit holder) · 316 W Edenton St, Raleigh NC · Tier B · NEW Oct 24", tone: "blue", val: "$5.4M project (permit est.)",
-                d: "PERMIT INTEL — City of Raleigh Building Permits open data, verified firsthand Oct 24 via the dataset API: permit issued Oct 20/21, workclass Alteration/Repairs, est. project cost $5,417,299.72, described as NCACC Full building alteration II. Full-building alteration plainly implies Division 08 scope (doors/frames/hardware, storefront/entrance glazing) — no door package is named on the permit record and no bid date exists; glazing/storefront element UNCONFIRMED, so no Doug Pipeline row. Stage: permit issued = alteration starting under Bobbitt Construction; whether the DFH/storefront package is still open is UNVERIFIED. Tim emailed Bobbitt (Blake Holmes) Oct 24, 8:07 AM — awaiting reply; stage still UNVERIFIED until the GC confirms a package is open.",
-                own: "Watch — regional bench (Piedmont Raleigh / Overhead Door Raleigh)",
-                note: "Watch — Tim emailed Bobbitt (Blake Holmes) Oct 24, 8:07 AM — awaiting reply; stage still UNVERIFIED until the GC confirms a package is open." },
-              { t: "Spartanburg County School District Six — $395M Bond Program", co: "Roebuck / Spartanburg, SC · 2026 Bond Program · NEW Oct 23", tone: "blue", val: "$395M bond program",
-                d: "Bond approved Mar 31, 2026. 3 new schools: new Dawkins Middle School + 2 new elementary schools. No GC/CM or bid dates yet; glazing/storefront packages expected within the five-year window. <b>Tim's heads-up email to Doug was SENT Fri Oct 23, 11:16 AM ET</b> (it was a draft at the last build).",
+                note: "Heads-ups sent Oct 24." },
+              { t: "NC Association of County Commissioners HQ — Full Building Alteration", co: "NCACC (owner) / Bobbitt Construction (GC) · Raleigh NC · NEW Oct 24", tone: "blue", val: "$5.4M project (permit est.)",
+                d: "$5.4M alteration. Div 08 implied, open status <b>unverified</b>.",
+                own: "Watch — regional bench (Piedmont Raleigh / OD Raleigh)",
+                note: "Bobbitt asked Oct 24 — awaiting reply." },
+              { t: "Spartanburg County School District Six — $395M Bond Program", co: "Roebuck / Spartanburg, SC · NEW Oct 23", tone: "blue", val: "$395M bond program",
+                d: "3 new schools. No GC/dates yet. Doug heads-up sent.",
                 own: "Doug first-match (glazing)",
                 note: "Piedmont SC covers DFH bench; Jerry partial fit as second lane." },
-              { t: "New Hanover County Schools — 2026 School Bond", co: "Wilmington, NC · Tier B · early signal · NEW Oct 23 (scanner run)", tone: "blue", val: "$320,525,000 GO bonds",
-                d: "Referendum Nov 3, 2026; pre-vote, pre-bid stage. Phase 1 New Hanover HS master plan, new 1,000-student middle school, two new 650-student elementary schools, Porters Neck addition, district-wide safety upgrades. Division 08 scope implied — no door package itemized yet.",
+              { t: "New Hanover County Schools — 2026 School Bond", co: "Wilmington, NC · early signal · NEW Oct 23", tone: "blue", val: "$320,525,000 GO bonds",
+                d: "Referendum Nov 3. Pre-bid. No door pkg yet.",
                 own: "Snket — bench coverage check",
-                note: "Tier B — Wilmington-area regional bench." },
-              { t: "Brunswick County Schools — 2026 School Bond", co: "Northern Brunswick County, NC · Tier B · early signal · NEW Oct 23 (scanner run)", tone: "blue", val: "$349.6M GO bonds",
-                d: "Referendum Nov 3, 2026; pre-vote, pre-bid stage. New elementary (~$83.9M) and new high school (~$198.9M + $35.1M design) plus upgrades. No bid date yet.",
+                note: "Wilmington-area regional bench." },
+              { t: "Brunswick County Schools — 2026 School Bond", co: "Northern Brunswick County, NC · early signal · NEW Oct 23", tone: "blue", val: "$349.6M GO bonds",
+                d: "Referendum Nov 3. Pre-bid. No bid date yet.",
                 own: "Snket — bench coverage check" },
-              { t: "Harnett County CTE High School", co: "Lillington, NC · early signal · NEW Oct 22 (late scanner run)", tone: "blue", val: "~$123M project",
-                d: "~$123M design / construction / equipment budget; design phase just starting, CMAR delivery, no bid date. Division 08 + glazing + overhead implied." },
+              { t: "Harnett County CTE High School", co: "Lillington, NC · early signal · NEW Oct 22", tone: "blue", val: "~$123M project",
+                d: "~$123M, design phase. No bid date." },
               { t: "Corvid Technologies — Mooresville", co: "Early signal · NEW Oct 22", tone: "blue", val: "$95M · 400K SF",
-                d: "Manufacturing project. Stored Oct 22, ~5:02 PM (Partner Signals)." },
+                d: "Manufacturing project." },
               { t: "Utili-Serve — Conover", co: "Early signal · NEW Oct 22", tone: "blue",
-                d: "25K SF HQ expansion. Stored Oct 22, ~5:02 PM (Partner Signals)." },
+                d: "25K SF HQ expansion." },
               { t: "Ernest Health — Six NC Rehab Hospitals", co: "Ernest Health · NC", tone: "blue",
-                d: "Planning / permitting — stage verified LIVE." },
+                d: "Planning stage — verified live." },
               { t: "Project Pear — Fort Mill", co: "Fort Mill, SC", tone: "blue",
-                d: "Incentive first reading only — earliest stage." },
+                d: "Earliest stage only." },
               { t: "Project Utopia — Clover", co: "Clover, SC", tone: "blue", val: "$17M HQ",
-                d: "Early project signal — watch for GC and package announcements." },
+                d: "Watch for GC/packages." },
               { t: "Duke Health + CaroMont Hospitals", co: "Charlotte, NC", tone: "blue",
-                d: "Two Charlotte hospital projects on watch." },
+                d: "Hospital projects on watch." },
               { t: "Costco Enka — Asheville", co: "Asheville, NC", tone: "blue",
-                d: "Warehouse project on the watch list." },
+                d: "Warehouse on watch." },
               { t: "PowerHouse Charlotte Data Centers", co: "Charlotte, NC", tone: "blue",
-                d: "Data-center projects on watch — no GC yet." },
+                d: "Data centers on watch — no GC yet." },
               { t: "Bass Pro — Irmo", co: "Irmo, SC", tone: "blue",
-                d: "Watch-and-intercept: approach its GC when announced." },
+                d: "Approach GC when announced." },
               { t: "Greensboro Fire Station", co: "Greensboro, NC", tone: "blue",
-                d: "Bond vote Nov 2026 — watch the vote, then procurement." },
+                d: "Bond vote Nov 2026." },
               { t: "Cabarrus — Central Cabarrus HS Bond", co: "Cabarrus County, NC", tone: "blue",
-                d: "Bond Nov 2026 — watch for package releases." },
+                d: "Bond Nov 2026." },
               { t: "Spartanburg D2 K-8 Bond", co: "Spartanburg, SC", tone: "blue",
                 d: "Bond Nov 2026 — watch for package releases." },
               { t: "Mauldin Fire Station Five", co: "Mauldin, SC", tone: "blue",
-                d: "Fire station project on watch." },
+                d: "Fire station on watch." },
               { t: "Flint Hill Warehouse — Fort Mill", co: "Fort Mill, SC", tone: "red",
-                d: "Warehouse signal on watch.",
+                d: "Warehouse on watch.",
                 note: "<span class='flag'>⚠ Stage UNVERIFIABLE — do not engage.</span>" },
               { t: "Sigmon Mini-Storage — Conover", co: "Conover, NC", tone: "blue",
-                d: "Mini-storage project — roll-up door scope if it proceeds." },
+                d: "Roll-up scope if it proceeds." },
               { t: "Fulton Schools Capital Plan 2027", co: "Atlanta watch · Jerry territory", tone: "blue",
-                d: "District capital plan — door packages expected as projects release." },
+                d: "Watch for package releases." },
               { t: "APS A.D. Williams Elementary", co: "Atlanta Public Schools · Atlanta watch", tone: "blue",
-                d: "CM-at-Risk route — trade packages follow the CM." },
+                d: "Packages follow the CM." },
               { t: "Cobb 2028 SPLOST Facilities", co: "Cobb County, GA · Atlanta watch", tone: "blue",
-                d: "SPLOST-funded facilities program — watch for releases." },
+                d: "Watch for releases." },
               { t: "Piedmont Newton Hospital Relocation", co: "Piedmont Healthcare · GA · Atlanta watch", tone: "blue",
-                d: "Hospital relocation on the Atlanta watch list." },
-              { t: "Fayetteville 911 Call Center (PSAP)", co: "City of Fayetteville, NC · Tier B · early signal", tone: "blue",
-                d: "RFQ COF1517015 for a Construction Manager at Risk — CMAR selection stage only; new ~18,000 SF public-safety facility, trade packages come later in design. Coverage check: line up Fayetteville-area bench when the CMAR is selected.",
+                d: "Hospital relocation on watch." },
+              { t: "Fayetteville 911 Call Center (PSAP)", co: "City of Fayetteville, NC · early signal", tone: "blue",
+                d: "CMAR stage only. Packages later.",
                 due: [{ label: "CMAR submissions due Nov 19", date: "2026-11-19" }] },
-              { t: "Jackson County Middle School (Smoky Mountain Middle School)", co: "Vannoy Construction (CMAR) · Sylva, NC · Tier B",
-                d: "Tim-voice Division 08 interest email SENT Oct 22, 8:38 PM to Joe Menard, Vannoy precon (cc to Neil Asher bounced, 550). Awaiting Vannoy reply on bidder notification route, openings-package timing, and prequal process. Watch / pre-bid stage: only Bid Package 3100 site development is out (quotes due Oct 28); building/door packages still TBA.",
+              { t: "Jackson County Middle School (Smoky Mountain Middle School)", co: "Vannoy Construction (CMAR) · Sylva, NC",
+                d: "Div 08 interest sent Oct 22. Door pkgs TBA. Awaiting reply.",
                 val: "$60M total project",
                 own: "Watch — pre-bid", tone: "blue",
-                note: "Door package value not yet estimable — watch for building/door package releases." }
+                note: "Watch for package releases." }
             ]},
             { name: "Closed", dot: "grey", cards: [
               { t: "Blackburn Resource Recovery", co: "Wilkie Construction", tone: "grey",
-                d: "CLOSED Oct 22 — Wilkie no longer doing the job (Doug via Trudy Brookshire); 3 PM bid cancelled. Not a competitive loss." },
+                d: "Closed Oct 22 — Wilkie off job, bid cancelled." },
               { t: "Sharon at SouthPark", co: "Edifice · Charlotte", tone: "grey",
-                d: "VOID — bid March 2026, already awarded (Cody confirmed Oct 22)." },
+                d: "Void — bid Mar 2026, already awarded." },
               { t: "Rock Hill Fire Station #7", co: "Rock Hill, SC", tone: "grey",
-                d: "VOID Oct 22 — listing unverifiable on recheck (page not found). Do not pursue." },
+                d: "Void — listing unverifiable. Do not pursue." },
               { t: "ECU Health Duplin Hospital ED Addition", co: "Barnhill · Duplin County, NC", tone: "grey",
-                d: "VOID — source unverified: the Greater Diversity listing could not be re-opened or corroborated on re-verification (403/404, site search empty). Do not pursue." },
+                d: "Void — source unverified. Do not pursue." },
               { t: "Pineville Town Hall", co: "Pineville, NC", tone: "grey",
                 d: "VOID — stale 2020 Post-Bid listing." },
               { t: "Project Accelerate", co: "Matthews, NC", tone: "grey",
                 d: "VOID — rezoning withdrawn Oct 2025." },
               { t: "Caldwell Commerce Center · Cadia Village · Berewick Bldg 2", co: "Stage audit · Oct 22", tone: "grey",
-                d: "VOID / BOUGHT OUT per Oct 22 stage audit — construction underway. Berewick Petfolk upfit only as watch." }
+                d: "Void / bought out — construction underway." }
             ]}
           ]
         },
         {
           id: "leads", title: "Board 2 — Leads & Customers",
-          sub: "21 direct customer leads — 16 Client Leads tab + 4 WhatConverts strong leads + 1 Facebook group lead (Jessie Lang, Oct 24). Rule: no contact in 14+ days = Stale.",
+          sub: "21 leads. No contact 14+ days = Stale.",
           cols: 4,
           columns: [
             { name: "Active", dot: "green", cards: [
-              { t: "Jessie Lang — window changed to a door", co: "Homeowner ask · Charlotte 28211 (Matthews area) · Charlotte Real Estate Investors Facebook group · found Oct 24",
-                d: "Wants a window changed to a door — <b>door provided by her</b> — ASAP. Confirmed detail: a <b>60-inch French door unit</b>, wider than the window it replaces. Snket DM'd her Oct 24.",
+              { t: "Jessie Lang — window changed to a door", co: "Homeowner ask · Charlotte 28211 (Matthews) · Facebook group · found Oct 24",
+                d: "Window → <b>60-in French door</b>, door supplied, ASAP. DM'd Oct 24.",
                 own: "Doug fit pending · Jerry passed", tone: "green",
-                note: "<b>Jerry PASSED</b> — not a fit for Apollo; he offered to ask his contacts, and a reply accepting his offer and giving him the job details (no customer contact info) is prepared for Snket. <b>Doug fit still PENDING</b> — Tim's 60-inch follow-up was SENT to Doug Oct 24, 2:58 PM ET (fit asks first sent Oct 24: Tim → Doug 11:46 AM · Snket → Jerry 12:22 PM). Awaiting Jessie's DM reply for her contact details." },
-              { t: "Harold Dill — Genie garage door motor", co: "Homeowner ask · Columbus, NC (Polk Co.) · Facebook keyword sweep · posted Oct 23, 11:42 AM ET",
-                d: "Genie garage door motor: door goes up but will not go down — red light on the motor comes on and nothing happens; asking who works on Genie motors. Residential. Status <b>New</b>.",
+                note: "<b>Jerry passed · Doug pending.</b> Awaiting contact details." },
+              { t: "Harold Dill — Genie garage door motor", co: "Homeowner ask · Columbus, NC (Polk Co.) · Facebook sweep · posted Oct 23",
+                d: "Genie motor fault. Residential. <b>New.</b>",
                 own: "Coverage check — Snket decides", tone: "amber",
-                note: "<b>Tier 3 — coverage check:</b> Columbus NC (between Asheville and Greenville-Spartanburg) is outside Doug's service area and outside Tier 1/2 — Snket decides coverage before any reply. Comments so far are DIY sensor-alignment advice only; need still open." },
+                note: "<b>Coverage check</b> — Snket decides first." },
               { t: "Legacy Heights — corridor fire doors", co: "Assisted living · Charlotte (Ballantyne) · 11230 Ballantyne Trace Ct · NEW Oct 23",
-                d: "NC DHHS DHSR survey records — PRIMARY-SOURCE VERIFIED Oct 23: smoke-tight corridor doors not maintained (tag C 189), first cited Feb 13, 2024 (19 gap findings plus a disconnected closer) and RE-CITED at the Aug 6, 2025 follow-up (splitting stair-exit frame, doors needing excessive force, one door no longer closes). 122-bed assisted living. Status <b>New</b> — Tim outreach.",
+                d: "Corridor doors cited Feb 24, <b>re-cited Aug 25</b>. Still open. 122 beds.",
                 own: "Tim outreach", tone: "amber",
-                note: "Deficiency STILL OPEN — the only one of five verified DHHS facilities still open. Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval)." },
+                note: "Drafts ready — awaiting approval." },
               { t: "Summit Place of SouthPark — cross-corridor doors", co: "Senior living · Charlotte · 2101 Runnymede Lane · NEW Oct 23",
-                d: "NC DHHS survey Aug 6, 2025 (tag C 121) cited cross-corridor doors not closing/latching — door by Room 321, SCU pair with latching hardware removed, three more failing doors, five doors wedged/propped open. 120 beds. No plan of correction posted — deficiency open. Status <b>New</b>.",
+                d: "Cross-corridor doors not latching. 120 beds. No correction posted.",
                 own: "Tim outreach", tone: "amber",
-                note: "Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval)." },
+                note: "Drafts ready — awaiting approval." },
               { t: "East Towne — corridor doors", co: "Senior living · Charlotte · 4815 N Sharon Amity Rd · NEW Oct 23",
-                d: "NC DHHS follow-up Apr 17, 2025 (tag C 189) cited corridor doors not maintained — doors not closing/latching, holes through corridor doors, wedged-open door, missing fire-rated labels. 120 beds. Status <b>New</b>.",
+                d: "Corridor doors + missing fire labels. 120 beds.",
                 own: "Tim outreach", tone: "amber",
-                note: "FLAG: softest of the three — POC/follow-up status could not be checked; confirm before relying on it. Tim outreach intro drafts prepared Oct 23 (awaiting Snket approval)." },
+                note: "Status unconfirmed. Drafts ready." },
               { t: "Eddie Douglas — Hartman USA", co: "Rock Hill, SC · call Oct 22, 10:38 AM",
-                d: "Closer replacement + broken handle, hollow-metal front office door. <b>Piedmont selected</b>; Tim sent the live-job email to Tanna Oct 22, 1:26 PM. Vortex priced it ~$1,770 (estimate); $2,100 not-to-exceed approval being sought from Eddie's boss.",
+                d: "Closer/handle, hollow-metal door. <b>Piedmont selected.</b>",
                 val: "Vortex ~$1,770 est. · $2,100 NTE sought",
                 own: "Snket / Tim", tone: "green",
-                note: "Numbers masked: <b>•••1143</b> / callback <b>•••3540</b>. Jerry confirmed by text Oct 22 PM that Advanced Door Services + Vortex stock the parts (context only)." },
+                note: "Vortex $1,770 · $2,100 NTE sought." },
               { t: "Cogir Senior Living — Cadence Huntersville", co: "Senior living · Huntersville, NC · found Oct 21",
-                d: "DHHS-cited corridor / smoke-barrier door corrections — mandated. Route: Tim call to the community (business line).",
+                d: "Corridor/smoke-barrier corrections — mandated.",
                 own: "Tim", tone: "amber",
-                note: "Tim's email to Heather Thomas at Cogir <b>BOUNCED</b> — route by phone / corporate." },
+                note: "Email <b>bounced</b> — phone route." },
               { t: "Brookdale Monroe Square Senior Living", co: "Senior living · Monroe, NC · found Oct 22",
-                d: "DHHS survey cites smoke-compartment doors not closing / latching — mandated fire-door repair.",
+                d: "Smoke doors not latching — mandated repair.",
                 own: "Tim outreach", tone: "amber" },
               { t: "Daniel Maddox", co: "Homeowner ask · Indian Land · found Oct 22",
-                d: "Sliding patio door install ask (group post Oct 21). Doug-fit in-area residential glass.",
+                d: "Patio door install ask. Doug-fit residential.",
                 own: "Doug coordination", tone: "amber",
-                note: "Reply follows the Anna Coello pattern via Doug coordination." }
+                note: "Via Doug coordination." }
             ]},
             { name: "Contacted", dot: "amber", cards: [
               { t: "Anna Coello", co: "Homeowner ask · Indian Land · Oct 20",
-                d: "Front door buy + install ask; check-in comment posted Oct 20; watching for reply.",
+                d: "Front door buy + install. Check-in posted Oct 20.",
                 own: "Snket", tone: "amber",
-                note: "2 days — not stale." }
+                note: "Watching for reply." }
             ]},
             { name: "Stale", dot: "red", cards: [
               { t: "Jim Ringley", co: "Caller · Sep 25 · Charlotte",
-                d: "Storefront latch / crash-bar repair — asked to get it scheduled.",
+                d: "Storefront latch/crash-bar repair.",
                 own: "Tim — call priority", tone: "red",
-                note: "27 days, no contact recorded (14+ day rule)." },
+                note: "27 days, no contact — stale." },
               { t: "Christo Peregoy", co: "Caller · Sep 21 · Charlotte",
                 d: "Closer adjustments, 3 corridor doors.",
                 own: "Tim — call priority", tone: "red",
-                note: "31 days, no contact recorded." },
+                note: "31 days, no contact — stale." },
               { t: "Jade Capital Caller (no name)", co: "Caller · Oct 7 · Charlotte 28278",
                 d: "Hollow-metal back door replacement.",
                 own: "Tim — call priority", tone: "red",
-                note: "15 days, no contact recorded." }
+                note: "15 days, no contact — stale." }
             ]},
             { name: "Blocked / Intel-Only", dot: "red", cards: [
               { t: "Robin Ruffolo", co: "Homeowner ask · Oct 22",
-                d: "Crawl-space door ask; reply ready but posting blocked until Snket joins the private group; low commercial fit.",
+                d: "Crawl-space door. Reply blocked — group join needed.",
                 own: "Snket to decide", tone: "red" },
               { t: "Review-Mined Intel Leads", co: "Monitor only — not directly reachable",
-                d: "Wolf M (Overhead Door quote failure), E. O. Oakley, Jem Solomon, GoldenDiamonds, anahernandez447, unnamed RCS reviewer. Reddit sliding-door poster already resolved with another company.",
+                d: "6 review-mined names. Monitor only.",
                 tone: "grey" }
             ]}
           ]
         },
         {
           id: "partners", title: "Board 3 — Partners",
-          sub: "74 companies tracked. Rule: no reply in 14+ days with open threads = Silent / Stale. Route to Doug &amp; Jerry first — the bench is insurance, not partnerships.",
+          sub: "74 tracked. Doug &amp; Jerry first. No reply 14+ days = Stale.",
           cols: 5,
           columns: [
             { name: "True Partners", dot: "green", cards: [
-              { t: "Doug / Glass &amp; Door Pro", co: "Glazing · storefront · automatic entrances",
-                d: "<b>Monthly-paying partner</b> (agreed Oct 21). Replied twice Oct 22 — 9:50 AM Blackburn, 9:58 AM China Grove Dec delivery incl. AASD-1.",
+              { t: "Doug / Glass & Door Pro", co: "Glazing · storefront · automatic entrances",
+                d: "<b>Monthly payer</b> (Oct 21). China Grove proposal sent Oct 23.",
                 val: "Monthly payer — terms being settled",
                 own: "Routes first: glazing", tone: "green",
-                note: "Revised China Grove proposal DELIVERED Oct 23, 10:41 AM (turned around to Akhil same day, 11:24 AM). Fee terms: Tim replied Oct 23, 11:17 AM — Doug's counter (2% of award, transitioning to $1,000/mo after first award) is UNDER REVIEW by Snket + Tim, to be settled in writing before the first award; NOT agreed. Owes: municipal references for Huntersville prequal; Carteret bid confirm (Oct 29); Mattamuskeet glazing decision (asked Oct 23, 9:10 AM; bids Oct 26). Evening Oct 22: Tim briefed Doug on Athens + Carrboro (6:16 PM), the two Wake County items (6:33 PM) and the urgent Carteret IFB (6:33 PM) — replies owed. <b>Gateway Plaza RESOLVED Oct 23 PM:</b> Glass &amp; Door Pro is NOT among the 08B prequalified firms — Tim's follow-up SENT Oct 23 afternoon (existing relationships / intro ask; A1 Glass is local); sub-route only via a prequalified firm before the Tue Oct 27 bids." },
+                note: "Fee <b>disputed</b> — settle before award. Owes: Carteret, Mattamuskeet, Kinston, Gateway, refs." },
               { t: "Jerry Richards / Apollo Door Systems", co: "Metro Atlanta · overhead · DFH · dock",
-                d: "<b>Reciprocity partner.</b> Replied 3× overnight Oct 22 — dock-leveler installer check on the 100-leveler package (client NOT named to him), Huntersville turnkey confirmed, proposed coordination call. Quoting China Grove (unblocked Oct 22). DeKalb ITB brief sent Oct 22.",
+                d: "Scope: auto/manual + DFH as sub. Overhead/prime OUT. Quoting China Grove.",
                 own: "Routes first: Atlanta + overhead/dock", tone: "green",
-                note: "Owes: dock-installer capacity answer; China Grove quote; DeKalb substitute-bidder confirmation OVERDUE (due early Oct 23 AM; STILL not received as of 10:50 AM ET Oct 24); China Grove hollow-metal Oct 28 confirmation (asked by Snket Oct 23, 12:22 PM — itemized quote, frames priced separately; frames needed mid-Nov, install mid-Dec). New decision asks Oct 23, 9:12 AM: IFB Solutions DFH package (due Oct 30) + Mattamuskeet DFH slice (bids Oct 26). Snket sent Apollo the Athens Drive overhead brief (6:17 PM) and the Wake County schools overhead + dock first-look (6:34 PM) Oct 22. <b>Oct 23 PM reply (UNREAD in tim@):</b> Jerry confirmed Platinum Overhead Doors' Michael as his overhead vendor contact — approach Platinum via Jerry first. Snket sent Jerry the GA Fire Station ITB 27-FD01 brief Oct 23, 4:27 PM (closes Nov 4)." }
+                note: "Owes: DeKalb substitute (<b>overdue</b>), China Grove Oct 28, IFB, Mattamuskeet." }
             ]},
             { name: "Active", dot: "green", cards: [
               { t: "Piedmont Door Solutions", co: "Tanna Thomas · pedestrian / automatic",
-                d: "China Grove pedestrian quote confirmed — PO/deposit/drawings path, mid-Dec install achievable, approval by Nov 1. Selected for the Hartman Rock Hill job (brief sent Oct 22, 1:26 PM) and the Triangle DFH/hardware brief (sent Oct 22, 5:10 PM).",
+                d: "China Grove pedestrian OK — approval by Nov 1. On Hartman + Triangle DFH.",
                 own: "Active partner", tone: "green",
-                note: "Oct 23, 9:10 AM — Tim asked Tanna: IFB Solutions DFH bidder of record (proposals due Oct 30). Hartman confirms sent 7:48 AM, awaiting reply. <b>Oct 23 PM:</b> Tim asked Tanna whether Piedmont is on the Gateway Plaza CM's 08A or 08B prequalified list — the Addendum #4 list shows Piedmont is NOT prequalified; sub-route only (bids Oct 27)." },
+                note: "Owes: Hartman, IFB (Oct 30), Gateway sub-route." },
               { t: "Edifice Inc.", co: "Cody Treece · GC contact",
-                d: "Active thread Oct 22: Asheville prequal registration moving; turnkey clarification received — packages are separate: storefront separate from DFH and overhead.",
+                d: "Asheville prequal moving. Packages separate: storefront ≠ DFH ≠ overhead.",
                 own: "GC contact", tone: "green" },
               { t: "Cedar Management Group", co: "HOA management · ~750 associations · vendor onboarding",
-                d: "<b>Vendor onboarding ADVANCED Oct 23.</b> Cedar replied 12:03 PM ET (support@mycmg.com, ticket #XN10400348), thanked CCD for its interest in becoming a vendor, and copied their vendor specialist (vendorspecialist@mycmg.com). Tim replied 12:11 PM ET requesting the onboarding form/link and COI/W-9 requirements; specialist auto-acknowledged (ticket #XN10419283). Specialist replied in detail 1:22 PM ET (UNREAD in tim@): Cedar uses third-party vendor <b>Vive at $149/yr</b> (extra security layer for HOAs); she asked what areas CCD services and, if interested, to send the business physical address so she can send the Vive link; it does not guarantee business/quotes but puts CCD in a status where she can share company info with Cedar clients and managers.",
+                d: "Onboarding via <b>Vive $149/yr</b>. Wants areas + address.",
                 own: "We owe Cedar a reply", tone: "amber",
-                note: "<b>Next step — Snket/Tim decision:</b> reply with service areas + business physical address to get the Vive link, and decide whether to pay the $149/yr Vive fee. A portfolio door-work channel across ~750 associations." },
+                note: "Decision: reply + fee?" },
               { t: "GHK Door Solutions", co: "Garret · hollow-metal / overhead",
-                d: "<b>REPLIED Fri Oct 23, 1:04 PM ET</b> (contact@ghkdoors.com, to snket@): GHK will have the China Grove hollow-metal / overhead quote over <b>by Wednesday, October 28</b> — currently out of town working on projects and heading back soon. Snket's status check went out Oct 23, 12:22 PM.",
+                d: "China Grove quote promised <b>by Oct 28</b>.",
                 due: [{ label: "Quote due Oct 28", date: "2026-10-28" }],
                 own: "Quote promised by Wed Oct 28", tone: "green",
-                note: "Dated commitment — the 'quote outstanding since Oct 19 / GHK silent' status is over." }
+                note: "Dated commitment." }
             ]},
             { name: "Bench", dot: "blue", cards: [
               { t: "Tier 1 — Review Leaders", co: "Vetted Oct 22 · route by tier", tone: "blue",
                 d: "<b>RCI Doors</b> (4.9★/650) · <b>Overhead Door of Charlotte</b> (4.9/529) · <b>Garage Door &amp; More</b> (4.9/1,087) · <b>OGD</b> (4.6/847) · <b>Vortex</b> (4.8 national)." },
               { t: "Vetted Fits", co: "Bench depth", tone: "blue",
-                d: "<b>Pro-Tech Glass</b> (glazing — VERIFY IDENTITY first) · <b>Binswanger Charlotte</b> (glazing; hold outreach — 3.4★/5) · <b>Southern Dock</b> · <b>MINER</b> · and the remaining vetted bench from the tracker.",
-                note: "Oct 23, 9:10 AM — IFB Solutions six-dock-doors pricing asks sent to Southern Dock (Blair Jones) and MINER; awaiting replies." },
+                d: "<b>Pro-Tech</b> · <b>Binswanger</b> (hold) · <b>Southern Dock</b> · <b>MINER</b> + tracker bench.",
+                note: "IFB dock asks sent — awaiting replies." },
               { t: "Formula Automatic Door / Formula Installation", co: "Charleston, SC · VETTED CLEAN · NEW Oct 23 (Pass A)", tone: "green",
-                d: "The ONLY fully vetted-clean new firm from the partner-engine passes — institutional DFH + automatic doors. Bench — route when Charleston / SC institutional work fits." },
+                d: "Only vetted-clean new firm. Institutional DFH + auto. For SC institutional." },
               { t: "Partner-Engine Bench Adds — Pass A (NC/SC)", co: "Not contacted / vet with caution · NEW Oct 23", tone: "blue",
-                d: "<b>Dock Door &amp; Grille Solutions</b> (Garner) · <b>U.S. Doorways</b> (Garner) · <b>Overhead Door Company of Raleigh</b> · <b>Express Entrance Services</b> (SC) · <b>Overhead Door Company of Fayetteville</b>. Tim outreach SENT Oct 23 PM to Express Entrance, Dock Door &amp; Grille, U.S. Doorways and OD Fayetteville." },
+                d: "<b>Dock Door &amp; Grille</b> · <b>U.S. Doorways</b> · <b>OD Raleigh</b> · <b>Express Entrance</b> · <b>OD Fayetteville</b>. Outreach sent Oct 23." },
               { t: "Partner-Engine Bench Adds — Pass B (Atlanta)", co: "Not contacted / vet with caution · NEW Oct 23", tone: "blue",
-                d: "<b>Covenant Architectural</b> · <b>Door Resources</b> · <b>U.S. Door Service</b> · <b>Aaron Overhead Doors</b> — Atlanta bench behind Jerry. Tim outreach SENT Oct 23 PM to Door Resources and U.S. Door Service. Covenant Architectural outreach BOUNCED Oct 23 PM (precon@ address invalid) — alternate contact route needed." },
-              { t: "Gateway Plaza Prequalified Firms — BMF + A1 Glass", co: "Surfaced via CM Prequalified Bidders List (Addendum #4) · NEW Oct 23", tone: "blue",
-                d: "<b>BMF Corporation</b> and <b>A1 Glass and Aluminum LLC</b> are on the Gateway Plaza 08B prequalified list (with NC Glazing and Fabrication and GCCM) — Doug's only route into Gateway Plaza is as a sub under one of them. A1 Glass is local." },
+                d: "<b>Covenant</b> · <b>Door Resources</b> · <b>U.S. Door Service</b> · <b>Aaron Overhead</b>. Outreach sent; Covenant bounced." },
+              { t: "Gateway Plaza Prequalified Firms — BMF + A1 Glass", co: "Surfaced via CM Prequalified Bidders List · NEW Oct 23", tone: "blue",
+                d: "<b>BMF</b> + <b>A1 Glass</b> on Gateway 08B list — Doug's only route in is under one." },
               { t: "Platinum Overhead Doors", co: "Jerry's overhead vendor contact · NEW Oct 23", tone: "blue",
-                d: "Named by Jerry (reply to tim@ Oct 23 PM, UNREAD): <b>Michael</b> is his overhead vendor contact — Michael and his father are known to Jerry; Platinum is reputable. <b>Approach via Jerry first.</b>" },
+                d: "Jerry's overhead contact: <b>Michael</b>. Approach via Jerry." },
               { t: "Carolina Door Specialties — Tier 3 CAUTION", co: "Downgraded Oct 23 · deprioritized", tone: "red",
-                d: "Downgraded to <b>Tier 3 caution / deprioritized</b> in the tracker — do not route ahead of the Tier 1/2 bench." },
+                d: "<b>Tier 3 caution</b> — do not route ahead of Tier 1/2." },
               { t: "Tip Top — CAUTION", co: "Do not route service customers", tone: "red",
-                d: "<b>4.9★ / 2,098 BUT a recurring price-gouging review theme</b> — do NOT route service customers." }
+                d: "<b>4.9★ but price-gouging theme</b> — do NOT route service." }
             ]},
             { name: "Silent / Stale", dot: "amber", cards: [
               { t: "None at the 14-Day Threshold", co: "All outreach is Oct 20–22", tone: "amber",
-                d: "Watch: <b>Garage Door Doctor</b> + <b>RCS Garage Doors</b> — Tim outreach Oct 20, no reply yet (2 days)." }
+                d: "Watch: <b>Garage Door Doctor</b> + <b>RCS</b> — no reply yet." }
             ]},
             { name: "Declined / Not a Fit", dot: "grey", cards: [
               { t: "Declined (3)", co: "Closed — do not re-pitch", tone: "grey",
                 d: "<b>Commercial Door Worx</b> — declined Oct 16. <b>ASAP Commercial Doors</b> — declined. <b>Southeast Door Solutions</b> — declined." },
               { t: "Vetted — Not a Fit", co: "Vetting complete", tone: "grey",
-                d: "<b>Control Garage Door</b> — residential-only. <b>Carolina Custom Glass Works</b> — vetted not a fit Oct 22 (shower-glass micro-specialist). Plus 5 more vetted-not-a-fit in the tracker — <b>11 total closed / not-fit incl. declined</b>." }
+                d: "<b>Control</b> (residential-only) · <b>Carolina Custom Glass</b> + 5 more. <b>11 closed total.</b>" }
             ]}
           ]
         },
         {
           id: "wins", title: "Board 4 — Bids Won by Partner · Award Watch",
-          sub: "Every lane we are feeding Doug &amp; Jerry, classified by one question: if the partner wins and says nothing, would we find out? A win counts as known only when a public record or our own channel proves it — everything to the right of the second column is partner-reported, and that is where the fee can disappear.",
+          sub: "Would we know if they won and said nothing? Won = proven only.",
           cols: 5,
           columns: [
             { name: "Won — Flows Through Us", dot: "green", cards: [
               { t: "China Grove Manufacturing Facility", co: "Doug (glazing) · Piedmont (pedestrian) · Jerry + GHK quoting · routed via CCD",
-                d: "The one lane where a win cannot be hidden: quotes, approval and deposit all flow through us. Revised client proposal <b>$152,212.58</b> sent to Akhil Oct 23 — <b>approval + deposit by Oct 30</b> is the win trigger, and we see it the day it lands.",
+                d: "Flows through CCD — <b>can't be hidden</b>. Deposit due Oct 30.",
                 val: "$6,000 margin booked",
                 due: [{ label: "Approval + deposit Oct 30", date: "2026-10-30" }],
                 own: "CCD channel — self-verifying", tone: "green" }
             ]},
             { name: "Public Record — We'd Know", dot: "blue", cards: [
               { t: "Carteret County Courthouse — Window + Storefront", co: "Doug (glazing only) · direct bid to Carteret County",
-                d: "Bids are <b>opened and read aloud publicly Thu Oct 29, 11:00 AM</b> — Doug's bid and amount are visible on bid day, with notice to proceed expected mid-November. If Doug reports a loss, the bid tab says otherwise.",
+                d: "<b>Public opening Oct 29</b> — bid + amount on record.",
                 val: "$300K – $600K est. package",
                 due: [{ label: "Public opening Oct 29", date: "2026-10-29" }],
                 own: "Public bid tab", tone: "green" },
               { t: "Athens Drive HS — BP-08F Glazing", co: "Doug (glazing) · Balfour Beatty / WCPSS",
-                d: "Package bids are received by Balfour Beatty for WCPSS and <b>opened publicly Nov 10, 2:00 PM</b> — the opening / bid tab shows whether Glass &amp; Door Pro bid and at what number. The signed subcontract lags the opening, but the win itself is on the record.",
+                d: "<b>Public opening Nov 10</b> — bid tab proves bid / no-bid.",
                 due: [{ label: "Public opening Nov 10", date: "2026-11-10" }],
                 own: "Public bid tab", tone: "green" },
               { t: "Fort Bragg Landfill Facility — DFH Package", co: "Piedmont / non-local lane · BidNet NC",
-                d: "Package-level solicitation: the award names the Doors, Frames &amp; Hardware package winner itself, so a direct win posts publicly after the <b>Oct 26, 1:00 PM</b> close. A win taken as a sub under another awardee would not be named.",
+                d: "Portal award names package winner. Sub wins invisible.",
                 due: [{ label: "Closes Oct 26, 1:00 PM EDT", date: "2026-10-26" }],
                 own: "Portal award posting", tone: "blue" },
-              { t: "Gateway Plaza &amp; Base Trail — Bid 27-1102", co: "Balfour Beatty–Holt Brothers JV / City of Durham",
-                d: "Public opening Oct 27 — but the CM's Prequalified Bidders List (Addendum #4) proves <b>neither Doug nor Piedmont can win this directly</b>. Any claimed win would be a sub-route under A1 Glass, NC Glazing, GCCM or BMF — and that never appears in the public record.",
+              { t: "Gateway Plaza & Base Trail — Bid 27-1102", co: "Balfour Beatty–Holt Brothers JV / City of Durham",
+                d: "Direct win <b>impossible</b> — neither prequalified. Sub-route invisible.",
                 due: [{ label: "Bids Oct 27, 2:00 PM EDT", date: "2026-10-27" }],
                 own: "Direct win impossible — sub-route only", tone: "amber" },
-              { t: "DeKalb County Overhead Doors &amp; Gates ITB", co: "Jerry territory · ITB 2026-106-ITB · OpenGov",
-                d: "Public agency ITB — an award names the prime. But Apollo-as-prime is OFF and Jerry's substitute bidder is <b>still unnamed</b> (confirmation overdue since early Oct 23). Today there is no verifiable Apollo win channel on this lane at all.",
+              { t: "DeKalb County Overhead Doors & Gates ITB", co: "Jerry territory · ITB 2026-106-ITB · OpenGov",
+                d: "Prime named publicly. Substitute <b>unnamed</b> — no verifiable lane.",
                 due: [{ label: "Bids Oct 28", date: "2026-10-28" }],
                 own: "Prime named — substitute unknown", tone: "amber" }
             ]},
             { name: "Prime Named Only — Sub Invisible", dot: "amber", cards: [
               { t: "Mattamuskeet School Building 800 Renovation", co: "Doug (glazing slice) · Jerry (DFH ask) · into A. R. Chesson's bid",
-                d: "Both partner lanes quote into <b>Chesson's</b> bid (Mon Oct 26, 2:00 PM). Public results name Chesson as the winning GC — never the door sub. A win on either slice is partner-reported only.",
+                d: "Into <b>Chesson's</b> bid. Record names Chesson only.",
                 due: [{ label: "Bids Oct 26", date: "2026-10-26" }],
                 own: "Blind spot — GC named only", tone: "red" },
               { t: "Beaufort County CC — New Skills Building", co: "Doug (storefront slice) · A. R. Chesson Construction",
-                d: "Same Chesson route — bids <b>Wed Oct 28, 3:00 PM</b>. The college's award names the prime; Doug's storefront slice would not appear in any public record.",
+                d: "Chesson route. Prime named, Doug invisible.",
                 due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
                 own: "Blind spot — GC named only", tone: "red" },
               { t: "Huntersville FS #5 + Asheville-Oakley FS #9", co: "Doug (glazing bidder of record) · Edifice CM packages",
-                d: "Doug is a confirmed / registered glazing bidder and prequal lists are sometimes obtainable — but Edifice package-winner lists are <b>not routinely public</b>. We would know he was allowed to bid, not whether he won.",
+                d: "Prequal visible, <b>award not public</b>.",
                 own: "Blind spot — prequal visible, award not", tone: "amber" },
               { t: "NC Global TransPark MRO 9-12 (Kinston) — BP0840.1", co: "Doug (glazing) · Barnhill / TA Loving JV (BTAL)",
-                d: "Prequalified bidders only, bids Nov 10, 2:00 PM. CM package award — the winner is not routinely published, and Doug's yes plus the BTAL prequal-add answer are still owed. Fee exposure rides entirely on Doug's report.",
+                d: "CM package — award not published. Relies on Doug's report.",
                 val: "$250K – $600K est.",
                 due: [{ label: "Bids Nov 10", date: "2026-11-10" }],
                 own: "Blind spot — CM package", tone: "amber" },
               { t: "Carrboro 0840 + Wake H-11 / M-19 + Athens BP-08A", co: "Doug · Piedmont · Jerry (08A ask) · Clancy &amp; Theys / Balfour Beatty",
-                d: "CM trade packages. Public award coverage stops at the CM / prime level — the aluminum/glass, DFH and hardware package winners are not published. Any partner win in this group is self-reported.",
+                d: "CM packages — winners not published.",
                 own: "Blind spot — CM packages", tone: "amber" },
               { t: "Robeson CC Healthcare + UNC-Chapel Hill 08g + Yates Mill", co: "Metcon · LeChase–SGS · single-prime GC bid",
-                d: "Same pattern at three addresses: Robeson is a Metcon CM package at prequal stage (our prequal email bounced Oct 22); UNC 08g is prequalified-bidders-only (bids Nov 12); Yates Mill's glazing sits inside a single-prime GC bid (Nov 5). In each case the public record names the prime — not the door package winner.",
+                d: "Prime named only — door winner not in record.",
                 own: "Blind spot — prime named only", tone: "amber" }
             ]},
             { name: "Private — No Public Record", dot: "red", cards: [
               { t: "IFB Solutions Expansion", co: "Jerry (DFH ask) · Piedmont (DFH ask) · Southern Dock + MINER (docks)",
-                d: "Private nonprofit owner — proposals due <b>Oct 30</b> and <b>no public award record is expected</b>. A Jerry or Piedmont win here is known only if the partner tells us.",
+                d: "Private owner — <b>no public award</b>. Partner report only.",
                 val: "$90K – $170K est.",
                 due: [{ label: "Proposals due Oct 30", date: "2026-10-30" }],
                 own: "No public record", tone: "red" },
               { t: "Firetower 77 — Dock Package", co: "Jerry's dock partner · via HGR Construction",
-                d: "Private project. The dock package is the <b>largest single fee exposure on this board</b> — and a win would surface only through Jerry or HGR. The partner is booked through year-end (2027 start), which buys time to get the reporting terms in writing first.",
+                d: "Private — <b>largest exposure</b>. Win via Jerry/HGR only.",
                 val: "$700K – $1.5M est. dock package",
                 own: "No public record", tone: "red" },
               { t: "Falls Park Conference District", co: "Doug (glazing, on reply) · Furman Co. (developer)",
-                d: "Private developer — no public award record exists for trade packages. Doug's glazing win here would be entirely self-reported.",
+                d: "Private developer — Doug win self-reported only.",
                 own: "No public record", tone: "red" },
               { t: "NCACC HQ Alteration + Madison GA FS #22 + Walmart / Mitsubishi GA", co: "Sub-under-prime routes · Bobbitt · awarded prime TBA · Whiting-Turner",
-                d: "NCACC's door work runs under Bobbitt as GC; Madison's door trades route under the prime selected after the Nov 13 submittals; the Georgia mega-projects put door/dock packages under the GC. In all three, the prime is public — the door sub never is.",
+                d: "Under a prime — door sub never public.",
                 own: "No public record for subs", tone: "red" }
             ]},
             { name: "Fee Protection Gaps", dot: "red", cards: [
               { t: "Doug's Rate — Disputed, Not Yet Signed", co: "Glass &amp; Door Pro · fee terms",
-                d: "Recorded agreed structure (Snket, Oct 23): <b>10% of every bid won</b>. Doug's Oct 23 counter: <b>2% of the awarded amount</b>, transitioning to $1,000/mo after the first award. Tim replied Oct 23, 11:17 AM: terms under review, to be settled in writing <b>before the first award</b>. Until it is signed, every Doug win in the two blind-spot columns rides on a disputed rate.",
+                d: "Recorded <b>10%</b> vs Doug <b>2%</b> counter. Unsigned — settle before award.",
                 own: "Settle in writing — before first award", tone: "red" },
               { t: "The $1M Scenario", co: "What an unreported win costs",
-                d: "A $1M package won and reported as a loss = <b>$100K owed</b> at the recorded 10% — and still $20K at Doug's proposed 2%. The exposure is not hypothetical: Firetower's dock package alone is est. $700K–$1.5M and sits in a lane with no public record.",
+                d: "$1M hidden win = <b>$100K owed</b> at 10%. Firetower alone $700K–$1.5M.",
                 own: "Exposure concentrated in blind spots", tone: "red" },
               { t: "Reporting Clause — Attach to Every Routed Bid", co: "The control that works where public data doesn't",
-                d: "Per project, in writing: the partner reports the bid result within <b>3 business days</b> of opening / award, provides the <b>subcontract amount and award confirmation</b>, and CCD may <b>verify directly with the GC, CM or owner</b>. This clause is the only protection that reaches the blind-spot columns.",
+                d: "Per bid: report in <b>3 days</b> + amount + proof. CCD verifies direct.",
                 own: "Needed on every Doug + Jerry lane", tone: "amber" },
               { t: "Apollo — No Fee % on Record", co: "Jerry Richards / Apollo Door Systems",
-                d: "No agreed percentage is recorded for Jerry on any lane — IFB (due Oct 30), Athens BP-08A, the DeKalb substitute route. Settle his rate in writing <b>before his first routed bid is decided</b>, or a win has no enforceable fee attached to it.",
+                d: "No % agreed. Settle before IFB (Oct 30) decides.",
                 own: "Settle before IFB decision lands", tone: "amber" },
               { t: "DeKalb Substitute — Unnamed = Untraceable", co: "Jerry / Apollo · ITB bids Oct 28",
-                d: "Jerry's substitute-bidder confirmation is <b>overdue</b> (due early Oct 23 AM; still not received). If the substitute bids and wins under its own name, nothing public ties that win to Apollo or to us. Name the substitute — or treat this lane as unprotected.",
+                d: "Overdue since Oct 23. Unnamed = untraceable if it wins.",
                 own: "Confirmation overdue", tone: "red" }
             ]}
           ]
