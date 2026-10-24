@@ -518,6 +518,31 @@
       <!-- ================= BOARDS (rendered from data) ================= -->
       <div id="boards"></div>
 
+      <!-- ================= AWARD WATCH — TIMING & PROTECTION ================= -->
+      <div class="section-head">
+        <h2>Award Watch — Timing &amp; Written Protection</h2>
+        <span class="sub">How fast a partner win becomes visible to us — and the paper that has to exist before one does</span>
+      </div>
+      <section class="two-panel">
+        <div class="w-panel">
+          <h3>How fast we'd know</h3>
+          <p class="wsub">The award layer runs on every hourly bid-engine cycle, so once a result is published we catch it within about an hour. The real delay is publication — and for sub-level wins, publication often never happens.</p>
+          <div class="w-item"><span class="who">Bid tab</span><p><b>Same day to ~3 days</b> — apparent winner at public openings. Carteret (Oct 29) is read aloud; Athens BP-08F (Nov 10) opens publicly. This is the fastest, hardest proof a partner won or lost.</p></div>
+          <div class="w-item"><span class="who">Formal</span><p><b>~3–14 days</b> — official award notices and portal postings after a public opening (e.g. the Fort Bragg DFH package award after the Oct 26 close).</p></div>
+          <div class="w-item"><span class="who">Board OK</span><p><b>~2–6 weeks</b> — school-board / county / city contract approvals. The winner may surface in an agenda packet before the meeting, but formal confirmation waits for the vote.</p></div>
+          <div class="w-item"><span class="who">CM / sub</span><p><b>Often never</b> — CM trade packages and sub-under-GC wins: some CMs publish awarded-bidder lists, most do not. Public data names the prime, not the door subcontractor.</p></div>
+          <div class="w-item"><span class="who">Private</span><p><b>Never</b> — private owners (IFB Solutions, Firetower, Falls Park) publish no award record at all. Only the contract paperwork proves a win.</p></div>
+        </div>
+        <div class="w-panel">
+          <h3>The protection, in writing</h3>
+          <p class="wsub">Public data covers the left of Board 4. These three items cover the rest — none of them works retroactively, so they go in before the bid, not after the win.</p>
+          <div class="w-item"><span class="who">Doug %</span><p><b>Settle the rate before the first award.</b> Recorded: 10% of every bid won. Doug's Oct 23 counter: 2% of award, then $1,000/mo. Tim's Oct 23 reply holds the line — under review, settled in writing before any award. First test cases are already on the calendar: Carteret Oct 29, Athens Nov 10.</p></div>
+          <div class="w-item"><span class="who">Clause</span><p><b>Per-project reporting clause on every routed bid:</b> result reported within 3 business days of opening / award, subcontract amount + award confirmation provided, and CCD may verify directly with the GC, CM or owner. A "we lost" on a publicly opened bid gets checked against the bid tab — no exceptions.</p></div>
+          <div class="w-item"><span class="who">Apollo</span><p><b>No fee % on record for Jerry yet</b> — and his DeKalb substitute is unnamed with its confirmation overdue. Both get fixed in writing before IFB (Oct 30) and DeKalb (Oct 28) are decided, or those wins carry no enforceable fee.</p></div>
+          <div class="w-item"><span class="who">$1M test</span><p>Run every new lane through one question before it is routed: <b>if this partner wins $1M here and reports a loss, what proves otherwise?</b> If the answer is "nothing," the reporting clause and a settled rate are the price of routing it.</p></div>
+        </div>
+      </section>
+
       <!-- ================= WAITING / DRAFTS ================= -->
       <div class="section-head">
         <h2>Waiting &amp; Drafts</h2>
@@ -1080,6 +1105,101 @@
                 d: "<b>Commercial Door Worx</b> — declined Oct 16. <b>ASAP Commercial Doors</b> — declined. <b>Southeast Door Solutions</b> — declined." },
               { t: "Vetted — Not a Fit", co: "Vetting complete", tone: "grey",
                 d: "<b>Control Garage Door</b> — residential-only. <b>Carolina Custom Glass Works</b> — vetted not a fit Oct 22 (shower-glass micro-specialist). Plus 5 more vetted-not-a-fit in the tracker — <b>11 total closed / not-fit incl. declined</b>." }
+            ]}
+          ]
+        },
+        {
+          id: "wins", title: "Board 4 — Bids Won by Partner · Award Watch",
+          sub: "Every lane we are feeding Doug &amp; Jerry, classified by one question: if the partner wins and says nothing, would we find out? A win counts as known only when a public record or our own channel proves it — everything to the right of the second column is partner-reported, and that is where the fee can disappear.",
+          cols: 5,
+          columns: [
+            { name: "Won — Flows Through Us", dot: "green", cards: [
+              { t: "China Grove Manufacturing Facility", co: "Doug (glazing) · Piedmont (pedestrian) · Jerry + GHK quoting · routed via CCD",
+                d: "The one lane where a win cannot be hidden: quotes, approval and deposit all flow through us. Revised client proposal <b>$152,212.58</b> sent to Akhil Oct 23 — <b>approval + deposit by Oct 30</b> is the win trigger, and we see it the day it lands.",
+                val: "$6,000 margin booked",
+                due: [{ label: "Approval + deposit Oct 30", date: "2026-10-30" }],
+                own: "CCD channel — self-verifying", tone: "green" }
+            ]},
+            { name: "Public Record — We'd Know", dot: "blue", cards: [
+              { t: "Carteret County Courthouse — Window + Storefront", co: "Doug (glazing only) · direct bid to Carteret County",
+                d: "Bids are <b>opened and read aloud publicly Thu Oct 29, 11:00 AM</b> — Doug's bid and amount are visible on bid day, with notice to proceed expected mid-November. If Doug reports a loss, the bid tab says otherwise.",
+                val: "$300K – $600K est. package",
+                due: [{ label: "Public opening Oct 29", date: "2026-10-29" }],
+                own: "Public bid tab", tone: "green" },
+              { t: "Athens Drive HS — BP-08F Glazing", co: "Doug (glazing) · Balfour Beatty / WCPSS",
+                d: "Package bids are received by Balfour Beatty for WCPSS and <b>opened publicly Nov 10, 2:00 PM</b> — the opening / bid tab shows whether Glass &amp; Door Pro bid and at what number. The signed subcontract lags the opening, but the win itself is on the record.",
+                due: [{ label: "Public opening Nov 10", date: "2026-11-10" }],
+                own: "Public bid tab", tone: "green" },
+              { t: "Fort Bragg Landfill Facility — DFH Package", co: "Piedmont / non-local lane · BidNet NC",
+                d: "Package-level solicitation: the award names the Doors, Frames &amp; Hardware package winner itself, so a direct win posts publicly after the <b>Oct 26, 1:00 PM</b> close. A win taken as a sub under another awardee would not be named.",
+                due: [{ label: "Closes Oct 26, 1:00 PM EDT", date: "2026-10-26" }],
+                own: "Portal award posting", tone: "blue" },
+              { t: "Gateway Plaza &amp; Base Trail — Bid 27-1102", co: "Balfour Beatty–Holt Brothers JV / City of Durham",
+                d: "Public opening Oct 27 — but the CM's Prequalified Bidders List (Addendum #4) proves <b>neither Doug nor Piedmont can win this directly</b>. Any claimed win would be a sub-route under A1 Glass, NC Glazing, GCCM or BMF — and that never appears in the public record.",
+                due: [{ label: "Bids Oct 27, 2:00 PM EDT", date: "2026-10-27" }],
+                own: "Direct win impossible — sub-route only", tone: "amber" },
+              { t: "DeKalb County Overhead Doors &amp; Gates ITB", co: "Jerry territory · ITB 2026-106-ITB · OpenGov",
+                d: "Public agency ITB — an award names the prime. But Apollo-as-prime is OFF and Jerry's substitute bidder is <b>still unnamed</b> (confirmation overdue since early Oct 23). Today there is no verifiable Apollo win channel on this lane at all.",
+                due: [{ label: "Bids Oct 28", date: "2026-10-28" }],
+                own: "Prime named — substitute unknown", tone: "amber" }
+            ]},
+            { name: "Prime Named Only — Sub Invisible", dot: "amber", cards: [
+              { t: "Mattamuskeet School Building 800 Renovation", co: "Doug (glazing slice) · Jerry (DFH ask) · into A. R. Chesson's bid",
+                d: "Both partner lanes quote into <b>Chesson's</b> bid (Mon Oct 26, 2:00 PM). Public results name Chesson as the winning GC — never the door sub. A win on either slice is partner-reported only.",
+                due: [{ label: "Bids Oct 26", date: "2026-10-26" }],
+                own: "Blind spot — GC named only", tone: "red" },
+              { t: "Beaufort County CC — New Skills Building", co: "Doug (storefront slice) · A. R. Chesson Construction",
+                d: "Same Chesson route — bids <b>Wed Oct 28, 3:00 PM</b>. The college's award names the prime; Doug's storefront slice would not appear in any public record.",
+                due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
+                own: "Blind spot — GC named only", tone: "red" },
+              { t: "Huntersville FS #5 + Asheville-Oakley FS #9", co: "Doug (glazing bidder of record) · Edifice CM packages",
+                d: "Doug is a confirmed / registered glazing bidder and prequal lists are sometimes obtainable — but Edifice package-winner lists are <b>not routinely public</b>. We would know he was allowed to bid, not whether he won.",
+                own: "Blind spot — prequal visible, award not", tone: "amber" },
+              { t: "NC Global TransPark MRO 9-12 (Kinston) — BP0840.1", co: "Doug (glazing) · Barnhill / TA Loving JV (BTAL)",
+                d: "Prequalified bidders only, bids Nov 10, 2:00 PM. CM package award — the winner is not routinely published, and Doug's yes plus the BTAL prequal-add answer are still owed. Fee exposure rides entirely on Doug's report.",
+                val: "$250K – $600K est.",
+                due: [{ label: "Bids Nov 10", date: "2026-11-10" }],
+                own: "Blind spot — CM package", tone: "amber" },
+              { t: "Carrboro 0840 + Wake H-11 / M-19 + Athens BP-08A", co: "Doug · Piedmont · Jerry (08A ask) · Clancy &amp; Theys / Balfour Beatty",
+                d: "CM trade packages. Public award coverage stops at the CM / prime level — the aluminum/glass, DFH and hardware package winners are not published. Any partner win in this group is self-reported.",
+                own: "Blind spot — CM packages", tone: "amber" },
+              { t: "Robeson CC Healthcare + UNC-Chapel Hill 08g + Yates Mill", co: "Metcon · LeChase–SGS · single-prime GC bid",
+                d: "Same pattern at three addresses: Robeson is a Metcon CM package at prequal stage (our prequal email bounced Oct 22); UNC 08g is prequalified-bidders-only (bids Nov 12); Yates Mill's glazing sits inside a single-prime GC bid (Nov 5). In each case the public record names the prime — not the door package winner.",
+                own: "Blind spot — prime named only", tone: "amber" }
+            ]},
+            { name: "Private — No Public Record", dot: "red", cards: [
+              { t: "IFB Solutions Expansion", co: "Jerry (DFH ask) · Piedmont (DFH ask) · Southern Dock + MINER (docks)",
+                d: "Private nonprofit owner — proposals due <b>Oct 30</b> and <b>no public award record is expected</b>. A Jerry or Piedmont win here is known only if the partner tells us.",
+                val: "$90K – $170K est.",
+                due: [{ label: "Proposals due Oct 30", date: "2026-10-30" }],
+                own: "No public record", tone: "red" },
+              { t: "Firetower 77 — Dock Package", co: "Jerry's dock partner · via HGR Construction",
+                d: "Private project. The dock package is the <b>largest single fee exposure on this board</b> — and a win would surface only through Jerry or HGR. The partner is booked through year-end (2027 start), which buys time to get the reporting terms in writing first.",
+                val: "$700K – $1.5M est. dock package",
+                own: "No public record", tone: "red" },
+              { t: "Falls Park Conference District", co: "Doug (glazing, on reply) · Furman Co. (developer)",
+                d: "Private developer — no public award record exists for trade packages. Doug's glazing win here would be entirely self-reported.",
+                own: "No public record", tone: "red" },
+              { t: "NCACC HQ Alteration + Madison GA FS #22 + Walmart / Mitsubishi GA", co: "Sub-under-prime routes · Bobbitt · awarded prime TBA · Whiting-Turner",
+                d: "NCACC's door work runs under Bobbitt as GC; Madison's door trades route under the prime selected after the Nov 13 submittals; the Georgia mega-projects put door/dock packages under the GC. In all three, the prime is public — the door sub never is.",
+                own: "No public record for subs", tone: "red" }
+            ]},
+            { name: "Fee Protection Gaps", dot: "red", cards: [
+              { t: "Doug's Rate — Disputed, Not Yet Signed", co: "Glass &amp; Door Pro · fee terms",
+                d: "Recorded agreed structure (Snket, Oct 23): <b>10% of every bid won</b>. Doug's Oct 23 counter: <b>2% of the awarded amount</b>, transitioning to $1,000/mo after the first award. Tim replied Oct 23, 11:17 AM: terms under review, to be settled in writing <b>before the first award</b>. Until it is signed, every Doug win in the two blind-spot columns rides on a disputed rate.",
+                own: "Settle in writing — before first award", tone: "red" },
+              { t: "The $1M Scenario", co: "What an unreported win costs",
+                d: "A $1M package won and reported as a loss = <b>$100K owed</b> at the recorded 10% — and still $20K at Doug's proposed 2%. The exposure is not hypothetical: Firetower's dock package alone is est. $700K–$1.5M and sits in a lane with no public record.",
+                own: "Exposure concentrated in blind spots", tone: "red" },
+              { t: "Reporting Clause — Attach to Every Routed Bid", co: "The control that works where public data doesn't",
+                d: "Per project, in writing: the partner reports the bid result within <b>3 business days</b> of opening / award, provides the <b>subcontract amount and award confirmation</b>, and CCD may <b>verify directly with the GC, CM or owner</b>. This clause is the only protection that reaches the blind-spot columns.",
+                own: "Needed on every Doug + Jerry lane", tone: "amber" },
+              { t: "Apollo — No Fee % on Record", co: "Jerry Richards / Apollo Door Systems",
+                d: "No agreed percentage is recorded for Jerry on any lane — IFB (due Oct 30), Athens BP-08A, the DeKalb substitute route. Settle his rate in writing <b>before his first routed bid is decided</b>, or a win has no enforceable fee attached to it.",
+                own: "Settle before IFB decision lands", tone: "amber" },
+              { t: "DeKalb Substitute — Unnamed = Untraceable", co: "Jerry / Apollo · ITB bids Oct 28",
+                d: "Jerry's substitute-bidder confirmation is <b>overdue</b> (due early Oct 23 AM; still not received). If the substitute bids and wins under its own name, nothing public ties that win to Apollo or to us. Name the substitute — or treat this lane as unprotected.",
+                own: "Confirmation overdue", tone: "red" }
             ]}
           ]
         }
