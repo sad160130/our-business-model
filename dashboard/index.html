@@ -389,15 +389,15 @@
           <div class="operators">Charlotte Commercial Doors · <b>Snket Desai</b> &amp; <b>Tim Lamb</b></div>
         </div>
         <div class="stamp">
-          Last updated: <b>Sat Oct 24, 2026, 10:50 PM ET</b><br />
-          Data snapshot verified 10:51 PM ET Oct 24 (sheets + both Gmail inboxes, raw API)
+          Last updated: <b>Sun Oct 25, 2026, 1:50 AM ET</b><br />
+          Data snapshot verified 1:51 AM ET Oct 25 (sheets + both Gmail inboxes, raw API)
         </div>
       </header>
 
       <!-- ================= KPI STRIP ================= -->
       <section class="kpis" aria-label="Key numbers">
         <div class="kpi">
-          <div class="num">116</div>
+          <div class="num">121</div>
           <div class="lbl"><b>Opportunities tracked</b> — 14 live bids</div>
         </div>
         <div class="kpi">
@@ -478,7 +478,7 @@
         <article class="lever">
           <div class="lhead"><span class="lid">L3</span><h3>Bid Engine (Opportunities)</h3><span class="pill green">Active</span></div>
           <p><b>3 tiers</b> NC/SC/GA · <b>76 partners</b> tracked.</p>
-          <div class="rev"><b>116 rows</b> <span>— 17 live packages</span></div>
+          <div class="rev"><b>121 rows</b> <span>— 17 live packages</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L4</span><h3>Direct Service Leads (Hartman Model)</h3><span class="pill green">Active</span></div>
@@ -634,6 +634,7 @@
         <span class="sub">Everything that moved, newest first</span>
       </div>
       <section class="timeline">
+        <div class="t-item"><span class="t-time">Oct 25 · 1:50 AM</span><p><b>Scanner stored 5 new Watch bond signals</b> (Wake $680M, Wake Tech $149.1M, Person $107M, Greenwood $175M, Dorchester ~$688M) — all funding-stage, referendum Nov 3.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 9:36 PM</span><p><b>Tim → Macon Door:</b> Audi Peach County heads-up — <b>SENT</b>.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 9:26 PM</span><p><b>Snket → Jerry:</b> Audi add-on to Fort Valley note — <b>SENT</b>.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 6:46 PM</span><p><b>Blue Bird outreach SENT:</b> Tim → Macon (DFH lane); Snket → Jerry (coverage backup).</p></div>
@@ -727,20 +728,20 @@
 
     <script>
       /* ============================================================
-         BOARD DATA — snapshot: Sat Oct 24, 2026, 7:50 PM ET.
+         BOARD DATA — snapshot: Sun Oct 25, 2026, 1:50 AM ET.
          Source: live records — Google Sheets + both Gmail inboxes
-         via raw API, verified 7:52 PM ET Oct 24. Refreshes replace this block.
+         via raw API, verified 1:51 AM ET Oct 25. Refreshes replace this block.
          Card fields: t title · co company/GC · d detail (may use <b>)
          · val value chip · due [{label, date}] · own owner chip
          · tone green|amber|red|blue|grey · note status · act last action
          Card copy is highlights-only by design (compressed Oct 24).
          ============================================================ */
-      var SNAPSHOT = new Date(2026, 9, 24); // Oct 24, 2026
+      var SNAPSHOT = new Date(2026, 9, 25); // Oct 25, 2026
 
       var BOARDS = [
         {
           id: "opps", title: "Board 1 — Opportunities",
-          sub: "116 rows · 17 live. Drag to move.",
+          sub: "121 rows · 17 live. Drag to move.",
           cols: 5,
           columns: [
             { name: "New", dot: "blue", cards: [
@@ -872,6 +873,26 @@
                 note: "⚠ Do not assume Metcon received it." }
             ]},
             { name: "Watch", dot: "blue", cards: [
+              { t: "Wake County Schools — 2026 School Bond", co: "Wake County, NC · NEW Oct 25", tone: "blue", val: "$680M bond",
+                d: "Referendum Nov 3. Pre-bid.",
+                own: "Bench — Piedmont Raleigh / Overhead Door Raleigh",
+                note: "Funding stage only — no packages yet." },
+              { t: "Wake Tech CC — Workforce Forward Bond", co: "Raleigh, NC · NEW Oct 25", tone: "blue", val: "$149.1M bond",
+                d: "Referendum Nov 3. Pre-bid.",
+                own: "Tier B regional bench",
+                note: "Funding stage only — no packages yet." },
+              { t: "Person County Schools — 2026 School Bond", co: "Roxboro, NC · NEW Oct 25", tone: "blue", val: "$107M bond",
+                d: "Referendum Nov 3. Pre-bid.",
+                own: "Coverage check — no named bench",
+                note: "Funding stage only — flag for Snket." },
+              { t: "Greenwood District 50 — 2026 Bond", co: "Greenwood, SC · NEW Oct 25", tone: "blue", val: "$175M bond",
+                d: "Referendum Nov 3. Pre-bid.",
+                own: "Bench — Piedmont SC",
+                note: "Funding stage only — no packages yet." },
+              { t: "Dorchester Districts Two & Four — Capital Sales Tax", co: "Dorchester County, SC · NEW Oct 25", tone: "blue", val: "~$688M / 15 yrs",
+                d: "Referendum Nov 3. Pre-bid.",
+                own: "Charleston-area coverage check",
+                note: "Funding stage only — no packages yet." },
               { t: "Blue Bird — Type C School Bus Plant Conversion", co: "Fort Valley, GA · NEW Oct 24", tone: "blue", val: "$300M · 1M SF",
                 own: "Macon DFH contacted · Jerry backup asked",
                 note: "Watch — pre-bid, construction Q1 2027, no GC yet." },
