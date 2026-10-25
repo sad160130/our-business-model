@@ -389,15 +389,15 @@
           <div class="operators">Charlotte Commercial Doors · <b>Snket Desai</b> &amp; <b>Tim Lamb</b></div>
         </div>
         <div class="stamp">
-          Last updated: <b>Sun Oct 25, 2026 4:50 AM ET</b><br />
-          Data snapshot verified 1:51 AM ET Oct 25 (sheets + both Gmail inboxes, raw API)
+          Last updated: <b>Sun Oct 25, 2026 7:50 AM ET</b><br />
+          Data snapshot verified 7:50 AM ET Oct 25 (sheets + both Gmail inboxes, raw API)
         </div>
       </header>
 
       <!-- ================= KPI STRIP ================= -->
       <section class="kpis" aria-label="Key numbers">
         <div class="kpi">
-          <div class="num">121</div>
+          <div class="num">127</div>
           <div class="lbl"><b>Opportunities tracked</b> — 14 live bids</div>
         </div>
         <div class="kpi">
@@ -478,7 +478,7 @@
         <article class="lever">
           <div class="lhead"><span class="lid">L3</span><h3>Bid Engine (Opportunities)</h3><span class="pill green">Active</span></div>
           <p><b>3 tiers</b> NC/SC/GA · <b>76 partners</b> tracked.</p>
-          <div class="rev"><b>121 rows</b> <span>— 17 live packages</span></div>
+          <div class="rev"><b>127 rows</b> <span>— 17 live packages</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L4</span><h3>Direct Service Leads (Hartman Model)</h3><span class="pill green">Active</span></div>
@@ -634,6 +634,7 @@
         <span class="sub">Everything that moved, newest first</span>
       </div>
       <section class="timeline">
+        <div class="t-item"><span class="t-time">Oct 25 · 7:50 AM</span><p><b>Scanner stored 6 new rows:</b> 3 referendum early signals + 2 Charlotte restaurant opening triggers; Pitt County voided same-run. Signals now <b>127</b>.</p></div>
         <div class="t-item"><span class="t-time">Oct 25 · 1:50 AM</span><p><b>Scanner stored 5 new Watch bond signals</b> (Wake $680M, Wake Tech $149.1M, Person $107M, Greenwood $175M, Dorchester ~$688M) — all funding-stage, referendum Nov 3.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 9:36 PM</span><p><b>Tim → Macon Door:</b> Audi Peach County heads-up — <b>SENT</b>.</p></div>
         <div class="t-item"><span class="t-time">Oct 24 · 9:26 PM</span><p><b>Snket → Jerry:</b> Audi add-on to Fort Valley note — <b>SENT</b>.</p></div>
@@ -728,9 +729,9 @@
 
     <script>
       /* ============================================================
-         BOARD DATA — snapshot: Sun Oct 25, 2026, 1:50 AM ET.
+         BOARD DATA — snapshot: Sun Oct 25, 2026, 7:50 AM ET.
          Source: live records — Google Sheets + both Gmail inboxes
-         via raw API, verified 1:51 AM ET Oct 25. Refreshes replace this block.
+         via raw API, verified 7:50 AM ET Oct 25. Refreshes replace this block.
          Card fields: t title · co company/GC · d detail (may use <b>)
          · val value chip · due [{label, date}] · own owner chip
          · tone green|amber|red|blue|grey · note status · act last action
@@ -741,7 +742,7 @@
       var BOARDS = [
         {
           id: "opps", title: "Board 1 — Opportunities",
-          sub: "121 rows · 17 live. Drag to move.",
+          sub: "127 rows · 17 live. Drag to move.",
           cols: 5,
           columns: [
             { name: "New", dot: "blue", cards: [
@@ -873,6 +874,26 @@
                 note: "⚠ Do not assume Metcon received it." }
             ]},
             { name: "Watch", dot: "blue", cards: [
+              { t: "Clarke County Schools — E-SPLOST Renewal, Athens GA", co: "Clarke County, GA · NEW Oct 25", tone: "blue", val: "$215M capital program",
+                due: [{ label: "Referendum Nov 3", date: "2026-11-03" }],
+                own: "Jerry / Apollo (North Georgia)",
+                note: "Funding stage only — no packages yet." },
+              { t: "DeKalb County Schools — E-SPLOST VII Renewal, GA", co: "DeKalb County, GA · NEW Oct 25", tone: "blue", val: "$946.8M program",
+                due: [{ label: "Referendum Nov 3", date: "2026-11-03" }],
+                own: "Jerry / Apollo",
+                note: "Funding stage only — no packages yet." },
+              { t: "Charleston County Schools — Sales Tax Extension 2029–2034, SC", co: "Charleston County, SC · NEW Oct 25", tone: "blue",
+                due: [{ label: "Referendum Nov 3", date: "2026-11-03" }],
+                own: "Bench — Formula (Charleston) / Piedmont SC",
+                note: "Funding stage only — no packages yet." },
+              { t: "Texas Roadhouse — Steele Creek, Charlotte", co: "Charlotte, NC · NEW Oct 25", tone: "blue",
+                due: [{ label: "Opening Nov 9 (projected)", date: "2026-11-09" }],
+                own: "Unassigned — identify GC/owner",
+                note: "Opening trigger — storefront/service doors, fit-out window." },
+              { t: "Roe &amp; Olivia's — Lower South End, Charlotte", co: "Charlotte, NC · NEW Oct 25", tone: "blue",
+                due: [{ label: "Opens late 2026" }],
+                own: "Unassigned — identify GC/owner",
+                note: "Opening trigger — storefront entrance refresh." },
               { t: "Wake County Schools — 2026 School Bond", co: "Wake County, NC · NEW Oct 25", tone: "blue", val: "$680M bond",
                 d: "Referendum Nov 3. Pre-bid.",
                 own: "Bench — Piedmont Raleigh / Overhead Door Raleigh",
@@ -976,6 +997,8 @@
                 note: "Watch for package releases." }
             ]},
             { name: "Closed", dot: "grey", cards: [
+              { t: "Pitt County — New Administration Building, Greenville NC", co: "Pitt County, NC", tone: "grey",
+                d: "VOID Oct 25 — single-prime only, no door package. Do not pursue." },
               { t: "Blackburn Resource Recovery", co: "Wilkie Construction", tone: "grey",
                 d: "Closed Oct 22 — Wilkie off job, bid cancelled." },
               { t: "Sharon at SouthPark", co: "Edifice · Charlotte", tone: "grey",
