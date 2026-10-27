@@ -20,25 +20,33 @@ h1,h2,h3{font-family:"Barlow",sans-serif;letter-spacing:-.02em;margin:0}
 .brand strong{font-family:"Barlow",sans-serif;font-size:18px}
 .stamp{font-size:12.5px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 11px}
 .hero{padding:22px 0 6px}.hero h1{font-size:36px;line-height:1.02;font-weight:800;max-width:760px}.hero h1 span{color:var(--ember)}
-.hero p{margin:8px 0 0;color:var(--slate);max-width:700px;font-size:15.5px}
-.hero-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.pill{font-size:12.5px;font-weight:700;border-radius:999px;padding:6px 10px;border:1px solid var(--line);background:#fff;color:var(--slate)}
-.pill.ember{background:var(--ember-bg);border-color:var(--ember-line);color:var(--ember)}.pill.teal{background:var(--teal-soft);border-color:#99e5d8;color:var(--teal)}
+.hero p{margin:8px 0 0;color:var(--slate);max-width:760px;font-size:15.5px}
+.alertline{margin-top:14px;background:var(--ember-bg);border:1px solid var(--ember-line);color:#7c2d12;border-radius:12px;padding:11px 13px;font-weight:700;font-size:13.8px;line-height:1.45}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 8px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
 .kpi label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.kpi b{display:block;font-family:"Barlow",sans-serif;font-size:30px;line-height:1;margin:4px 0 2px}
-.kpi span{font-size:12.5px;color:var(--muted);line-height:1.3;display:block}
+.kpi b{display:block;font-family:"Barlow",sans-serif;font-size:28px;line-height:1.05;margin:4px 0 2px}
+.kpi span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block}
 .kpi.hot{border-color:var(--ember-line);background:#fff8f2}.kpi.hot b{color:var(--ember)}
+.revgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 4px}
+.revcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.revcard.model{border-color:var(--amber-line);background:#fffdf5}
+.revcard label{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block}
+.revcard .modeled{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:999px;padding:2px 7px;display:inline-block;margin-top:6px}
+.revcard b.big{display:block;font-family:"Barlow",sans-serif;font-size:24px;line-height:1.08;margin:6px 0 4px;color:var(--navy)}
+.revcard p{margin:4px 0 0;font-size:12.5px;color:var(--muted);line-height:1.4}
+.revrows{margin:8px 0 0;border-top:1px solid var(--line2)}
+.revrow{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line2);font-size:13px}
+.revrow:last-child{border-bottom:0}.revrow span{color:var(--slate)}.revrow strong{font-family:"Barlow",sans-serif;white-space:nowrap;color:var(--navy)}.revrow strong.zero{color:var(--ember)}
 .board-nav{position:sticky;top:0;z-index:20;background:rgba(250,247,241,.97);border-bottom:1px solid var(--line);margin:14px -18px 0;padding:10px 18px;display:flex;gap:8px;flex-wrap:wrap}
 .board-nav a{text-decoration:none;font-weight:700;font-size:13.5px;color:var(--slate);background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:999px}
 .board-nav a em{font-style:normal;background:var(--bg2);border-radius:999px;padding:1px 6px;margin-left:4px;font-size:12px}
 .board{margin-top:28px}.board-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:12px}
 .board-head h2{font-size:23px;font-weight:800}.board-head h2 small{font-family:"Source Sans 3",sans-serif;font-size:13px;font-weight:600;color:var(--muted);margin-left:6px}
-.board-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px;max-width:660px}
+.board-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px;max-width:680px}
 .controls{display:flex;gap:6px;flex-wrap:wrap}.chipbtn{border:1px solid var(--line);background:#fff;color:var(--slate);font-weight:700;font-size:12.5px;padding:6px 10px;border-radius:999px;cursor:pointer}.chipbtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.strip{background:#fff1e6;border:1px solid var(--ember-line);border-radius:12px;padding:12px 14px;margin-bottom:12px;font-size:13.5px}.strip b{color:var(--ember)}
-.kanban{display:grid;gap:12px}.kanban.c3{grid-template-columns:repeat(3,1fr)}.kanban.c2{grid-template-columns:2fr 1fr}
+.strip{background:#fff1e6;border:1px solid var(--ember-line);border-radius:12px;padding:12px 14px;margin-bottom:12px;font-size:13.5px;line-height:1.5}.strip b{color:var(--ember)}
+.kanban{display:grid;gap:12px}.kanban.c3{grid-template-columns:repeat(3,1fr)}.kanban.c2{grid-template-columns:repeat(2,1fr)}
 .col{background:#f6f1e8;border:1px solid var(--line2);border-radius:16px;padding:10px}
 .col-head{display:flex;justify-content:space-between;align-items:center;padding:2px 4px 10px}.col-head b{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--slate)}.col-head span{font-size:12px;font-weight:800;background:#fff;border:1px solid var(--line);min-width:24px;height:24px;border-radius:999px;display:grid;place-items:center;padding:0 6px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin-bottom:8px}.card h3{font-size:14.8px;line-height:1.25;font-weight:700}.card p{margin:3px 0 0;font-size:13px;color:var(--muted);line-height:1.4}
@@ -48,199 +56,239 @@ h1,h2,h3{font-family:"Barlow",sans-serif;letter-spacing:-.02em;margin:0}
 .tag.unv{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-line)}
 .tag.live{background:var(--green-bg);color:var(--green);border:1px solid #86efac}
 .tag.sent{background:var(--teal-soft);color:var(--teal);border:1px solid #99e5d8}
-.tag.t1{background:var(--green-bg);color:var(--green)}.tag.t2{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-line)}.tag.t3{background:#f1f5f9;color:var(--slate);border:1px solid #e2e8f0}
+.tag.draft{background:#fff;border:1px solid var(--line);color:var(--slate)}
+.tag.t1{background:var(--green-bg);color:var(--green)}.tag.t2{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-line)}.tag.t3{background:#f1f5f9;color:var(--slate);border:1px solid #e2e8f0}.tag.unt{background:#f5f3ff;color:#5b21b6;border:1px solid #ddd6fe}
 .tag.warn{background:var(--rose-bg);color:var(--rose);border:1px solid var(--rose-line)}
-.closed{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:13.5px;color:var(--slate)}
+.tag.hold{background:var(--rose-bg);color:var(--rose);border:1px solid var(--rose-line)}
+.closed{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:13.5px;color:var(--slate);line-height:1.55}
+.clients-box{margin-top:12px;background:#fff;border:1.5px solid var(--navy);border-radius:14px;padding:16px}.clients-box b{font-family:"Barlow",sans-serif;font-size:18px}.clients-box p{margin:4px 0 0;color:var(--slate);font-size:14px}
 .empty{background:#fff;border:1.5px dashed var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--muted)}.empty b{color:var(--navy);font-family:"Barlow",sans-serif;font-size:18px;display:block;margin-bottom:4px}
 .tracker{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .funnel{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
 .fstep{padding:14px 16px;border-right:1px solid var(--line2)}.fstep:last-child{border-right:0}.fstep b{font-family:"Barlow",sans-serif;font-size:26px;line-height:1;display:block}.fstep label{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700}.fstep p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
-.queue{padding:16px}.queue ol{margin:8px 0 0;padding-left:20px;color:var(--slate)}.queue li{margin:5px 0}
+.queue{padding:16px}.queue ol,.queue ul{margin:8px 0 0;padding-left:20px;color:var(--slate)}.queue li{margin:5px 0}
 .grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.cad{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}.cad b{font-size:14px}.cad p{margin:3px 0 0;font-size:13px;color:var(--muted)}
 .source{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.source h2{font-size:19px}.source p{color:var(--slate);font-size:14px;margin:6px 0 0}
-.numstrip{margin-top:12px;background:var(--navy);color:#fff;border-radius:12px;padding:12px 14px;font-weight:700;font-size:13.5px;text-align:center}
-footer{margin-top:18px;padding:14px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.numstrip{margin-top:12px;background:var(--navy);color:#fff;border-radius:12px;padding:12px 14px;font-weight:700;font-size:13.5px;text-align:center;line-height:1.5}
+footer{margin-top:18px;padding:14px 2px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.55}
 .hidden{display:none!important}
-@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.kanban.c3,.kanban.c2{grid-template-columns:1fr}.funnel{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.hero h1{font-size:30px}}
+@media(max-width:900px){.kpis,.revgrid{grid-template-columns:repeat(2,1fr)}.kanban.c3,.kanban.c2{grid-template-columns:1fr}.funnel{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.hero h1{font-size:30px}}
+@media(max-width:520px){.revgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand"><div class="flame" aria-hidden="true">♨</div><div><small>Snket • Charlotte Commercial Doors</small><strong>Fire Protection</strong></div></div>
-    <div class="stamp">Updated Mon Oct 26, 2026, 11:57 PM ET</div>
+    <div class="brand"><div class="flame" aria-hidden="true">♨</div><div><small>Snket • Charlotte Commercial Doors</small><strong>Fire Protection Dashboard — Snket</strong></div></div>
+    <div class="stamp">Updated Tue Oct 27, 2026, 2:56 AM ET</div>
   </div>
 
   <header class="hero">
-    <h1>Fire Protection — <span>Operations Dashboard</span></h1>
-    <p>Bid engine is the backbone, email outreach is the channel — no websites, no lead capture in this niche. Sanket sent the fire wave on Oct 26: 25 emails out, no replies yet by 11:57 PM.</p>
-    <div class="hero-meta">
-      <span class="pill ember">● B464 bids tomorrow — Oct 27</span>
-      <span class="pill teal">25 sent Oct 26 · 9 drafts ready</span>
-      <span class="pill">12 deadlines inside 10 days</span>
-    </div>
+    <h1>Fire Protection Dashboard — <span>Snket</span></h1>
+    <p>Snket • Charlotte Commercial Doors — bid engine plus Tim-voice email outreach. 47 fire emails are now sent and 24 drafts are ready; B464 bids today.</p>
+    <div class="alertline">● B464 bids TODAY — Oct 27, 5:00 PM · Gwinnett FS #14 bids tomorrow Oct 28 · 47 fire emails sent · 24 drafts ready · 16 deadlines inside 10 days</div>
   </header>
 
   <section class="kpis" aria-label="Key numbers">
-    <div class="kpi hot"><label>Opportunities</label><b>44 open</b><span>48 tracked</span></div>
+    <div class="kpi hot"><label>Opportunities</label><b>49 open</b><span>54 tracked</span></div>
     <div class="kpi"><label>Facility Targets</label><b>3</b><span>Pitched Oct 26, awaiting reply</span></div>
-    <div class="kpi"><label>Clients</label><b>0</b><span>No two-way engagement yet</span></div>
-    <div class="kpi"><label>Partners</label><b>36</b><span>Tier 1: 1 / Tier 2: 19 / Tier 3: 16</span></div>
-    <div class="kpi"><label>Drafts ready</label><b>9</b><span>8 All American briefs + Edifice GC intro</span></div>
-    <div class="kpi hot"><label>Sent Oct 26</label><b>25</b><span>From tim@ — no replies yet</span></div>
+    <div class="kpi"><label>Clients</label><b>0</b><span>Explicit — no two-way engagement yet; no websites, no lead capture in this niche</span></div>
+    <div class="kpi"><label>Partners</label><b>45</b><span>Tier 1: 1 / Tier 2: 19 / Tier 3: 18 / Untiered pending verification: 7</span></div>
+    <div class="kpi"><label>Drafts ready</label><b>24</b><span>All in tim@</span></div>
+    <div class="kpi hot"><label>Fire emails sent</label><b>47</b><span>25 on Oct 26 + 22 on Oct 27, from tim@; 0 replies yet</span></div>
     <div class="kpi"><label>Bids Won</label><b>0</b><span>No verified wins</span></div>
     <div class="kpi"><label>Booked revenue</label><b>$0</b><span>Nothing booked yet</span></div>
   </section>
 
+  <section class="revgrid" aria-label="Revenue">
+    <div class="revcard model">
+      <label>Pipeline value — modeled estimate</label>
+      <span class="modeled">Modeled estimate</span>
+      <b class="big">$1.56M – $6.83M</b>
+      <p>Modeled estimate — 39 dated, named-scope bid packages × $40K–$175K typical fire-package band (alarm replacements at the low end, full new-construction Div 21/28 packages at the high end). Early-signal/EDC rows (9), the China Grove scope-unconfirmed gate, and awards are excluded. Not quotes.</p>
+    </div>
+    <div class="revcard model">
+      <label>Revenue for Snket + Tim — modeled, @ 3–5% commission</label>
+      <span class="modeled">Modeled · Not booked</span>
+      <div class="revrows">
+        <div class="revrow"><span>Booked</span><strong class="zero">$0</strong></div>
+        <div class="revrow"><span>Win-adjusted expected at ~1-in-3</span><strong>$16K – $114K</strong></div>
+        <div class="revrow"><span>If everything lands</span><strong>$47K – $341K</strong></div>
+      </div>
+      <p>Booked — $0 (STRICT: signed agreements and verified wins only; $0 until one exists). Win-adjusted expected at ~1-in-3 — $16K – $114K (modeled) / If everything lands — $47K – $341K (modeled). Never present modeled pipeline as booked revenue.</p>
+    </div>
+    <div class="revcard">
+      <label>Recurring base</label>
+      <b class="big">$0/mo</b>
+      <p>0 signed partners × $2,500/mo vs the $10,000/mo target (4 partners signed = target).</p>
+    </div>
+    <div class="revcard">
+      <label>Verified contract value in this market — awarded to others</label>
+      <b class="big">$275,500/yr</b>
+      <p><strong>Awarded to others:</strong> Siemens Industry $37,500/yr (Chatham County fire alarm inspections, awarded Aug 28, 2026) + Southeastern System Technologies $238,000/yr (Savannah-Chatham schools Bid 26-14 fire alarm monitoring &amp; testing, awarded Jun 17, 2026). These are engine-tracked verified awards to others, not our wins.</p>
+    </div>
+  </section>
+
   <nav class="board-nav" aria-label="Boards">
-    <a href="#opportunities">Opportunities <em>44</em></a>
+    <a href="#opportunities">Opportunities <em>49</em></a>
     <a href="#leads">Facility Targets <em>3</em></a>
-    <a href="#partners">Partners <em>36</em></a>
+    <a href="#partners">Partners <em>45</em></a>
     <a href="#won">Bids Won <em>0</em></a>
-    <a href="#email">Email / Outreach <em>51</em></a>
+    <a href="#email">Email / Outreach <em>85</em></a>
     <a href="#how">How it works</a>
   </nav>
 
   <!-- OPPORTUNITIES -->
   <section class="board" id="opportunities">
     <div class="board-head">
-      <div><h2>Opportunities <small>44 open · 48 tracked</small></h2><p>Only Beaufort CC is <strong>Live — verified</strong>. Every other open card is <strong>Watch — unverified</strong> until it clears diligence at the official source.</p></div>
+      <div><h2>Opportunities <small>49 open · 54 tracked</small></h2><p>Only Beaufort CC is <strong>Live — verified</strong>; every other open card is <strong>Watch — unverified</strong>.</p></div>
       <div class="controls" role="group" aria-label="Filter opportunities">
-        <button class="chipbtn active" data-opp="all">All 44</button>
-        <button class="chipbtn" data-opp="urgent">Next 10 days · 12</button>
-        <button class="chipbtn" data-opp="nov">November · 19</button>
-        <button class="chipbtn" data-opp="later">Dec – Jan &amp; early · 13</button>
+        <button class="chipbtn active" data-opp="all">All 49</button>
+        <button class="chipbtn" data-opp="urgent">Next 10 days · 16</button>
+        <button class="chipbtn" data-opp="nov">November · 20</button>
+        <button class="chipbtn" data-opp="later">Dec–Jan &amp; early · 13</button>
       </div>
     </div>
-
-    <div class="strip"><b>Deadlines inside 10 days — 12:</b> B464 Oct 27 · Beaufort CC Oct 29 · NC Zoo Oct 29 · IFB Solutions Oct 30 · SC on-call Oct 30 · BJWSA backflow Oct 30 · China Grove gate Oct 30 · Wake CC Nov 3 · LEDC Nov 3 · Nash hood Nov 3 · Neuse CI Nov 4 · Yates Mill Nov 5</div>
+    <div class="strip"><b>Deadlines inside 10 days — 16:</b> B464 Oct 27 (TODAY) · James Island A/E RFQ Oct 27 · Gwinnett FS #14 Oct 28 · Beaufort CC Oct 29 · NC Zoo Oct 29 · IFB Solutions Oct 30 · SC on-call sprinkler Oct 30 · BJWSA backflow Oct 30 · China Grove gate Oct 30 · Camp Lejeune dry sprinkler Nov 2 (date unverified) · Wake CC Nov 3 · LEDC Nov 3 · Nash hood Nov 3 · Neuse CI Nov 4 · Yates Mill Nov 5 · Briarcliff Elementary Nov 5</div>
 
     <div class="kanban c3" id="oppBoard">
-      <div class="col" data-col="urgent"><div class="col-head"><b>Next 10 days</b><span>12</span></div>
-        <article class="card"><h3>Repair Dormitory B464, Joint Base Charleston</h3><p>Charleston SC — All American Fire · Brief still in drafts — URGENT, bids tomorrow</p><div class="card-foot"><span class="tag date soon">Oct 27, 5:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag warn">Urgent</span></div></article>
-        <article class="card"><h3>Beaufort County CC New Skills Building</h3><p>Washington NC — All American Fire</p><div class="card-foot"><span class="tag date soon">Oct 29, 2:00 PM</span><span class="tag live">Live — verified</span></div></article>
-        <article class="card"><h3>NC Zoo Fire Alarm Testing &amp; Inspection</h3><p>Asheboro NC — All American Fire · Brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 29, 2:30 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>IFB Solutions Manufacturing Expansion</h3><p>Winston-Salem NC — Unassigned</p><div class="card-foot"><span class="tag date soon">Oct 30, 5:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>SC On-Call Sprinkler Maintenance / Repair / Inspection (statewide)</h3><p>South Carolina — All American Fire · Brief in drafts — recurring</p><div class="card-foot"><span class="tag date soon">Oct 30, 12:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Beaufort-Jasper WSA Backflow Program Support</h3><p>Beaufort SC — All American Fire · Brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 30, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>China Grove manufacturing facility (QBS customer)</h3><p>China Grove NC — Unassigned · Oct 30 customer decision gate</p><div class="card-foot"><span class="tag date soon">Oct 30 · Gate</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Wake CC Fire Alarm Replacement</h3><p>Wake County NC — All American Fire · Brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>LEDC Life Safety / Fire Alarm Replacement</h3><p>North Carolina — All American Fire · Brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 3:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Nash County Hood Fire Suppression</h3><p>Nashville NC — All American Fire · Brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Neuse CI Fire Alarm Replacement (REBID)</h3><p>Goldsboro NC — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 4, 10:00 AM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>Historic Yates Mill County Park RFB #26-092</h3><p>Raleigh NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 5, 3:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
+      <div class="col" data-col="urgent"><div class="col-head"><b>Next 10 days</b><span>16</span></div>
+        <article class="card"><h3>Repair Dormitory B464, Joint Base Charleston</h3><p>Charleston SC — All American Fire — Watch, brief SENT Oct 27 (urgent) — bids TODAY</p><div class="card-foot"><span class="tag date soon">Oct 27, 5:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>James Island Fire Station No. 4 (A/E stage)</h3><p>Charleston SC — All American Fire — Watch, early signal, brief still in drafts</p><div class="card-foot"><span class="tag date soon">Oct 27, 5:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Construction of Gwinnett County Fire Station #14</h3><p>Gwinnett County GA — Titan Life Safety — Watch, urgent brief SENT Oct 27 — bids tomorrow; scope unconfirmed</p><div class="card-foot"><span class="tag date soon">Oct 28, 3:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Beaufort County CC New Skills Building</h3><p>Washington NC — All American Fire — Live — verified (only verified card); brief still in drafts; treat Oct 28 as working sub-bid deadline per plan-room conflict</p><div class="card-foot"><span class="tag date soon">Oct 29, 2:00 PM</span><span class="tag live">Live — verified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>NC Zoo Fire Alarm Testing &amp; Inspection</h3><p>Asheboro NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 29, 2:30 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>IFB Solutions Manufacturing Expansion</h3><p>Winston-Salem NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 30, 5:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>SC On-Call Sprinkler Maintenance (statewide)</h3><p>South Carolina — All American Fire — Watch, recurring, brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 30, 12:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Beaufort-Jasper WSA Backflow Program</h3><p>Beaufort SC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date soon">Oct 30, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>China Grove manufacturing facility (QBS customer)</h3><p>China Grove NC — Unassigned — Watch, fire scope not confirmed</p><div class="card-foot"><span class="tag date soon">Oct 30 · Gate</span><span class="tag unv">Watch — unverified</span></div></article>
+        <article class="card"><h3>FY27 Dry Sprinkler Inspection, Camp Lejeune</h3><p>Camp Lejeune NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 2 · Unverified</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Wake CC Fire Alarm Replacement</h3><p>Wake County NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>LEDC Life Safety / Fire Alarm Replacement</h3><p>North Carolina — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 3:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Nash County Hood Fire Suppression</h3><p>Nashville NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 3, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Neuse CI Fire Alarm Replacement (REBID)</h3><p>Goldsboro NC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 4, 10:00 AM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Historic Yates Mill RFB #26-092</h3><p>Raleigh NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 5, 3:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>WCPSS Briarcliff Elementary</h3><p>Cary NC — All American Fire — Watch, brief SENT Oct 27; prequal-only, scope unconfirmed</p><div class="card-foot"><span class="tag date">Nov 5, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Sent Oct 27</span></div></article>
       </div>
 
-      <div class="col" data-col="nov"><div class="col-head"><b>November</b><span>19</span></div>
-        <article class="card"><h3>FY27 Dry Sprinkler Inspection &amp; Testing, Camp Lejeune</h3><p>Camp Lejeune NC — Unassigned · Nov 2 (UNVERIFIED date conflict)</p><div class="card-foot"><span class="tag date">Nov 2</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Dorsett Shoals Elementary Fire Alarm Addition</h3><p>Douglasville GA — Fire Systems Inc · Phone brief queued</p><div class="card-foot"><span class="tag date">Nov 9, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Turner Middle School Fire Alarm Addition</h3><p>Lithia Springs GA — Fire Systems Inc · Phone brief queued</p><div class="card-foot"><span class="tag date">Nov 9, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Athens Drive High School Additions / Renovations</h3><p>Raleigh NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 10, 3:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>NWHS &amp; DTMC Fire Alarm Systems</h3><p>South Carolina — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 10, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>Huntersville Fire Station #5</h3><p>Huntersville NC — Unassigned · Edifice intro draft covers this</p><div class="card-foot"><span class="tag date">Nov 12 · Prequal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>City of South Fulton Fire &amp; Life Safety Inspections</h3><p>South Fulton GA — Fire Systems Inc · Phone brief queued — recurring</p><div class="card-foot"><span class="tag date">Nov 13, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>New Fire Station #22 RFP</h3><p>Madison GA — Unassigned</p><div class="card-foot"><span class="tag date">Nov 13, 5:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>NCSSM Academic Commons Phase 2</h3><p>Durham NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 17, 3:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>NCSSM Residence Hall Renovations</h3><p>Durham NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 17, 3:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Cherry Point Maglocks-to-Fire-System</h3><p>Cherry Point NC — All American Fire · Brief SENT Oct 26 · Sub lane, MACC holders only</p><div class="card-foot"><span class="tag date">Nov 18, 3:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>7th &amp; College Street Parking Deck Fire Pump</h3><p>Charlotte NC — All American Fire · Brief SENT Oct 26 · Prequalified subs only</p><div class="card-foot"><span class="tag date">Nov 19, 1:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>NCCIW Dormitories Fire Alarm Replacement</h3><p>Raleigh NC — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 19, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>Glynn County Fire Pump Modernization IFB27-015</h3><p>Brunswick GA — Fire Systems Inc · Phone brief queued</p><div class="card-foot"><span class="tag date">Nov 19</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>City of Fayetteville 911 Call Center (PSAP)</h3><p>Fayetteville NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 19, 2:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Pine Grove Circle Fire Suppression</h3><p>Charlotte NC — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 20, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>Camp Lejeune Bldg 575 Fire Suppression</h3><p>Camp Lejeune NC — All American Fire · Brief SENT Oct 26 · Sub lane, MACC holders only</p><div class="card-foot"><span class="tag date">Nov 23, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>McCelvey Center Fire Notification</h3><p>York SC — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 24</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>Carrboro Elementary School Replacement Rel. 2</h3><p>Carrboro NC — Unassigned</p><div class="card-foot"><span class="tag date">Nov 30 · Prequal</span><span class="tag unv">Watch — unverified</span></div></article>
+      <div class="col" data-col="nov"><div class="col-head"><b>November</b><span>20</span></div>
+        <article class="card"><h3>Dorsett Shoals Elementary</h3><p>Douglasville GA — Fire Systems Inc — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 9</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Turner Middle School</h3><p>Lithia Springs GA — Fire Systems Inc — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 9</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Athens Drive High School</h3><p>Raleigh NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 10</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>NWHS &amp; DTMC Fire Alarm</h3><p>South Carolina — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 10</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Huntersville Fire Station #5</h3><p>Huntersville NC — All American Fire — Watch, brief in drafts; Edifice GC intro also in drafts</p><div class="card-foot"><span class="tag date">Nov 12 · Prequal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>City of South Fulton Inspections</h3><p>South Fulton GA — Fire Systems Inc — Watch, recurring, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 13</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>New Fire Station #22</h3><p>Madison GA — Titan Life Safety — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 13</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Cabarrus YDC BAS Renovation</h3><p>Concord NC — All American Fire — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 17</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Blue Ridge Road Center Renovations</h3><p>North Carolina — All American Fire — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 17</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>NCSSM Academic Commons Ph 2</h3><p>Durham NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 17</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>NCSSM Residence Hall Renovations</h3><p>Durham NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 17</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Cherry Point Maglocks-to-Fire</h3><p>Cherry Point NC — All American Fire — Watch, sub lane, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 18</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>7th &amp; College Parking Deck Fire Pump</h3><p>Charlotte NC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 19</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>NCCIW Dormitories Fire Alarm</h3><p>Raleigh NC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 19</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Glynn County Fire Pump IFB27-015</h3><p>Brunswick GA — Fire Systems Inc — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date">Nov 19</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Fayetteville 911 Call Center (PSAP)</h3><p>Fayetteville NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 19</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Pine Grove Circle Fire Suppression</h3><p>Charlotte NC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 20</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Camp Lejeune Bldg 575 Fire Suppression</h3><p>Camp Lejeune NC — All American Fire — Watch, sub lane, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 23</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>McCelvey Center Fire Notification</h3><p>York SC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date">Nov 24</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Carrboro Elementary Rel. 2</h3><p>Carrboro NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date">Nov 30 · Prequal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
       </div>
 
-      <div class="col" data-col="later"><div class="col-head"><b>Dec – Jan &amp; early signals</b><span>13</span></div>
-        <article class="card"><h3>Greenville Tech Fire Alarm Replacement</h3><p>Greenville SC — All American Fire · Brief SENT Oct 26</p><div class="card-foot"><span class="tag date later">Dec 3, 2:00 PM</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Brief sent</span></div></article>
-        <article class="card"><h3>GA Interdisciplinary Research Building Fire Alarm</h3><p>Georgia — Fire Systems Inc · Phone brief queued</p><div class="card-foot"><span class="tag date later">Dec 3, 5:00 PM</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Robeson Community College Healthcare Ed Bldg</h3><p>Lumberton NC — Unassigned · Dec 8 (date unverified)</p><div class="card-foot"><span class="tag date later">Dec 8</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Asheville-Oakley Fire Station #9</h3><p>Asheville NC — Unassigned · Edifice intro draft covers this</p><div class="card-foot"><span class="tag date later">Dec 11 · Prequal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Henderson County PS Bus Garage</h3><p>Flat Rock NC — Unassigned</p><div class="card-foot"><span class="tag date later">Jan 29, 2027 · Prequal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Fayetteville Fire Station No. 4 Reconstruction</h3><p>Fayetteville NC — All American Fire · Heads-up SENT Oct 26 · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span><span class="tag sent">Heads-up sent</span></div></article>
-        <article class="card"><h3>Savannah-Chatham Schools Bid 26-14 Fire Alarm Monitoring / Testing</h3><p>Savannah GA — Fire Systems Inc · Coverage check — recurring annual contract · Date not verified</p><div class="card-foot"><span class="tag date later">Date not verified</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Corvid Technologies Mooresville Campus Expansion</h3><p>Mooresville NC — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Re:Build Manufacturing New Facility</h3><p>Rock Hill SC — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Utili-Serve HQ Expansion</h3><p>Conover NC — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>US Conec New Manufacturing Facility</h3><p>Hickory NC — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>CurTec USA Warehouse / Production Expansion</h3><p>Westminster SC — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
-        <article class="card"><h3>Blue Bird Corp New Manufacturing Facility</h3><p>Fort Valley GA — Unassigned · Early signal, no date</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch — unverified</span></div></article>
+      <div class="col" data-col="later"><div class="col-head"><b>Dec–Jan &amp; early signals</b><span>13</span></div>
+        <article class="card"><h3>Greenville Tech Fire Alarm</h3><p>Greenville SC — All American Fire — Watch, brief SENT Oct 26</p><div class="card-foot"><span class="tag date later">Dec 3</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>GA Interdisciplinary Research Bldg Fire Alarm</h3><p>Georgia — Fire Systems Inc — Watch, brief SENT Oct 27</p><div class="card-foot"><span class="tag date later">Dec 3</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Robeson CC Healthcare Ed Bldg</h3><p>Lumberton NC — All American Fire — Watch, brief ON HOLD — do not send</p><div class="card-foot"><span class="tag date later">Dec 8 · Unverified</span><span class="tag unv">Watch</span><span class="tag hold">On hold</span></div></article>
+        <article class="card"><h3>Asheville-Oakley Fire Station #9</h3><p>Asheville NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date later">Dec 11 · Prequal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Henderson County Bus Garage</h3><p>Flat Rock NC — All American Fire — Watch, brief in drafts</p><div class="card-foot"><span class="tag date later">Jan 29, 2027 · Prequal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Fayetteville Fire Station No. 4</h3><p>Fayetteville NC — All American Fire — Watch, heads-up SENT Oct 26</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Corvid Technologies Mooresville</h3><p>Mooresville NC — All American Fire — Watch, heads-up in drafts</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Re:Build Manufacturing</h3><p>Rock Hill SC — All American Fire — Watch, heads-up in drafts</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>Utili-Serve HQ Expansion</h3><p>Conover NC — All American Fire — Watch, heads-up in drafts</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag draft">In drafts</span></div></article>
+        <article class="card"><h3>US Conec</h3><p>Hickory NC — All American Fire — Watch, heads-up SENT Oct 27</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>CurTec USA</h3><p>Westminster SC — All American Fire — Watch, heads-up SENT Oct 27</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Blue Bird Corp</h3><p>Fort Valley GA — Titan Life Safety — Watch, heads-up SENT Oct 27</p><div class="card-foot"><span class="tag date later">Early signal</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Chapel Hill Fire Station 4</h3><p>Chapel Hill NC — Regional Fire Services — Watch, heads-up SENT Oct 27; bids mid-2027</p><div class="card-foot"><span class="tag date later">Early · Mid-2027</span><span class="tag unv">Watch</span><span class="tag sent">Sent Oct 27</span></div></article>
       </div>
     </div>
-
-    <div class="closed"><b>Closed —</b> NC Global TransPark MRO (no fire package advertised) · Huntersville Medical Center fire protection services (source failed verification) · Novant system-wide inspection services (source failed verification).<br><b>Award —</b> Chatham County fire alarm inspections awarded to Siemens Industry (Aug 28, 2026) — not our win; Siemens intro queued pending a published contact.</div>
+    <div class="closed"><b>Closed:</b> NC Global TransPark MRO (no fire package) · Huntersville Medical Center + Novant system-wide (source failed verification).<br><b>Awards:</b> Chatham County $37,500/yr to Siemens + Savannah-Chatham $238,000/yr to Southeastern — verified awards to others, not our wins.</div>
   </section>
 
   <!-- FACILITY TARGETS -->
   <section class="board" id="leads">
-    <div class="board-head"><div><h2>Facility Targets</h2><p>3 targets — pitched Oct 26, awaiting reply — not clients</p></div></div>
-    <div class="kanban c2">
-      <div class="col"><div class="col-head"><b>Pitched Oct 26 — awaiting reply</b><span>3</span></div>
-        <article class="card"><h3>Novant Health — Matthew Stiene</h3><p>NFPA 25 inspections + annual alarm testing + corrections</p><div class="card-foot"><span class="tag sent">Pitch SENT Oct 26, 10:19 PM</span><span class="tag unv">Awaiting reply</span></div></article>
-        <article class="card"><h3>Beacon Partners — Tim Robertson</h3><p>Sprinkler inspections incl. ESFR warehouses + alarm testing</p><div class="card-foot"><span class="tag sent">Pitch SENT Oct 26, 10:19 PM</span><span class="tag unv">Awaiting reply</span></div></article>
-        <article class="card"><h3>Henderson Properties</h3><p>Sprinkler / alarm / backflow / extinguisher inspection schedule + corrections</p><div class="card-foot"><span class="tag sent">Pitch SENT Oct 26, 10:19 PM</span><span class="tag unv">Awaiting reply</span></div></article>
-      </div>
-      <div>
-        <div class="kpi" style="height:100%"><label>Clients</label><b>0</b><span>No two-way engagement yet; no websites, no lead capture in this niche. The 3 pitches above are sent (one-way) — still not clients, no replies yet.</span></div>
-      </div>
+    <div class="board-head"><div><h2>Facility Targets</h2><p>3 targets, pitched Oct 26, awaiting reply — NOT clients</p></div></div>
+    <div class="kanban c3">
+      <article class="card"><h3>Novant Health — Matthew Stiene</h3><p>NFPA 25 inspections + alarm testing — pitch SENT Oct 26, awaiting reply</p><div class="card-foot"><span class="tag sent">Sent Oct 26</span></div></article>
+      <article class="card"><h3>Beacon Partners — Tim Robertson</h3><p>Sprinkler inspections incl. ESFR warehouses — pitch SENT Oct 26, awaiting reply</p><div class="card-foot"><span class="tag sent">Sent Oct 26</span></div></article>
+      <article class="card"><h3>Henderson Properties</h3><p>Sprinkler/alarm/backflow/extinguisher schedule — pitch SENT Oct 26, awaiting reply</p><div class="card-foot"><span class="tag sent">Sent Oct 26</span></div></article>
     </div>
+    <div class="clients-box"><b>Clients — 0.</b><p>No two-way engagement yet; the 3 pitches above are one-way sends. A target becomes a client only after real two-way contact. This niche has no websites and no lead capture.</p></div>
   </section>
 
   <!-- PARTNERS -->
   <section class="board" id="partners">
     <div class="board-head">
-      <div><h2>Partners <small>36 — by tier</small></h2><p>Phones shown only masked to last 4 digits. Tier 3 is bench / caution — tracker only unless Sanket decides.</p></div>
+      <div><h2>Partners <small>45 — by tier</small></h2><p>Phones masked to last 4 digits only.</p></div>
       <div class="controls" role="group" aria-label="Filter partners">
-        <button class="chipbtn active" data-tier="all">All 36</button>
+        <button class="chipbtn active" data-tier="all">All 45</button>
         <button class="chipbtn" data-tier="t1">Tier 1 · 1</button>
         <button class="chipbtn" data-tier="t2">Tier 2 · 19</button>
-        <button class="chipbtn" data-tier="t3">Tier 3 · 16</button>
+        <button class="chipbtn" data-tier="t3">Tier 3 · 18</button>
+        <button class="chipbtn" data-tier="unt">Untiered · 7</button>
       </div>
     </div>
-    <div class="kanban c3" id="partnerBoard">
+    <div class="kanban c2" id="partnerBoard">
       <div class="col" data-ptier="t1"><div class="col-head"><b>Tier 1 — Route first</b><span>1</span></div>
-        <article class="card"><h3>All American Fire Protection</h3><p>NC statewide incl. Charlotte, alarm + sprinkler + suppression — 4.9★/718 — partner intro SENT Oct 26; 18 opportunity briefs (10 sent, 8 in drafts) — phone …0600</p><div class="card-foot"><span class="tag t1">Tier 1</span><span class="tag sent">Intro sent</span></div></article>
+        <article class="card"><h3>All American Fire Protection</h3><p>NC statewide incl. Charlotte, alarm + sprinkler + suppression, 4.9★/718 — intro SENT Oct 26; briefs: 15 sent, 22 in drafts — phone …0600</p><div class="card-foot"><span class="tag t1">Tier 1</span><span class="tag sent">Intro sent Oct 26</span></div></article>
       </div>
       <div class="col" data-ptier="t2"><div class="col-head"><b>Tier 2</b><span>19</span></div>
-        <article class="card"><h3>City Fire &amp; Safety</h3><p>Charlotte metro, full-line — phone-only, queued for Tim call …4394</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Wiginton Fire Systems (Charlotte)</h3><p>Design-build, best license evidence — not contacted, bench</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Fire Systems Inc</h3><p>Smyrna GA, sprinkler + alarm — phone-only …7979; partner intro + 5 opportunity call briefs queued</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>City Fire &amp; Safety</h3><p>Charlotte metro full-line — phone-only …4394, queued for Tim call</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Wiginton Fire Systems (Charlotte)</h3><p>Design-build, best license evidence — bench, not contacted</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Fire Systems Inc</h3><p>Smyrna GA, sprinkler + alarm, 4.7★/105 — email lane opened (…7979); partner bench intro + 5 project briefs SENT Oct 27</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 27</span></div></article>
         <article class="card"><h3>Lewis Fire Protection</h3><p>Villa Rica GA, sprinkler only — bench</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
         <article class="card"><h3>Statewide Fire Protection</h3><p>Decatur GA, serves NC/SC/GA — verify trade split</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
         <article class="card"><h3>Safe-T Fire Protection</h3><p>Buford GA, both trades — bench</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Precision Fire Systems</h3><p>Charleston SC, inspection-forward — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>American Fire Protection</h3><p>Greenville SC, sprinkler since 1973 — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Precision Fire Solutions</h3><p>West Columbia SC, alarm lane only — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>PASCO</h3><p>West Columbia / Charleston SC sprinkler — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Zgoda Fire Protection</h3><p>Triangle NC, NFPA 25 inspection specialist — phone queue (priority Triangle call)</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Wayne Automatic Fire Sprinklers (Raleigh)</h3><p>Sprinkler + alarm + monitoring — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Associated Fire Protection</h3><p>Clayton NC, sprinkler + alarm — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Carolina Fire Protection</h3><p>Dunn NC, sprinkler inspect/test — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Coastal Empire Fire &amp; Security</h3><p>Savannah GA, alarm lane — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>Titan Life Safety</h3><p>Atlanta metro, inspection-forward — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>Fire Technology LLC</h3><p>Augusta GA, design/install/test — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Chief Facility Defense</h3><p>Atlanta GA, full ITM, veteran-owned — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
-        <article class="card"><h3>Champion Fire Protection</h3><p>Savannah GA, full sprinkler + alarm + pump testing — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Intro sent</span></div></article>
+        <article class="card"><h3>Precision Fire Systems</h3><p>Charleston SC, inspection-forward — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>American Fire Protection</h3><p>Greenville SC, sprinkler since 1973 — partner bench intro SENT Oct 27</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Precision Fire Solutions</h3><p>West Columbia SC, alarm lane — outreach staged, phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>PASCO</h3><p>West Columbia/Charleston SC sprinkler — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Zgoda Fire Protection</h3><p>Triangle NC, NFPA 25 inspection specialist — partner bench draft ready in tim@</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag draft">Draft ready</span></div></article>
+        <article class="card"><h3>Wayne Automatic Fire Sprinklers (Raleigh)</h3><p>Sprinkler + alarm — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Associated Fire Protection</h3><p>Clayton NC — outreach staged, phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Carolina Fire Protection</h3><p>Dunn NC, sprinkler inspect/test — partner bench intro SENT Oct 27</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Coastal Empire Fire &amp; Security</h3><p>Savannah GA, alarm lane — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 26</span></div></article>
+        <article class="card"><h3>Titan Life Safety</h3><p>Atlanta metro, inspection-forward — intro SENT Oct 26; Gwinnett + Madison + Blue Bird briefs SENT</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent</span></div></article>
+        <article class="card"><h3>Fire Technology LLC</h3><p>Augusta GA — phone queue</p><div class="card-foot"><span class="tag t2">Tier 2</span></div></article>
+        <article class="card"><h3>Chief Facility Defense</h3><p>Atlanta GA, full ITM, veteran-owned — partner bench intro SENT Oct 27</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Champion Fire Protection</h3><p>Savannah GA — intro SENT Oct 26</p><div class="card-foot"><span class="tag t2">Tier 2</span><span class="tag sent">Sent Oct 26</span></div></article>
       </div>
-      <div class="col" data-ptier="t3"><div class="col-head"><b>Tier 3 — Bench / caution</b><span>16</span></div>
-        <article class="card"><h3>Sunland</h3><p>APi roll-up — benchmark only</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Fire Sprinkler Service LLC</h3><p>DO NOT ROUTE — NC license reported expired 2025-12-31; intro was sent Oct 26 before re-verification — do not route work unless license verified current</p><div class="card-foot"><span class="tag warn">Do not route</span><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Unifour</h3><p>Hiller division — benchmark</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Eagle Fire Charlotte</h3><p>Fallback only — intro SENT Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>Alliance Fire Protection</h3><p>Conduct flag — intro SENT Oct 26, caution</p><div class="card-foot"><span class="tag warn">Conduct flag</span><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Fire Protection Services LLC</h3><p>Caution — install scope unproven</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Central Fire Protection</h3><p>Do not route first — intro SENT Oct 26, caution</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>SuperHero Fire Protection</h3><p>Enterprise scale — bench</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Columbia Fire &amp; Safety</h3><p>Extinguisher / suppression — verify on call</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Carolina Fire Safety</h3><p>Extinguisher only — verify on call</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+      <div class="col" data-ptier="t3"><div class="col-head"><b>Tier 3 — Bench / caution</b><span>18</span></div>
+        <article class="card"><h3>Sunland</h3><p>APi roll-up, benchmark only</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Fire Sprinkler Service LLC</h3><p>DO NOT ROUTE — NC license reported expired 2025-12-31; intro was sent Oct 26 — do not route unless license verified current</p><div class="card-foot"><span class="tag warn">Do not route</span><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Unifour</h3><p>Hiller division</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Eagle Fire Charlotte</h3><p>Fallback only, intro sent Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Alliance Fire Protection</h3><p>Conduct flag, intro sent Oct 26</p><div class="card-foot"><span class="tag warn">Conduct flag</span><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Fire Protection Services LLC</h3><p>Caution</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Central Fire Protection</h3><p>Do not route first, intro sent Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>SuperHero Fire Protection</h3><p>Enterprise scale</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Columbia Fire &amp; Safety</h3><p>Verify on call</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Carolina Fire Safety</h3><p>Extinguisher only</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
         <article class="card"><h3>A&amp;A Fire Protection</h3><p>DO NOT ROUTE — roll-up owned, 2.6★</p><div class="card-foot"><span class="tag warn">Do not route</span><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>Regional Fire Services of NC</h3><p>Verify on call — intro SENT Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>Crawford Sprinkler</h3><p>Bench — caution</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Regional Fire Services of NC</h3><p>Verify on call; Chapel Hill heads-up sent Oct 27</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Crawford Sprinkler</h3><p>Caution</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
         <article class="card"><h3>Automatic Fire Systems of Augusta</h3><p>Verify on call</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
-        <article class="card"><h3>FirePro</h3><p>Extinguisher only — intro SENT Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span><span class="tag sent">Intro sent</span></div></article>
-        <article class="card"><h3>AIE</h3><p>National benchmark — intro SENT Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span><span class="tag sent">Intro sent</span></div></article>
+        <article class="card"><h3>FirePro</h3><p>Extinguisher only, intro sent Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>AIE</h3><p>National benchmark, intro sent Oct 26</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>Integrated Fire Protection</h3><p>Roll-up owned, do not route first</p><div class="card-foot"><span class="tag t3">Tier 3</span></div></article>
+        <article class="card"><h3>FESS Fire Protection / Impact Fire</h3><p>DISQUALIFIED — roll-up owned</p><div class="card-foot"><span class="tag warn">Disqualified</span><span class="tag t3">Tier 3</span></div></article>
+      </div>
+      <div class="col" data-ptier="unt"><div class="col-head"><b>Untiered — pending verification</b><span>7</span></div>
+        <article class="card"><h3>Sentry Fire Protection</h3><p>LinkedIn candidate, not yet tiered — intro SENT Oct 27</p><div class="card-foot"><span class="tag unt">Untiered</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Deesco Fire Protection</h3><p>LinkedIn candidate, not yet tiered — intro SENT Oct 27</p><div class="card-foot"><span class="tag unt">Untiered</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Premier Fire Protection / Premier Fire &amp; Security</h3><p>LinkedIn candidate, not yet tiered — intro SENT Oct 27</p><div class="card-foot"><span class="tag unt">Untiered</span><span class="tag sent">Sent Oct 27</span></div></article>
+        <article class="card"><h3>Performance Fire Protection</h3><p>LinkedIn candidate, not yet tiered</p><div class="card-foot"><span class="tag unt">Untiered</span></div></article>
+        <article class="card"><h3>Central Piedmont Fire Protection</h3><p>LinkedIn candidate, not yet tiered — phone-only</p><div class="card-foot"><span class="tag unt">Untiered</span></div></article>
+        <article class="card"><h3>Thomas Mechanical &amp; Fire Protection</h3><p>LinkedIn candidate, not yet tiered — phone-only</p><div class="card-foot"><span class="tag unt">Untiered</span></div></article>
+        <article class="card"><h3>Midlands Fire Protection</h3><p>LinkedIn candidate, not yet tiered — phone-only</p><div class="card-foot"><span class="tag unt">Untiered</span></div></article>
       </div>
     </div>
   </section>
@@ -248,53 +296,50 @@ footer{margin-top:18px;padding:14px 2px 0;border-top:1px solid var(--line);color
   <!-- BIDS WON -->
   <section class="board" id="won">
     <div class="board-head"><div><h2>Bids Won <small>0 verified wins</small></h2></div></div>
-    <div class="empty"><b>0 verified wins</b>No partner win has independent evidence yet — nothing modeled, nothing counted. Chatham County's $37,500 Year 1 award went to Siemens, not to a network partner. Booked revenue: $0.</div>
+    <div class="empty"><b>0 verified wins</b>No partner win has independent evidence yet — nothing modeled, nothing counted. Booked revenue: $0.</div>
   </section>
 
   <!-- EMAIL / OUTREACH -->
   <section class="board" id="email">
-    <div class="board-head"><div><h2>Email / Outreach <small>Follow-Ups — system of record</small></h2><p>Tim-voice outreach from tim@. Follow-Ups tracked — 51 · Replies — 0 · Overdue — 0.</p></div></div>
+    <div class="board-head"><div><h2>Email / Outreach <small>Follow-Ups — system of record</small></h2><p>Follow-Ups sheet is the system of record (85 tracked rows; sheet statuses lag the mailbox — mailbox is truth). Follow-Ups tracked 85 · Fire replies 0 · Sent 47 · Drafts ready 24 · Phone queue 17 (sheet) · Contact-ID pending 2 (Siemens + Southeastern award intros) · 1 ON HOLD (Robeson CC brief — do not send).</p></div></div>
     <div class="tracker">
       <div class="funnel">
-        <div class="fstep"><b>25</b><label>Sent Oct 26</label><p>All American intro + 10 briefs; 3 facility pitches; 11 partner intros</p></div>
-        <div class="fstep"><b>9</b><label>Drafts ready</label><p>8 All American briefs + Edifice GC intro</p></div>
-        <div class="fstep"><b>16</b><label>Phone queue</label><p>City Fire + Fire Systems partner calls, 5 GA call briefs, 9 partner first-touch calls</p></div>
-        <div class="fstep"><b>1</b><label>Contact ID pending</label><p>Siemens award intro</p></div>
+        <div class="fstep"><b>85</b><label>Follow-Ups tracked</label><p>Sheet is system of record; mailbox is truth</p></div>
+        <div class="fstep"><b>47</b><label>Sent</label><p>25 on Oct 26 + 22 on Oct 27, from tim@</p></div>
+        <div class="fstep"><b>24</b><label>Drafts ready</label><p>All in tim@, in deadline order below</p></div>
+        <div class="fstep"><b>0</b><label>Fire replies</label><p>No replies yet · Phone queue 17 · Contact-ID pending 2 · 1 on hold</p></div>
       </div>
       <div class="queue">
-        <h3>Sanket's send queue — 9 drafts, in deadline order</h3>
-        <ol>
-          <li><strong>B464 JB Charleston</strong> — bids TOMORROW Oct 27</li>
-          <li>Beaufort CC + NC Zoo — Oct 29</li>
-          <li>SC on-call + BJWSA backflow — Oct 30</li>
-          <li>Wake CC + LEDC + Nash hood — Nov 3</li>
-          <li>Edifice GC intro — Huntersville FS #5 + Asheville-Oakley FS #9</li>
-        </ol>
-        <p style="color:var(--muted);font-size:13px;margin:10px 0 0">Sent Oct 26 breakdown: 4 at 10:19 PM (All American partner intro + Novant, Beacon and Henderson pitches) and 21 at 10:50–10:53 PM (10 All American per-project briefs + 11 partner intros). No replies had arrived by 11:57 PM.</p>
+        <h3>Sent breakdown</h3>
+        <ul>
+          <li><strong>Oct 26 — 25:</strong> All American intro + 10 briefs, 3 facility pitches, 11 partner intros</li>
+          <li><strong>Oct 27 — 22:</strong> 5 early-signal/project sends at 00:21, 3 partner bench intros at 01:15, 14 at 02:12–02:15: B464 urgent, Gwinnett urgent, Cabarrus, Blue Ridge, Briarcliff, 5 Fire Systems briefs, 4 partner bench intros</li>
+        </ul>
+        <h3 style="margin-top:16px">Snket's send queue — 24 fire drafts in tim@, deadline order</h3>
+        <p style="color:var(--slate);margin:6px 0 0;line-height:1.6">Beaufort CC + NC Zoo (Oct 29) · SC on-call + BJWSA backflow + IFB Solutions (Oct 30) · Wake CC + LEDC + Nash hood (Nov 3) · Yates Mill (Nov 5) · Athens Drive (Nov 10) · Huntersville FS #5 (Nov 12) · NCSSM x2 (Nov 17) · Camp Lejeune dry sprinkler (date TBC) · Fayetteville 911 (Nov 19) · Carrboro (Nov 30) · Asheville FS #9 (Dec 11) · Henderson Bus Garage (Jan 29) · early signals Corvid / Re:Build / Utili-Serve / James Island · Zgoda partner bench · Edifice GC intro</p>
       </div>
     </div>
   </section>
 
   <!-- EXPLAINER -->
   <section class="source" id="how">
-    <h2>How the fire model works</h2>
+    <h2>How the fire model works — for Tim</h2>
     <div class="grid2">
-      <div class="cad"><b>1 · Bid engine</b><p>Hourly sweep of NC/SC/GA procurement, GC portals, SAM.gov and plan rooms for Div 21 sprinkler, fire alarm and NFPA 25 inspection work; every opportunity diligence-checked (live at official source, stage, eligibility, scope + license fit) before routing, and unverified items stay flagged.</p></div>
-      <div class="cad"><b>2 · Outreach</b><p>Tim-voice email coordination — we help owners, GCs and facilities find the right licensed fire contractor and coordinate scope, quotes and scheduling; all drafts are staged for Sanket to send.</p></div>
-      <div class="cad"><b>3 · Recurring layer</b><p>NFPA 25 inspections, annual alarm testing and correction work are the retention engine — recurring contracts count double toward the $10,000/month target.</p></div>
+      <div class="cad"><b>1 · Bid engine</b><p>Hourly sweep of NC/SC/GA procurement, GC portals, SAM.gov and plan rooms for Div 21 sprinkler, fire alarm and NFPA 25 work; every opportunity diligence-checked (live at official source, stage, eligibility, scope + license fit) before routing; unverified stays flagged.</p></div>
+      <div class="cad"><b>2 · Outreach</b><p>Tim-voice email coordination: we help owners, GCs and facilities find the right licensed fire contractor and coordinate scope, quotes and scheduling; Muse stages drafts, Snket sends.</p></div>
+      <div class="cad"><b>3 · Recurring layer</b><p>NFPA 25 inspections, annual alarm testing and corrections count double toward the $10,000/month target.</p></div>
     </div>
-    <p style="margin-top:14px"><strong>Money model:</strong> partners pay $2,500/month + 3–5% commission on wins, in writing (Partner Coordination Agreement) before bid day; the partner is always bidder of record.</p>
-    <p style="margin-top:8px">Source: Google Sheet <strong>“Fire Protection — Operations”</strong> + both Gmail mailboxes via the raw API, re-read Mon Oct 26, 2026 at 11:57 PM ET. <a href="https://docs.google.com/spreadsheets/d/1sWVwWtKkey2nDR0-hNxZw6dB-Vq_TkixapXSREhHNTE/edit?usp=drivesdk" target="_blank" rel="noopener">Open the workbook ↗</a></p>
-    <div class="numstrip">44 open opportunities · 36 partners (1 Tier 1) · 3 facility targets pitched · 25 emails sent Oct 26 · 0 clients · 0 wins · $0 booked</div>
+    <p style="margin-top:14px"><strong>Money model:</strong> partners pay $2,500/month + 3–5% commission on wins, in writing (Partner Coordination Agreement) before bid day; the partner is always bidder of record. Booked revenue today: $0.</p>
+    <div class="numstrip">49 open opportunities · 45 partners (1 Tier 1) · 3 facility targets pitched · 47 emails sent · 24 drafts ready · 0 clients · 0 wins · $0 booked</div>
   </section>
 
-  <footer><span>Demand = bid engine + email outreach only. No websites, no lead capture, no paid search.</span><span>Snket • Fire Protection</span></footer>
+  <footer>Source: Google Sheet Fire Protection — Operations + both Gmail mailboxes via the raw API, re-read Tue Oct 27, 2026 at 2:56 AM ET. 49 open opportunities · 45 partners (1 Tier 1) · 3 facility targets pitched · 47 emails sent · 24 drafts ready · 0 clients · 0 wins · $0 booked. Demand = bid engine + email outreach only. No websites, no lead capture, no paid search.</footer>
 </div>
 <script>
 (function(){
   function wire(sel,fn){var b=document.querySelectorAll(sel);b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.classList.remove('active')});x.classList.add('active');fn(x)})})}
   wire('[data-opp]',function(b){var v=b.getAttribute('data-opp');document.querySelectorAll('#oppBoard .col').forEach(function(c){c.classList.toggle('hidden',v!=='all'&&c.getAttribute('data-col')!==v)});document.getElementById('oppBoard').className=v==='all'?'kanban c3':'kanban'});
-  wire('[data-tier]',function(b){var v=b.getAttribute('data-tier');document.querySelectorAll('#partnerBoard .col').forEach(function(c){c.classList.toggle('hidden',v!=='all'&&c.getAttribute('data-ptier')!==v)});document.getElementById('partnerBoard').className=v==='all'?'kanban c3':'kanban'});
+  wire('[data-tier]',function(b){var v=b.getAttribute('data-tier');document.querySelectorAll('#partnerBoard .col').forEach(function(c){c.classList.toggle('hidden',v!=='all'&&c.getAttribute('data-ptier')!==v)});document.getElementById('partnerBoard').className=v==='all'?'kanban c2':'kanban'});
 })();
 </script>
 </body>
