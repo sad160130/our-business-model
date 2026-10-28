@@ -158,6 +158,39 @@
         text-align: right; margin-top: 3px; white-space: nowrap;
       }
 
+      /* ---------- Partner scorecards ---------- */
+      .scorecards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .scorecard {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        padding: 15px 17px 12px;
+        box-shadow: 0 1px 3px rgba(34, 48, 62, 0.07);
+      }
+      .scorecard.doug { border-top: 4px solid var(--green); }
+      .scorecard.jerry { border-top: 4px solid var(--blue); }
+      .scorecard h3 { font-size: 18px; font-weight: 700; margin: 0 0 2px; line-height: 1.25; }
+      .scorecard .sc-fee { font-size: 13px; color: var(--muted); margin: 0 0 10px; line-height: 1.45; }
+      .scorecard .sc-fee b { color: var(--steel); font-weight: 600; }
+      .sc-banner {
+        background: var(--green-bg); color: var(--green);
+        border: 1px solid #b7dcc6; border-radius: 6px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 19px; font-weight: 700; letter-spacing: 0.4px;
+        padding: 8px 12px; margin: 0 0 10px; line-height: 1.25;
+      }
+      .sc-rows { list-style: none; margin: 0; padding: 0; }
+      .sc-rows li {
+        font-size: 13.5px; color: var(--muted); line-height: 1.45;
+        padding: 5px 0; border-top: 1px dashed var(--line-soft);
+      }
+      .sc-rows li b { color: var(--text); font-weight: 600; }
+      .bench-strip {
+        margin-top: 10px;
+        background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+        padding: 10px 15px; font-size: 13.5px; color: var(--muted); line-height: 1.5;
+      }
+      .bench-strip b { color: var(--steel); font-weight: 600; }
+      .bench-strip .flag { color: var(--red); font-weight: 700; }
+
       /* ---------- Section heads ---------- */
       .section-head {
         display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
@@ -375,6 +408,7 @@
         .two-panel { grid-template-columns: 1fr; }
         .filterbox { margin-left: 0; width: 100%; }
         .filterbox input { width: 100%; }
+        .scorecards { grid-template-columns: 1fr; }
         .w-item .who { width: 70px; }
       }
     </style>
@@ -389,15 +423,15 @@
           <div class="operators">Charlotte Commercial Doors · <b>Snket Desai</b> &amp; <b>Tim Lamb</b></div>
         </div>
         <div class="stamp">
-          Last updated: <b>Wed Oct 28, 2026 11:09 AM ET</b><br />
-          Data snapshot verified 11:10 AM ET Oct 28 (sheets + both Gmail inboxes, raw API)
+          Last updated: <b>Wed Oct 28, 2026 — 11:29 AM ET</b><br />
+          Data snapshot verified 11:30 AM ET Oct 28 (sheets + both Gmail inboxes, raw API)
         </div>
       </header>
 
       <!-- ================= KPI STRIP ================= -->
       <section class="kpis" aria-label="Key numbers">
         <div class="kpi">
-          <div class="num">187</div>
+          <div class="num">191</div>
           <div class="lbl"><b>Partner Signals</b> — rows tracked</div>
         </div>
         <div class="kpi">
@@ -429,6 +463,45 @@
           <div class="lbl"><b>Booked</b> — China Grove margin · deposit due Oct 30</div>
         </div>
       </section>
+
+      <!-- ================= PARTNER SCORECARDS ================= -->
+      <div class="section-head">
+        <h2>Partner Scorecards</h2>
+        <span class="sub">True partners only — computed from live records, Oct 28, 2026</span>
+      </div>
+      <section class="scorecards" aria-label="Partner scorecards">
+        <article class="scorecard doug">
+          <h3>Doug — Glass &amp; Door Pro</h3>
+          <p class="sc-fee"><b>Fee AGREED — 3% of every bid won</b> (agreed Oct 28, 2026; paper agreement in prep, unsigned)</p>
+          <p class="sc-banner">FIRST BID SUBMITTED — Beaufort County CC $71,100, Oct 28</p>
+          <ul class="sc-rows">
+            <li><b>Bids submitted: 1</b> · total submitted value <b>$71,100</b></li>
+            <li><b>Latest submission:</b> Beaufort County CC Div 08 — $71,100 · Oct 28 (submitted to A.R. Chesson, cc'd Tim)</li>
+            <li><b>Bids won (verified only): 0</b> · $0</li>
+            <li><b>In play: 13 live lanes</b> · Next deadline: Yates Mill, Nov 5</li>
+            <li><b>Passes / declines: 1</b> (Carteret, Oct 28)</li>
+            <li><b>Fees booked: $0</b></li>
+            <li><b>Fees pending on submitted bids: $2,133 if won</b> ($71,100 × 3%)</li>
+            <li><b>Fees projected on in-play lanes: est.</b> — 3% of his assigned Band 1 in-play lane values, per the revenue panel</li>
+            <li><b>Last activity:</b> Oct 28, 10:31 AM — Beaufort $71,100 submission to Chesson</li>
+          </ul>
+        </article>
+        <article class="scorecard jerry">
+          <h3>Jerry — Apollo Door Systems</h3>
+          <p class="sc-fee"><b>Fee AGREED — 5% of closed commercial bids</b> (agreed Oct 27, 2026; agreement in prep, unsigned)</p>
+          <ul class="sc-rows">
+            <li><b>Bids submitted: 0</b></li>
+            <li><b>Bids won (verified only): 0</b> · $0</li>
+            <li><b>In play: 7 live lanes</b> · Next deadline: Gwinnett Fire Station #14, TODAY Oct 28 (opens 3:00 PM ET)</li>
+            <li><b>Passes / declines: 0</b></li>
+            <li><b>Fees booked: $0</b></li>
+            <li><b>Fees pending on submitted bids: $0</b></li>
+            <li><b>Fees projected on in-play lanes: est.</b> — 5% of his assigned Band 1 in-play lane values, per the revenue panel</li>
+            <li><b>Last activity:</b> Oct 27, 11:51 PM — will price IFB / Athens / Huntersville on drawings</li>
+          </ul>
+        </article>
+      </section>
+      <div class="bench-strip"><b>Bench:</b> 85 companies tracked · bench partners have no agreed fee rate — <b>terms not locked / no fee terms presented or signed</b> · <b>Route Doug and Jerry first.</b></div>
 
       <!-- ================= MONEY CARDS ================= -->
       <section class="moneycards" aria-label="Pipeline value and revenue estimates">
@@ -477,7 +550,7 @@
       <section class="levers">
         <article class="lever">
           <div class="lhead"><span class="lid">L1</span><h3>China Grove Coordination</h3><span class="pill green">Active</span></div>
-          <p>Proposal <b>$152,213</b> sent Oct 23 · GHK HM quote due TODAY Oct 28 — still owed 11:09 AM.</p>
+          <p>Proposal <b>$152,213</b> sent Oct 23 · GHK HM quote due TODAY Oct 28 — still owed 11:29 AM.</p>
           <div class="rev"><b>$6,000 booked</b> <span>— deposit due Oct 30</span></div>
         </article>
         <article class="lever">
@@ -488,7 +561,7 @@
         <article class="lever">
           <div class="lhead"><span class="lid">L3</span><h3>Bid Engine (Opportunities)</h3><span class="pill green">Active</span></div>
           <p><b>3 tiers</b> NC/SC/GA · <b>85 partners</b> tracked.</p>
-          <div class="rev"><b>187 signals</b> <span>— Partner Signals rows</span></div>
+          <div class="rev"><b>191 signals</b> <span>— Partner Signals rows</span></div>
         </article>
         <article class="lever">
           <div class="lhead"><span class="lid">L4</span><h3>Direct Service Leads (Hartman Model)</h3><span class="pill green">Active</span></div>
@@ -539,7 +612,7 @@
       <!-- ================= WAITING / DRAFTS ================= -->
       <div class="section-head">
         <h2>Waiting &amp; Drafts</h2>
-        <span class="sub">Open loops + sent log (verified Oct 28, 11:10 AM)</span>
+        <span class="sub">Open loops + sent log (verified Oct 28, 11:30 AM)</span>
       </div>
       <section class="two-panel">
         <div class="w-panel">
@@ -607,6 +680,8 @@
           <div class="w-item"><span class="who">tim@</span><p><b>tim@</b> — Doug open-items brief · Oct 27 — <b>STALE</b> (Beaufort submitted, Carteret passed)<span class="tag">stale · tim@</span></p></div>
           <div class="w-item"><span class="who">Note</span><p><b>Oct 28 morning nudge drafts sent 10:02–10:15</b> — no longer drafts.</p></div>
           <div class="w-item"><span class="who">Note</span><p><b>B464 draft deleted — lane killed.</b></p></div>
+          <h4 class="wgroup">Sent — Oct 28, late morning</h4>
+          <div class="w-item"><span class="who">11:18 AM</span><p>Tim → <b>Clemson University</b> — residence hall intro SENT Oct 28, 11:18 AM (was a staged draft)<span class="tag sent">sent · tim@</span></p></div>
           <h4 class="wgroup">Sent — Oct 28 morning (verified in Sent folders)</h4>
           <div class="w-item"><span class="who">10:02–10:15</span><p>Tim → <b>Advanced Door Systems · Overhead Door Florence · DDGS (Athens BP-08C) · Express Entrance · Door Resources · U.S. Door Service · Metcon/Tina Harris (Robeson) · Vannoy/Joe Menard · Idlewood Capital · Cedar Management</b> — nudges + intros SENT<span class="tag sent">sent · tim@</span></p></div>
           <div class="w-item"><span class="who">9:29 AM</span><p>Snket → <b>Garret Kelly / GHK</b> — China Grove SENT<span class="tag sent">sent · snket@</span></p></div>
@@ -769,6 +844,7 @@
         <span class="sub">Everything that moved, newest first</span>
       </div>
       <section class="timeline">
+        <div class="t-item"><span class="t-time">Oct 28 · 11:18 AM</span><p><b>Tim's Clemson University intro SENT</b> — residence hall watch match; was a staged draft.</p></div>
         <div class="t-item"><span class="t-time">Oct 28 · 10:31 AM</span><p><b>Doug submitted Beaufort $71,100</b> to Chesson — award watch, not a win.</p></div>
         <div class="t-item"><span class="t-time">Oct 28 · 10:23 AM</span><p><span class="bad">Vortex declined</span> — Brian Newberry: do not contact.</p></div>
         <div class="t-item"><span class="t-time">Oct 28 · 10:02–10:15</span><p><b>Tim sent 10 partner/GC nudges + intros</b> — incl. Advanced Door, OD Florence, Metcon, Cedar.</p></div>
@@ -887,9 +963,9 @@
 
     <script>
       /* ============================================================
-         BOARD DATA — snapshot: Wed Oct 28, 2026, 11:09 AM ET.
+         BOARD DATA — snapshot: Wed Oct 28, 2026, 11:29 AM ET.
          Source: live records — Google Sheets + both Gmail inboxes
-         via raw API, verified 11:10 AM ET Oct 28. Refreshes replace this block.
+         via raw API, verified 11:30 AM ET Oct 28. Refreshes replace this block.
          Card fields: t title · co company/GC · d detail (may use <b>)
          · val value chip · due [{label, date}] · own owner chip
          · tone green|amber|red|blue|grey · note status · act last action
@@ -900,7 +976,7 @@
       var BOARDS = [
         {
           id: "opps", title: "Board 1 — Opportunities",
-          sub: "187 Partner Signals rows · highlights only. Drag to move.",
+          sub: "191 Partner Signals rows · highlights only. Drag to move.",
           cols: 5,
           columns: [
             { name: "New", dot: "blue", cards: [
@@ -943,7 +1019,7 @@
                 val: "$71,100 submitted Oct 28 · award watch",
                 due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
                 own: "Doug — submitted", tone: "green",
-                note: "Submitted Oct 28, 10:31 AM — award watch, not a win." },
+                note: "BID SUBMITTED — $71,100 · Oct 28" },
               { t: "Pitt County — New Administration Building", co: "Pitt County · Greenville, NC · Div 08",
                 d: "Doug emailed + 9 GC intros sent Oct 27. Sub quotes to GCs.",
                 due: [{ label: "GC bids Nov 12", date: "2026-11-12" }],
@@ -1524,8 +1600,13 @@
             ]},
             { name: "Public Record — We'd Know", dot: "blue", cards: [
               { t: "Carteret County Courthouse — Window + Storefront", co: "Doug (glazing only) · Carteret County",
-                d: "Doug <b>PASSED Oct 28</b> — no bid submitted. Lane closed.",
-                own: "Closed — partner pass", tone: "grey" },
+                d: "Doug <b>PASS Oct 28</b> — closed, did not bid. Lane closed.",
+                own: "Closed — Doug PASS Oct 28, did not bid", tone: "grey" },
+              { t: "Beaufort County CC — New Skills Building", co: "Doug (storefront slice) · A. R. Chesson Construction",
+                d: "Doug bid submitted via <b>A. R. Chesson</b> — public record / prime-named channel. <b>No verified win yet.</b>",
+                val: "$71,100 submitted Oct 28",
+                due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
+                own: "Submitted — award watch, no verified win", tone: "blue" },
               { t: "Athens Drive HS — BP-08F Glazing", co: "Doug (glazing) · Balfour Beatty / WCPSS",
                 d: "<b>Public opening Nov 10</b> — bid tab proves bid / no-bid.",
                 due: [{ label: "Public opening Nov 10", date: "2026-11-10" }],
@@ -1566,11 +1647,6 @@
                 d: "Into <b>Chesson's</b> bid. Record names Chesson only.",
                 tag: "Bid passed Oct 22 — sub outcome not publicly provable",
                 own: "Blind spot — GC named only", tone: "amber" },
-              { t: "Beaufort County CC — New Skills Building", co: "Doug (storefront slice) · A. R. Chesson Construction",
-                d: "Submitted Oct 28, awaiting award — <b>not a win</b>. Prime named, sub invisible.",
-                val: "$71,100 submitted Oct 28",
-                due: [{ label: "Bids Oct 28, 3:00 PM", date: "2026-10-28" }],
-                own: "Submitted — award watch", tone: "amber" },
               { t: "Huntersville FS #5 + Asheville-Oakley FS #9", co: "Doug (glazing bidder of record) · Edifice CM packages",
                 d: "Prequal visible, <b>award not public</b>.",
                 own: "Blind spot — prequal visible, award not", tone: "amber" },
