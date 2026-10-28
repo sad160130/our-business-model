@@ -228,6 +228,22 @@ input[type=range]{width:100%;accent-color:var(--amber);height:28px;cursor:pointe
 .rule em{font-style:normal;text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:4px;text-underline-offset:4px}
 .rule.amber em{text-decoration-color:var(--ink)}
 
+/* ---------- SCORECARDS ---------- */
+.first-bid-banner{background:var(--amber);color:var(--ink);border-radius:var(--radius);padding:22px 26px;margin-bottom:14px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between;border:2px solid var(--ink)}
+.first-bid-banner .fb-k{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.first-bid-banner .fb-big{font-size:clamp(24px,4vw,38px);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.first-bid-banner .fb-sub{font-size:14.5px;line-height:1.5;font-weight:600;max-width:560px}
+.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:820px){.score-grid{grid-template-columns:1fr}}
+.score-card{background:var(--card);border:2px solid var(--amber);border-radius:var(--radius);padding:26px}
+.score-card h3{font-size:23px;font-weight:900;margin:6px 0 2px;color:var(--ink);line-height:1.1}
+.score-card .org{font-size:13.5px;font-weight:700;color:var(--muted)}
+.score-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.score-stats div{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+.score-stats .sv{font-size:22px;font-weight:900;color:var(--ink);line-height:1}
+.score-stats .sl{font-size:11px;font-weight:700;color:var(--muted);margin-top:6px;line-height:1.35;text-transform:uppercase;letter-spacing:.06em}
+.score-card p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0}
+.score-card p b{color:var(--text)}
 footer{margin-top:80px;background:var(--ink);color:#fff;padding:44px 20px 54px;text-align:center}
 footer .f-big{font-size:clamp(24px,4.5vw,42px);font-weight:900;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em}
 footer .f-big em{font-style:normal;color:var(--amber)}
@@ -401,10 +417,16 @@ footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains M
     <p class="sec-lede">This isn't theory. These are real projects in motion this week — found by the scanners, matched to partners, moving toward bid day.</p>
   </div>
   <div class="pipe">
+    <article class="pcard hot rv">
+      <span class="status live"><i></i> BID SUBMITTED — $71,100 · Oct 28, 2026</span>
+      <h3>Beaufort County CC — Doug's FIRST bid</h3>
+      <p><b>Doug / Glass &amp; Door Pro submitted his first bid through the machine: Beaufort County CC, $71,100, on Oct 28, 2026, to A. R. Chesson.</b> Fee on a win is the agreed <b>3%</b> (agreed Oct 28, 2026; paper agreement in prep, unsigned).</p>
+      <span class="amt">BID SUBMITTED — $71,100 · OCT 28, 2026</span>
+    </article>
     <article class="pcard rv">
       <span class="status soon"><i></i> Decision gate · Oct 30</span>
       <h3>China Grove manufacturing facility</h3>
-      <p><b>Revised client proposal sent to Akhil Fri Oct 23 (11:24 AM)</b> — Doug's revised proposal arrived Fri Oct 23, 10:41 AM, and was turned around the same day with the formal proposal PDF attached. Revised total <b>$152,212.58</b> (entries + AASD-1 $85,246.63; interior glass partitions $66,965.95), with the <b>$6,000 coordination margin included</b> in that client total. Total door scope estimated at <b>$225–325K</b> across storefront, hollow metal and overhead. Jerry / Apollo is quoting the openings. Per his Oct 22 late-night update, Jerry is now pricing <b>four automatic-entrance options for the AASD-1 package</b> and has <b>hollow-metal RFQs out to suppliers</b>. <b>Garret at GHK replied Tue Oct 27 (2:35 PM) with drawing and frame clarification questions; Snket answered the same day (3:50 PM) — no fire ratings required, frames priced separately, lead times being checked — and GHK is holding Wed Oct 28 for the hollow-metal quote.</b> <b>Snket asked Jerry Fri Oct 23 (12:22 PM) to confirm Oct 28</b> for his itemized hollow-metal quote with frames priced separately. <b>Hollow-metal quotes are due Wed Oct 28; frames are needed mid-November, install mid-December</b>. <b>Doug has confirmed early-to-mid December delivery for all materials — including the AASD-1 automatic entrance</b>. Schedule improved: <b>AASD-1 now 6–8 weeks for delivery and completed installation from deposit</b> (was a 15-week allowance). <b>Next step:</b> Akhil's written approval + deposit by Oct 30 holds the mid-December installation target.</p>
+      <p><b>Revised client proposal sent to Akhil Fri Oct 23 (11:24 AM)</b> — Doug's revised proposal arrived Fri Oct 23, 10:41 AM, and was turned around the same day with the formal proposal PDF attached. Revised total <b>$152,212.58</b> (entries + AASD-1 $85,246.63; interior glass partitions $66,965.95), with the <b>$6,000 coordination margin included</b> in that client total. Total door scope estimated at <b>$225–325K</b> across storefront, hollow metal and overhead. <b>On Wed Oct 28, Akhil sent design revisions and requested an updated quote:</b> AASD-1 is now <b>swinging doors with panic bars</b> instead of the previously designed automatic sliding doors; <b>SD-02 is now a double-leaf door</b>; quantities were revised per RFI; and frame specifications per wall type are in the updated drawing set. <b>Jerry / Apollo's hollow-metal proposal landed Wed Oct 28 at 1:50 PM:</b> furnish-and-install base bid <b>$92,868.43 for 36 openings</b>, frames priced separately at <b>$14,431.28 for the mid-November release</b>, with <b>Alternate 01 — AASD-1 automatic entrance — quoted at $20,704.96 installed, 8–10 week lead time</b> (Jerry noted Tebarco's exact numbers had not yet arrived, so this is his best presentable figure). <b>Updated vendor quotes against the revised set are due Thu Oct 29 EOD</b> (GHK and Doug reprice). A <b>Teams quote-review meeting with Akhil and Nick is proposed for Fri Oct 30 at 10:00 AM ET</b> (Snket's reply draft, unsent at last check). <b>Doug has confirmed early-to-mid December delivery for all materials.</b> <b>Next step:</b> Akhil's written approval + deposit by Oct 30 holds the mid-December installation target.</p>
       <span class="amt">SCOPE ≈ $225–325K · DELIVERY EARLY–MID DEC</span>
     </article>
     <article class="pcard rv d1">
@@ -454,6 +476,38 @@ footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains M
   </div>
 </section>
 
+<!-- PARTNER SCORECARDS -->
+<section id="scorecards">
+  <div class="sec-head rv">
+    <div><span class="sec-no">04B — Scorecards</span><h2>Partner <em>scorecards</em></h2></div>
+    <p class="sec-lede">The two true partners, at a glance — bids in, fees agreed, what's next. Updated Oct 28, 2026.</p>
+  </div>
+  <div class="first-bid-banner rv">
+    <div><span class="fb-k">★ Milestone · Oct 28, 2026</span><div class="fb-big">FIRST BID SUBMITTED</div></div>
+    <p class="fb-sub">Doug / Glass &amp; Door Pro — <b>Beaufort County CC, $71,100</b>, submitted Oct 28, 2026 to A. R. Chesson. The machine's first partner bid is in.</p>
+  </div>
+  <div class="score-grid">
+    <article class="score-card rv">
+      <span class="status live"><i></i> True Partner · Glazing</span>
+      <h3>Doug Adams — Glass &amp; Door Pro</h3>
+      <div class="org">Fee AGREED Oct 28, 2026: 3% of every bid won · Paper agreement in prep, unsigned</div>
+      <div class="score-stats"><div><div class="sv">1</div><div class="sl">Bids submitted</div></div><div><div class="sv">$71,100</div><div class="sl">First bid · Beaufort CC</div></div><div><div class="sv">3%</div><div class="sl">Agreed fee on wins</div></div></div>
+      <p><b>Latest:</b> FIRST bid submitted Oct 28, 2026 — Beaufort County CC, $71,100, to A. R. Chesson. Also Oct 28: confirmed <b>YES on Kinston BP0840.1 glazing</b> and <b>YES on the RDU storefront prequal</b>; <b>passed on Carteret Courthouse</b>.</p>
+    </article>
+    <article class="score-card rv d1">
+      <span class="status"><i></i> True Partner · DFH &amp; Atlanta</span>
+      <h3>Jerry Richards — Apollo Door Systems</h3>
+      <div class="org">Onboarded Oct 27, 2026 · Fee AGREED: 5% of closed commercial bids · Agreement in prep, unsigned</div>
+      <div class="score-stats"><div><div class="sv">0</div><div class="sl">Bids submitted so far</div></div><div><div class="sv">Oct 28</div><div class="sl">Gwinnett FS #14 bidding</div></div><div><div class="sv">5%</div><div class="sl">Agreed fee on closes</div></div></div>
+      <p><b>Latest:</b> As of Oct 28 he is <b>pricing IFB Solutions / Athens / Huntersville once drawings are seen</b>, with <b>Gwinnett Fire Station #14 bidding Oct 28, 2026</b>. Bids submitted so far: <b>0</b>.</p>
+    </article>
+  </div>
+  <div class="bench rv">
+    <strong>Bench behind them: 85 companies tracked — prospects &amp; backups at 3–5% estimates, not partners yet</strong>
+    <div class="trades"><span class="chip">Glazing</span><span class="chip">Doors / Frames / Hardware</span><span class="chip">Overhead</span><span class="chip">Dock</span><span class="chip">Automatic entrances</span></div>
+  </div>
+</section>
+
 <!-- SECTION 6: PEOPLE -->
 <section id="people">
   <div class="sec-head rv">
@@ -479,8 +533,8 @@ footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains M
       <h3>Doug Adams</h3>
       <div class="org">Glass &amp; Door Pro</div>
       <p>One of our <b>two true partners</b> — and the first monthly-paying one. Doug's contact provided to Edifice (Cody Treece) Oct 22 — Doug prequalifies directly with Edifice per project and completes prequal in BuildingConnected on invite. On China Grove he's confirmed <b>early-to-mid December delivery on all materials, AASD-1 included</b>, and his revised proposal was delivered Fri Oct 23 and turned around to the client the same day (revised client total $152,212.58 sent Oct 23). Glazing work routes to Doug first. On Oct 26 he confirmed two more Wake County lanes — the Yates Mill storefront/glazing slice (bids Nov 5) and the Wake H-11 / M-19 BP 08F glass package — and Tim sent both follow-ups the same afternoon.</p>
-      <p>Fee agreed Oct 28, 2026: Doug pays 3% of every bid won. No monthly component.</p>
-      <p><b>Status Oct 28:</b> Submitted the Beaufort County CC Div 08 proposal — $71,100 — to Chesson; confirmed YES on Kinston BP0840.1 glazing and RDU Package B storefronts; passed on Carteret.</p>
+      <p>Fee <b>AGREED Oct 28, 2026: 3% of every bid won</b>. No monthly component stated. Paper agreement in prep, unsigned.</p>
+      <p><b>Status — Oct 28, 2026:</b> Submitted his <b>FIRST bid — Beaufort County CC, $71,100</b>, to <b>A. R. Chesson</b>. Also on Oct 28: confirmed <b>YES on Kinston BP0840.1 glazing</b> and <b>YES on the RDU storefront prequal</b>; <b>passed on Carteret Courthouse</b>. <b>Bids submitted: 1.</b></p>
     </article>
     <article class="person true rv d3">
       <div class="avatar">JR</div>
@@ -488,6 +542,7 @@ footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains M
       <h3>Jerry Richards</h3>
       <div class="org">Apollo Door Systems</div>
       <p>One of our <b>two true partners</b> — <b>officially onboard Oct 27</b> after today's meeting. <b>Fee agreed: 5% of awarded value on commercial bids that close</b> — no retainer, nothing owed on work that doesn't close; <b>written agreement in prep</b> (not yet signed); service-call compensation is still being worked out. A reciprocity partner — we feed each other work. Quoting China Grove now, offered to project-manage Huntersville, and he's our man on the ground for Atlanta. <b>Snket sent Jerry the full IFB Solutions bid pack on Tue Oct 27 and Tim formally introduced Jerry to IFB's Ken Edwards as the DFH installer for RFP IFB-2026-1 (proposals due Fri Oct 30, 5 PM); Jerry's quote build-out is now awaited. He's also been asked to price the Athens Drive BP-08A DFH package (prequal list locks ~Oct 31), and to be the DFH bidder name for Huntersville FS #5 (prequal due Nov 12).</b></p>
+      <p><b>Status — Oct 28, 2026:</b> Onboarded <b>Oct 27, 2026</b> with fee <b>AGREED at 5% of closed commercial bids</b> (agreement in prep, unsigned). As of Oct 28 he is <b>pricing IFB Solutions / Athens / Huntersville once drawings are seen</b>, with <b>Gwinnett Fire Station #14 bidding Oct 28, 2026</b>. <b>Bids submitted so far: 0.</b> On Oct 28 he delivered Apollo's China Grove hollow-metal proposal — $92,868.43 base for 36 openings, frames priced separately.</p>
       <p><b>Bid capability — verified from his own emails + capabilities statement (Oct 22):</b> Apollo CAN bid automatic/manual doors + doors-frames-hardware packages as a subcontractor-bidder — he is on BuildingConnected, his capabilities statement lists a SAM.gov UEI, GA@WORK and Bonfire, and furnish + install + warranty is his standard. Overhead doors and dock equipment are NOT Apollo's scope (Jerry's own words) — that experience is personal, from his technician years. Large public prime contracts are not his lane on current evidence (no bonding shown; insurance "available upon request"). Apollo launched ~July 2026 and is founder-led — Jerry is the company. Jerry himself is an AAADM Certified Inspector (verified, credential through Jan 2027), formerly Lead Service Technician at Vortex Doors and a technician at Advanced Door Services — the trade skill is real and certified.</p>
     </article>
   </div>
@@ -507,7 +562,7 @@ footer p{color:#8FA6C6;font-size:13.5px;margin:16px 0 0;font-family:'JetBrains M
     <div class="todo rv">
       <div class="todo-item urgent">
         <div class="todo-num">1</div>
-        <div><h4>China Grove — client proposal sent to Akhil Fri Oct 23</h4><p>Doug confirmed <b>early-to-mid December delivery for all materials, including the AASD-1 automatic entrance</b>. <b>DONE — move it to Akhil:</b> Doug's revised proposal landed Fri Oct 23 (10:41 AM) and the rebuilt client proposal (<b>$152,212.58, PDF attached</b>) was sent to Akhil Fri Oct 23, 11:24 AM. Remaining moves: <b>Akhil approval + deposit by Oct 30</b> to hold the mid-December installation target, <b>hollow-metal quotes due Wed Oct 28</b> — Garret at GHK replied Tue Oct 27 (2:35 PM) with drawing and frame clarification questions; Snket answered the same day (3:50 PM) — no fire ratings required, frames priced separately, lead times being checked — and GHK is holding Wed Oct 28 for the hollow-metal quote, and Snket asked Jerry Fri Oct 23 (12:22 PM) to confirm Oct 28 for his itemized quote with frames priced separately (frames needed mid-Nov, install mid-Dec) — and <b>Doug's fee terms are settled — 3% of wins, agreed Oct 28</b>. (Blackburn is off: Wilkie is no longer doing the job.)</p></div>
+        <div><h4>China Grove — revisions in, updated quotes due Oct 29</h4><p>Client revisions received <b>Oct 28</b>; Jerry's HM proposal in <b>Oct 28 ($92,868.43 base)</b>; updated vendor quotes due <b>Oct 29 EOD</b>; Teams review proposed <b>Fri Oct 30</b>; approval + deposit gate <b>Oct 30</b>.</p></div>
       </div>
       <div class="todo-item">
         <div class="todo-num">2</div>
